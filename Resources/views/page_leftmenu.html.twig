@@ -1,0 +1,5 @@
+<h2>Meny</h2>
+{{ knp_menu_render(menu, {'depth': 2, 'firstClass': 'firstli', 'lastClass': 'lastli'}) }}		  
+{#% if submenu is defined %}	
+     {{ knp_menu_render(submenu, {'firstClass': 'firstli', 'lastClass': 'lastli', 'Class': 'side-menu__item' ,'branch_class': 'side-menu__item', viewTemplate: 'tfktelemarkBundle:parts:knp_menu.html.twig'}) }}
+{% endif %#}

@@ -1,0 +1,42 @@
+<div class="content">
+  <div class="breadcrumb">
+    <div class="constrained">
+      <div class="media">
+        <div class="media__img--right">
+          <ul class="social-links js-sl">
+           <li>
+             <a class="social-links__link js-sl-facebook">
+               <span title="Del på Facebook" class="social-links__link__icon icon--facebook"></span><span class="visuallyhidden">Del på Facebook</span>
+             </a>
+           </li>
+           <li>
+             <a class="social-links__link js-sl-twitter">
+               <span title="Del på Twitter" class="social-links__link__icon icon--twitter"></span><span class="visuallyhidden">Del på Twitter</span>
+             </a>
+           </li>
+           <li>
+             <a class="social-links__link js-sl-googlepluss">
+               <span title="Del på Google+" class="social-links__link__icon icon--google"></span><span class="visuallyhidden">Del på Google+</span>
+             </a>
+           </li>
+           <li>
+             <a href="/rss/feed/aktuelt" class="social-links__link">
+               <span title="RSS-feed" class="social-links__link__icon icon--rss"></span><span class="visuallyhidden">RSS-feed</span>
+             </a>
+           </li>
+         </ul>
+        </div>
+        <div class="media__bd">
+          {{ wo_render_breadcrumbs( { 
+  			separator: '/',
+  			listClass: 'breadcrumb__list',
+  			itemClass: 'breadcrumb__item',
+        	linkClass: 'breadcrumb__item__link',
+  			separatorClass: 'breadcrumb__item__separator',
+  			viewTemplate: 'tfktelemarkBundle:parts:breadcrumbs.html.twig'
+	      } ) }}  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+{% set siteLang = app.request.locale[:2] %}
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="unsupported-ie ie" lang="{{ siteLang }}"><![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="{{ siteLang }}"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="{{ siteLang }}"><!--<![endif]-->
+<head>
+	{# TODO: this probably won't be needed anymore as we will relay on the HTTP cache #}
+	{% include 'tfktelemarkBundle::page_head_displaystyles.html.twig' %}
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	{% block page_head %}
+		{% include 'tfktelemarkBundle::page_head.html.twig' %}
+	{% endblock %}
+	{% include 'tfktelemarkBundle::page_head_style.html.twig' %}
+	{% include 'tfktelemarkBundle::page_head_script.html.twig' %}
+	{% block facebookMeta %}{% endblock %}
+</head>
+<body>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=104427336329204";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <div class="menu-container">
+    <div id="mp-pusher" class="menu-pusher">
+			{% if location is defined and not location.isDraft %}
+				{% set currentLocation=location %}
+			{% endif %}
+
+			<!-- Complete page area: START -->
+			{% if ezpublish.legacy is defined and currentLocation is defined %}
+				{{ render( controller( "ezpublish_legacy.website_toolbar.controller:websiteToolbarAction", { 'locationId': currentLocation.id} ) ) }}
+			{% endif %}
+
+			<!-- Header area: START -->
+			{% block header %}
+				{% include 'tfkfarteBundle::page_header.html.twig' %}
+			{% endblock %}
+
+			<!-- Header area: END -->
+				<!-- Top menu area: END -->
+			{% block breadcrumb %}
+				{% if currentLocation is defined %}
+					{{ render( controller( 'tfktelemarkBundle:Item:viewBreadcrumb', { 'locationId': currentLocation.id } ) ) }}
+				{% endif %}
+			{% endblock %}
+
+			<main id="main" role="main" tabindex="-1">
+				<!-- Main area: START -->
+				{% block content %}{% endblock %}
+				<!-- Main area: END -->
+			</main>
+			<!-- Footer area: START -->
+			{% include 'tfktelemarkBundle::page_footer.html.twig' %}
+		</div>
+	</div>
+
+<!-- Complete page area: END -->
+<!-- Footer script area: START -->
+{% block footerScript %}
+	{% include 'tfktelemarkBundle::page_footer_script.html.twig' %}
+{% endblock %}
+
+<!-- Footer script area: END -->
+</body>
+</html>

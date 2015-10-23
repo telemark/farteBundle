@@ -1,0 +1,29 @@
+{#
+    Defining page title based on current content name, if available
+    See full/blog_post.html.twig for an example of customization
+#}
+{% if content is defined and title is not defined %}
+    {% set title = ez_content_name( content ) %}
+{% endif %}
+
+<title>{{ title|default( 'Telemark fylkeskommune' ) }}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="author" content="{% if content.fields.author is defined %}{{ ez_field_value(content,'author') }}{% else%}Telemark fykeskommune{% endif %}"/>
+<meta name="copyright" content="Telemark fylkeskommune"/>
+<meta name="description" content="{% if content.fields.meta_description is defined %}{{ ez_field_value(content,'meta_description') }}{% else%}
+Telemark fylkeskommune er en offentlig arbeidsplass med cirka 1600 ansatte. Sammen med staten og kommunene utgjør vi ett av forvaltningsnivåene i det offentlige Norge.
+{% endif %}"/>
+<meta name="keywords" content="{% if content.fields.meta_keywords is defined %}{{ ez_field_value(content,'meta_keywords') }}{% else%}Fylkeskommune, Telemark, ledige, rjukan ,Notodden, Offentlig {% endif %}"/>
+<meta name="MSSmartTagsPreventParsing" content="TRUE"/>
+<meta name="generator" content="eZ Platform"/>
+
+<link rel="Home" href="{{ path( ezpublish.rootLocation ) }}" title="{{ 'Telemark Fylkeskommune'|trans }}"/>
+<link rel="Index" href="{{ path( ezpublish.rootLocation ) }}" title="{{ 'Hjem'|trans }}"/>
+<link rel="Home" href="{{ path( ezpublish.rootLocation ) }}" title="{{ 'Hjem'|trans }}"/>
+<link rel="Shortcut icon" href="{{ asset( "bundles/tfktelemark/images/icons/favicon.ico" ) }}" type="image/x-icon"/>
+<link rel="icon" type="image/x-icon" href="{{ asset( "bundles/tfktelemark/images/icons/favicon.ico" ) }}" />
+
+{# adding canonical url for all defined content #}
+{% if content is defined and content.contentInfo.mainLocationId %}
+    <link rel="canonical" href="{{ path( 'ez_urlalias', {'locationId': content.contentInfo.mainLocationId} ) }}" />
+{% endif %}

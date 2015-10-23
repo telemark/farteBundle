@@ -1,0 +1,15 @@
+{% extends 'EzPublishCoreBundle::content_fields.html.twig' %}
+
+{% block ezkeyword_field %}
+    {% spaceless %}
+        {% if field.value.values|length() > 0 %}
+            <ul {{ block( 'field_attributes' ) }} >
+                {% for keyword in field.value.values %}
+                <li>
+                    <span class="tag-title">{{ keyword }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endspaceless %}
+{% endblock %}

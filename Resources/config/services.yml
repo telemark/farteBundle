@@ -1,0 +1,5 @@
+services:
+#    tfkfarte.example:
+#        class: tfk\farteBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+
