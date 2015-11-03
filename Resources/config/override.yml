@@ -13,7 +13,7 @@ system:
            Identifier\ContentType: [landing_page]
         folder:
           controller: tfktelemarkBundle:Item:folderInit
-          template: tfktelemarkBundle:full:folder.html.twig
+          template: tfkfarteBundle:full:folder.html.twig
           match:
             Identifier\ContentType: [folder]
         hidden_folder:
@@ -21,7 +21,7 @@ system:
           match:
             Identifier\ContentType: [hidden_folder]
         article:
-          template: tfktelemarkBundle:full:article.html.twig
+          template: tfkfarteBundle:full:article.html.twig
           match:
            Identifier\ContentType: [article]
         event_calendar:
@@ -79,11 +79,11 @@ system:
           match:
             Identifier\ContentType: [image_gallery_slide]
         tabboks:
-          template: tfktelemarkBundle:line:tabboks.html.twig
+          template: tfkfarteBundle:line:tabboks.html.twig
           match:
             Identifier\ContentType: [tabboks]
         tabboks_tab:
-          template: tfktelemarkBundle:line:tabboks_tab.html.twig
+          template: tfkfarteBundle:line:tabboks_tab.html.twig
           match:
             Identifier\ContentType: [tabboks_tab]
         slide_container:
@@ -98,6 +98,10 @@ system:
           template: tfktelemarkBundle:line:did_u_know_line.html.twig
           match:
             Identifier\ContentType: [did_u_know_line]
+        file:
+          template: tfkfarteBundle:line:file.html.twig
+          match:
+           Identifier\ContentType: [file]
       ezfind_line:
         article:
           template: tfktelemarkBundle:ezfind_line:article.html.twig
@@ -180,7 +184,7 @@ system:
           match:
             Identifier\ContentType: [kampanjecontainer]
         tabboks:
-          template: tfktelemarkBundle:line:tabboks.html.twig
+          template: tfkfarteBundle:line:tabboks.html.twig
           match:
             Identifier\ContentType: [tabboks]
         article:
@@ -212,3 +216,7 @@ system:
           template: tfktelemarkBundle:ezfind_line:personprofil.html.twig
           match:
             Identifier\ContentType: [personprofil]
+        file:
+          template: tfkfarteBundle:line:file.html.twig
+          match:
+           Identifier\ContentType: [file]

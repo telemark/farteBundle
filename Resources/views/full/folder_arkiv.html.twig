@@ -1,0 +1,47 @@
+{% extends "tfkfarteBundle::pagelayout.html.twig" %}
+
+{% block content %}
+<div class="constrained-content">
+  <div class="content">
+
+    {% if not ez_is_field_empty( content, 'show_name' ) %}
+      <h1>{{ ez_render_field(content, 'name') }}</h1>
+    {% endif %}
+
+    {% if not ez_is_field_empty( content, 'short_description' ) %}
+      <div class="byline">
+        {{ ez_render_field(content, 'short_description') }}
+      </div>
+    {% endif %}
+
+    {% if not ez_is_field_empty( content, 'description' ) %}
+      {{ ez_render_field(content, 'description') }}
+    {% endif %}
+
+  </div>
+
+  {% if items|length() > 0 %}
+
+    <div class="content grid">
+
+      {% for item in items %}
+        {{ render_esi( controller( "ez_content:viewLocation", { "locationId": item.contentInfo.mainLocationId, "viewType": "line" } )) }}
+      {% endfor %}
+
+    </div>
+
+    {% if items.haveToPaginate() %}
+      {#% include "tfktelemarkBundle:parts:paginator.html.twig" %#}
+       {{ pagerfanta( items, 'twitter_bootstrap_translated',
+       {'routeName': location,
+       'prev_message': 'Forrige',
+       'next_message': 'Neste',
+  	 'css_next_class': 'pagination__next',
+  	 'css_prev_class': 'pagination__prev'
+      } ) }}
+    {% endif %}
+
+  {% endif %}
+</div>
+
+{% endblock %}

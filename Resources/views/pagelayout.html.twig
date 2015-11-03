@@ -5,15 +5,15 @@
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="{{ siteLang }}"><!--<![endif]-->
 <head>
 	{# TODO: this probably won't be needed anymore as we will relay on the HTTP cache #}
-	{% include 'tfktelemarkBundle::page_head_displaystyles.html.twig' %}
+	{% include 'tfkfarteBundle::page_head_displaystyles.html.twig' %}
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	{% block page_head %}
-		{% include 'tfktelemarkBundle::page_head.html.twig' %}
+		{% include 'tfkfarteBundle::page_head.html.twig' %}
 	{% endblock %}
-	{% include 'tfktelemarkBundle::page_head_style.html.twig' %}
-	{% include 'tfktelemarkBundle::page_head_script.html.twig' %}
+	{% include 'tfkfarteBundle::page_head_style.html.twig' %}
+	{% include 'tfkfarteBundle::page_head_script.html.twig' %}
 	{% block facebookMeta %}{% endblock %}
 </head>
 <body>
@@ -56,14 +56,14 @@
 				<!-- Main area: END -->
 			</main>
 			<!-- Footer area: START -->
-			{% include 'tfktelemarkBundle::page_footer.html.twig' %}
+			{% include 'tfkfarteBundle::page_footer.html.twig' %}
 		</div>
 	</div>
 
 <!-- Complete page area: END -->
 <!-- Footer script area: START -->
 {% block footerScript %}
-	{% include 'tfktelemarkBundle::page_footer_script.html.twig' %}
+	{% include 'tfkfarteBundle::page_footer_script.html.twig' %}
 {% endblock %}
 
 <!-- Footer script area: END -->

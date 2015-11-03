@@ -1,0 +1,41 @@
+parameters:
+    # Number of article displayed per page in the folder view
+    telemark.folder.folder_list.limit: 9
+    # ContentType identifiers we want to exclude from content list in folder view
+    telemark.folder.folder_view.excluded_content_types: [folder, image]
+    # ContentType identifiers we want to have in folder's tree
+    telemark.folder.folder_tree.included_content_types: [folder]
+    # Decide whether to show or hide article summary in the full view
+    telemark.article.full_view.show_summary: true
+    # Decide whether to show or hide article image in the full view
+    telemark.article.full_view.show_image: true
+    # Minimum distance in km for the places lookup
+    telemark.places.place_list.min: 0
+    # Maximum distance in km for the places lookup
+    telemark.places.place_list.max: 20000
+
+    # List of content types to be displayed in the place list
+    telemark.places.place_list.content_types:
+        - place
+
+    ## Cache settings
+    telemark.cache.feed_reader_ttl: 3600
+
+    ## Feedback Form
+    # Reminder: You can override these settings in config_dev.yml or config_prod.yml for debug or prod
+    # Email address to send contact form emails to
+    telemark.feedback_form.email_to: root@localhost
+    # Email address displayed as sent
+    telemark.feedback_form.email_from: noreply@ezdemobundle.test
+
+    ## Search Page
+    # Number of results displayed per page in the simple search
+    telemark.search.list.limit: 10
+
+    ## Menu. Overrides MenuContentSettings.TopIdentifierList from ezpublish_legacy/settings/menu.ini.
+    menu.default.menucontentsettings.topidentifierlist: [landing_page, folder, gallery, place_list, blog, feedback_form]
+
+    ## Premium content
+    telemark.premium_content.section_id: 7
+    telemark.premium_content.role_id: 6
+    telemark.tjenester.id: 111

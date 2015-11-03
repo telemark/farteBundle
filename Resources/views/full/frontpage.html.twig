@@ -2,6 +2,24 @@
 
 {% block content %}
 
-Her!!!!
+<div class="constrained-content">
+	<div class="campaign-content">
+	<img class="right" src="{{ asset('bundles/tfkfarte/images/banner_1.png') }}" alt="Farte" />
+	</div>
+</div>
 
+<div class="constrained-content">
+  {{ render(
+    controller(
+      "ez_content:viewContent",
+        {
+          "contentId": 160,
+          "viewType": "line",
+          "params": {
+            "tabboks_size":"large"
+          }
+        }
+    )
+  ) }}
+</div>
 {% endblock %}

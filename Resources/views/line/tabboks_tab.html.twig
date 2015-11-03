@@ -1,0 +1,28 @@
+{% if not ez_is_field_empty( content, 'internal_resource' ) %}
+	{% set externalResourceId = ez_field_value( content, 'internal_resource' ) %}
+	{% set this_block_url = url( 'ez_urlalias', {'contentId': externalResourceId} ) %}
+{% else %}
+	{% set this_block_url = ez_field_value( content, 'exit_url' ) %}
+{% endif %}
+{% set element_size = params.element_size|default('large') %}
+
+<li id="tabboks-tab-{{ content.contentInfo.id }}" class="tabs__content__item tabs__content__item--active">
+	<h1 class="tabs__content__header js-tabs-tab">{{ ez_render_field( content, 'title' ) }}</h1>
+  <div class="tabs__content__block">
+    {% if element_size is sameas('large') %}
+      <div class="grid grid--12">
+    {% else %}
+      <div class="grid grid--6">
+    {% endif %}
+      {% if not ez_is_field_empty( content, 'text' ) %}
+        {{ ez_render_field( content, 'text' ) }}
+      {% endif %}
+      {{ ez_render_field( content, 'related_objects', { 'template': 'tfktelemarkBundle:fields:tabboks_related_objects.html.twig', 'params' : {'element_size': element_size}} ) }}
+    </div>
+    {% if this_block_url is defined %}
+    	{% if not ez_is_field_empty( content, 'exit_url' ) %}
+      	<a href="{{ this_block_url }}" class="see-more">{{ content.fields.exit_url['nor-NO'].text }}</a>
+      {% endif %}
+    {% endif %}
+  </div>
+</li>

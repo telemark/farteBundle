@@ -1,0 +1,5 @@
+system:
+    default:
+        templating:
+            view_layout: "tfkfarteBundle::pagelayout.html.twig"
+            module_layout: "tfkfarteBundle::pagelayout_legacy.html.twig"

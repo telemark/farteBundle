@@ -1,0 +1,33 @@
+{% extends noLayout ? viewbaseLayout : "tfkfarteBundle::pagelayout.html.twig" %}
+
+{% block content %}
+    <h1>{{  ez_content_name( content ) }}</h1>
+
+
+
+                    {% if pagerFolder.haveToPaginate() %}
+                        <div class="pagination-centered">
+                            {{ pagerfanta( pagerFolder, 'twitter_bootstrap_translated', { 'routeName': location } ) }}
+                        </div>
+                    {% endif %}
+
+                </div>
+
+                <aside class="col-md-4">
+                    <section class="subnavigation row nav-collapse">
+                        <div class="attribute-header">
+                            <h2>{{ ez_content_name( content ) }}</h2>
+                        </div>
+
+                        {% if treeItems is not empty %}
+                            <ul class="break folder-view">
+                                {% for treeItem in treeItems %}
+                                    {{ render_esi( controller( 'ez_content:viewLocation', { 'locationId': treeItem.contentInfo.mainLocationId, 'viewType': 'aside' } ) ) }}
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+
+                    </section>
+                </aside>
+
+{% endblock %}

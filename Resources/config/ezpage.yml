@@ -1,0 +1,7 @@
+system:
+    tfk:
+        # Configuration for block views.
+        # This configuration is used when using sub-requests on ez_page:viewBlock.
+        # Block views are triggered from eZPage Zone layouts.
+        # Check eZDemoBundle:zone:2zoneslayout1.html.twig
+        block_view:

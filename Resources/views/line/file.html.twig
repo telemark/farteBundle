@@ -1,0 +1,11 @@
+{% block content %}
+	   <div class="constrained-content content">
+      <div class="main">
+        <div class="main__center">
+{% set url = '/content/download/' ~ content.contentInfo.id ~ '/' ~ content.getField('file').id ~ '/version/' ~ content.contentInfo.currentVersionNo ~ '/file' ~ content.getField('file').value.fileName|url_encode %}
+
+<li><a href="{{url}}" alt="{{ez_field_value(content, 'name')}}" target="_blank">{{ez_field_value(content, 'name')}}</a>
+	      </div>
+    </div>
+     </div>
+{% endblock %}

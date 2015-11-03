@@ -1,0 +1,127 @@
+body {
+    ms-word-wrap: normal;
+    word-wrap: normal;
+}
+
+iframe, object, embed {
+        max-width: 100%;
+        border: none;
+}
+
+.campaign-content {
+    background: #FFD520;
+    margin: 0.9em;
+}
+.page-header__logo {
+    margin: 1.5em 0;
+}
+.menu {
+    background: #ffffff;
+
+}
+
+.menu__item-link:hover, .menu__item-link:focus, .menu__item-link:active
+.page-header {
+
+
+}
+.page-header__logo img {
+    display: block;
+}
+
+
+.pagination {
+	position: relative;
+	text-align: center;
+}
+
+.pagination ul {
+	list-style: none;
+    padding-left: 85px;
+    padding-right: 85px;
+}
+
+.pagination li {
+	display: inline-block;
+	margin: 5px;
+}
+
+.pagination .prev {
+	position: absolute;
+	left: 0;
+}
+
+.pagination .prev a:before {
+	color: #383838;
+    font-size: 27px;
+    margin-left: -13px;
+    position: absolute;
+}
+
+.pagination .next {
+	position: absolute;
+	right: 0;
+}
+
+.pagination .next a:after {
+	color: #383838;
+    font-size: 27px;
+    margin-left: 4px;
+    position: absolute;
+}
+
+.pagination .next span, .pagination .prev span {
+	background-color: #e8f3f0;
+    border: 0 none;
+    color: #6c6c6c;
+    display: inline-block;
+    padding: 0.5em 1em;
+}
+
+.pagination a {
+	background-color: #e8f3f0;
+    border: 0 none;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: underline;
+}
+
+.pagination li.active span {
+    background-color: #ffd520;
+    color: #000;
+    border: 0 none;
+    display: inline-block;
+    padding: 0.5em 1em;
+}
+
+.pagination__next a, .pagination__prev a {
+    padding: 0;
+}
+
+.main .pagination {
+    float: left;
+    width: 100%;
+}
+
+/*.main__center {
+    display: inline-block;
+    float: none;
+    margin-left: 1.38889%;
+}
+
+.main__left {
+    margin-left: 0;
+}
+.main__right {
+    float: right;
+}
+*/
+input #basicsearch_term {
+	font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+}
+
+.slider__slide a {
+    float: left;
+}

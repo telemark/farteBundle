@@ -5,18 +5,12 @@
               <a id="menu-trigger" href="#footer-menu" class="menu-trigger icon--menu-mobile">Meny</a>
               <a href="{{ path( ezpublish.rootLocation ) }}search" class="menu-search-trigger icon--search">Søk</a>
               <a href="{{ path( ezpublish.rootLocation ) }}" class="page-header__logo">
-                <img src="{{ asset('bundles/tfktelemark/images/logo/logo.svg') }}" alt="Telemark Fylkeskommune" /></a>
+                <img src="{{ asset('bundles/tfkfarte/images/logo/logo.svg') }}" alt="Farte" /></a>
                 <nav role="navigation" class="page-header__nav">
                             <ul class="nav nav--small">
-                              <li class="nav__item"><a href="/Fylkeskommunen/For-pressen" class="nav__item__link">Presse</a>
+                              <li class="nav__item"><a href="/pressen" class="nav__item__link">Presse</a>
                               </li>
-                              <li class="nav__item"><a href="https://postlister.t-fk.no" target="_blank" class="nav__item__link">Postlister</a>
-                              </li>
-                              <li class="nav__item"><a href="/Informasjon/English" class="nav__item__link">English</a>
-                              </li>
-                              <li class="nav__item"><a href="/Fylkeskommunen/Ledige-stillinger" class="nav__item__link">Ledige stillinger</a>
-                              </li>
-                              <li class="nav__item"><a href="/Vaare-tjenester/Soeknader-og-tilskudd" class="nav__item__link">Søknader og tilskudd</a>
+                              <li class="nav__item"><a href="/english" class="nav__item__link">English</a>
                               </li>
                               <li class="nav__item"><a href="/Kontakt-oss" class="nav__item__link">Kontakt</a>
                               </li>
@@ -42,40 +36,41 @@
                       </div>
                     </div>
                   </li>
+                <li class="menu__item">
+                    <div class="menu__item-content-wrapper">
+                      <div class="menu__item-content menu__item--submenu"><a href="/Rutetabeller" class="menu__item-link menu__item-link--submenu">Rutetabeller</a><span class="icon--menu-arrow-down menu__item__dropdown hide--to-l"></span><span class="icon--menu-arrow-right menu__item__dropdown hide--from-l js-menu-dropdown"></span>
+                      </div>
+                         {{ render( controller("tfktelemarkBundle:Item:mainMenu", {'locationId': '124' } )) }}
+                    </div>
+                  </li>
                   <li class="menu__item">
                     <div class="menu__item-content-wrapper">
-                      <div class="menu__item-content"><a href="/Aktuelt" class="menu__item-link">Aktuelt</a>
+                      <div class="menu__item-content"><a href="/Skoleskyss" class="menu__item-link">Skoleskyss</a>
+                      </div>
+                    </div>
+                  </li>
+                <li class="menu__item">
+                    <div class="menu__item-content-wrapper">
+                      <div class="menu__item-content menu__item--submenu"><a href="/Billetter-og-priser" class="menu__item-link menu__item-link--submenu">Billetter og priser</a><span class="icon--menu-arrow-down menu__item__dropdown hide--to-l"></span><span class="icon--menu-arrow-right menu__item__dropdown hide--from-l js-menu-dropdown"></span>
+                      </div>
+                         {{ render( controller("tfktelemarkBundle:Item:mainMenu", {'locationId': '135' } )) }}
+                    </div>
+                  </li>
+                  <li class="menu__item">
+                    <div class="menu__item-content-wrapper">
+                      <div class="menu__item-content"><a href="/Nettbutikk" class="menu__item-link">Nettbutikk</a>
                       </div>
                     </div>
                   </li>
                   <li class="menu__item">
                     <div class="menu__item-content-wrapper">
-                      <div class="menu__item-content"><a href="/Politikk" class="menu__item-link">Politikk</a>
+                      <div class="menu__item-content"><a href="/Om-farte" class="menu__item-link">Om farte</a>
                       </div>
                     </div>
                   </li>
                   <li class="menu__item">
                     <div class="menu__item-content-wrapper">
-                      <div class="menu__item-content menu__item--submenu"><a href="/Vaare-tjenester" class="menu__item-link menu__item-link--submenu">Våre tjenester</a><span class="icon--menu-arrow-down menu__item__dropdown hide--to-l"></span><span class="icon--menu-arrow-right menu__item__dropdown hide--from-l js-menu-dropdown"></span>
-                      </div>
-                         {{ render( controller("tfktelemarkBundle:Item:mainMenu", {'locationId': '2' } )) }}
-                    </div>
-                  </li>
-                  <li class="menu__item">
-                    <div class="menu__item-content-wrapper">
-                      <div class="menu__item-content"><a href="/Planer" class="menu__item-link">Planer</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="menu__item">
-                    <div class="menu__item-content-wrapper">
-                      <div class="menu__item-content"><a href="/Fylkeskommunen" class="menu__item-link">Fylkeskommunen</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="menu__item">
-                    <div class="menu__item-content-wrapper">
-                      <div class="menu__item-content"><a href="/Om-Telemark" class="menu__item-link">Om Telemark</a>
+                      <div class="menu__item-content"><a href="/Tapt-og-funnet" class="menu__item-link">Tapt og funnet </a>
                       </div>
                     </div>
                   </li>

@@ -1,0 +1,23 @@
+{% extends "tfkfarteBundle::pagelayout.html.twig" %}
+
+{% block content %}
+  <div class="constrained-content content">
+    {% if not ez_is_field_empty( content, 'show_name' ) %}
+      <h1>{{ ez_render_field(content, 'name') }}</h1>
+    {% endif %}
+
+    {% if not ez_is_field_empty( content, 'short_description' ) %}
+      <div class="byline">
+        {{ ez_render_field(content, 'short_description') }}
+      </div>
+    {% endif %}
+
+    {% if not ez_is_field_empty( content, 'description' ) %}
+      {{ ez_render_field(content, 'description') }}
+    {% endif %}
+    <div class="grid grid--12">
+      {{ render( controller("tfktelemarkBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['linkbox'] , 'viewType': 'line' }} )) }}
+    </div>
+  </div>
+
+{% endblock %}
