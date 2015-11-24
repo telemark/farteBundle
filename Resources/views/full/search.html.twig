@@ -1,0 +1,35 @@
+
+{% extends "tfkfarteBundle::pagelayout.html.twig" %}
+
+{% block content %}
+    <div class="constrained-content content">
+    <h1>{{ 'Søk'|trans }}</h1>
+
+    {% include form_template with { form: form, form_action: path( route, {'context': context} )} %}
+
+    {% if show_results  %}
+        <h2>{{ 'Søkeresultater'|trans }}</h2>
+
+        <p>{{ 'Funnet:'|trans }} {{ pager.getNbResults() }}</p>
+
+        <ul class="search-result">
+            {% for hit in pager %}
+                {{ render( controller( 'ez_content:viewContent', {'contentId': hit.valueObject.id, 'viewType': 'ezfind_line', 'params': { 'type': 'ezfind_line' }} ) ) }}
+            {% endfor %}
+        </ul>
+
+        {% if pager.haveToPaginate() %}
+            <div class="pagerfanta">
+                {{ pagerfanta( pager, 'twitter_bootstrap_translated', {
+                    'routeName': route,
+                    'routeParams': query_string|merge({'context': context}),
+                    'prev_message': 'Forrige',
+                    'next_message': 'Neste'
+                } )
+                }}
+            </div>
+        {% endif %}
+    {% endif %}
+</div>
+{% endblock %}
+

@@ -12,7 +12,7 @@
     {% if element_size is sameas('large') %}
       <div class="grid grid--12">
     {% else %}
-      <div class="grid grid--6">
+      <div class="grid grid--3-12">
     {% endif %}
       {% if not ez_is_field_empty( content, 'text' ) %}
         {{ ez_render_field( content, 'text' ) }}

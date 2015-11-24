@@ -1,0 +1,12 @@
+<form action="{{ form_action }}" method="post" {{ form_enctype(form) }} class="well form-search">
+
+    <!-- form errors -->
+    {{ form_errors(form) }}
+
+    {{ form_errors(form.term) }}
+    {{ form_widget(form.term) }}
+
+    {{ form_rest(form) }}
+    <label for="search">Søk i farte.no </label>
+    <input class="btn btn-primary clear" type="submit" value="{{ 'Søk'|trans }}"/>
+</form>

@@ -1,0 +1,41 @@
+{#
+    Folder - ezfind_line view
+#}
+
+{% set imageId = ez_field_value( content, 'image' ) %}
+{% set article_url = path( 'ez_urlalias', {'contentId': content.contentInfo.id} ) %}
+
+<li class="search-result__item">
+  {% if imageId is defined and imageId.destinationContentId is not empty %}
+    <a href={{ article_url }} title="Les mer om {{ ez_field_value( content, 'name' ) }}" tabindex="-1" class="search-result__item__img">  
+      {{ render(
+        controller( 
+          "ez_content:viewContent", 
+          {
+            "contentId": imageId.destinationContentId,
+            "viewType": "custom",
+            "params": { "img_render_size": "responsive_03" }
+          }
+        )
+      ) }}
+    </a>
+  {% endif %}
+
+  <div class="search-result__content">
+    <h2 class="search-result__item__header">
+      <a href={{ article_url }} title="Gå til {{ ez_field_value( content, 'name' ) }}">
+        {{ ez_render_field( content, 'name' ) }}
+      </a>
+    </h2>
+    <div class="sidenote">
+      Oppdatert {{ content.contentInfo.modificationDate|date("d.m.Y") }}
+    </div>
+    <div class="search-result__item__intro">
+      {% if not ez_is_field_empty( content, 'short_intro' ) %}
+        {{ ez_render_field( content, 'short_intro' ) }}
+      {% else %}
+        {{ ez_render_field( content, 'short_description' ) }}
+      {% endif %}
+    </div>
+  </div>
+</li>

@@ -3,18 +3,17 @@
             <footer id="footer-menu" role="contentinfo" class="page-footer clearfix">
               <div class="page-footer__block-left">
                 <div class="page-footer__content">
+                <ul>
                  <li class="side-menu__item"><a href="/">Forside</a></li>
                     <li class="side-menu__item"><a href="/Rutetabeller">Rutetabeller</a></li>
-                    <li class="side-menu__item"><a href="/Skoleskyss">Skoleskyss</a></li>
                     <li class="side-menu__item"><a href="/Biletter-og-priser">Biletter og priser</a></li>
-                    <li class="side-menu__item"><a href="/Nettbutikk">Nettbutikk</a></li>
-                    <li class="side-menu__item"><a href="/Om farte">Om farte</a></li>
-                    <li class="side-menu__item"><a href="/Tapt og funnet">Tapt og funnet</a></li>
+                    <li class="side-menu__item"><a href="/Om-farte">Om farte</a></li>
+                    <li class="side-menu__item"><a href="/Tapt-og-funnet">Tapt og funnet</a></li>
+                  </ul>
                 </div>
                 <div class="page-footer__content page-footer__content--last">
-                    <li class="side-menu__item"><a href="/Presse">Presse</a></li>
-                    <li class="side-menu__item"><a href="/English">English</a></li>
-                    <li class="side-menu__item"><a href="/Kontakt">Kontakt</a></li>
+   <a href="{{ path( ezpublish.rootLocation ) }}" class="page-header__logo">
+                <img src="{{ asset('bundles/tfkfarte/images/logo/tfk_logo_wb.svg') }}" alt="Telemark Fylkeskommune" /></a>
                 </div>
               </div>
               <div class="page-footer__block-right">
@@ -25,7 +24,7 @@
                     <ul>
                       <li>Telefon: 35 91 70 00</li>
                       <li>Telefaks: 35 91 70 01</li>
-                      <li>E-post: <a href="mailto:post@farte.no">post@farte.no</a></li>
+                      <li>E-post: <a href="mailto:farte@t-fk.no">farte@t-fk.no</a></li>
                     </ul>
                     <h3>Postadresse:</h3>
                     <p>Postboks 2844, 3702 Skien</p>
@@ -39,17 +38,5 @@
                 </div>
               </div>
             </footer>
-            <div class="page-footer-nav">
-            <div class="page-footer__block-left">
-                <div class="page-footer__content">
-                <a href="{{ path( ezpublish.rootLocation ) }}" class="page-header__logo">
-                <img src="{{ asset('bundles/tfkfarte/images/logo/tfk_logo_wb.svg') }}" alt="Telemark Fylkeskommune" /></a>
-            </div>
-             <div class="page-footer__content page-footer__content--last">
-             
-              </div>
-            </div>
-
-            </div>
           </div>
         </div>

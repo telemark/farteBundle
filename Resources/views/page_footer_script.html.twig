@@ -1,11 +1,11 @@
 {# Override this template and place javascript based statistics here (like Google Analytics) #}
 
 {% javascripts filter='yui_js' output='js/*'
-    '@tfktelemarkBundle/Resources/public/js/vendor/jquery-1.10.2.min.js'
     '@tfktelemarkBundle/Resources/public/js/main.js'
     '@tfktelemarkBundle/Resources/public/js/slider.js'
-    '@tfktelemarkBundle/Resources/public/js/tabs.js'
+    '@tfkfarteBundle/Resources/public/js/tabs.js'
     '@tfktelemarkBundle/Resources/public/js/popup.js'
+    '@tfkfarteBundle/Resources/public/js/datepicker-nb.js'
 %}
     <script type="text/javascript" src="{{ asset_url }}" async="async" defer="defer"></script>
 {% endjavascripts %}
@@ -14,7 +14,7 @@
 <script async="async" defer="defer" src='/js/local-analytics.js'></script>
 <script>
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-5569947-1', 'auto');
+ga('create', 'UA-5569947-22', 'auto');
 ga('set', 'anonymizeIp', true);
 ga('set', 'forceSSL', true);
 ga('send', 'pageview');

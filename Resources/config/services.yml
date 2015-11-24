@@ -2,4 +2,40 @@ services:
 #    tfkfarte.example:
 #        class: tfk\farteBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]
-
+    telemark.criteria_helper:
+        class: %ezdemo.criteria_helper.class%
+    telemark.search_helper:
+        class: %ezdemo.search_helper.class%
+        arguments:
+            - @ezpublish.api.service.search
+            - %ezdemo.search.list.limit%
+    telemark.menu.builder:
+        class: tfk\telemarkBundle\Menu\Builder
+        arguments:
+            - @knp_menu.factory
+            - @ezpublish.api.service.search
+            - @router
+            - @ezpublish.config.resolver
+            - @ezpublish.api.service.location
+            - @ezpublish.translation_helper
+            - @service_container
+            - @ezpublish.api.repository
+    telemark.menu.top:
+        class: tfk\telemarkBundle\Menu\Builder
+        factory_service: telemark.menu.builder
+        factory_method: createTopMenu
+        arguments: [ @request ]
+        scope: request # needed as we have the request as a dependency here
+        tags:
+            - { name: knp_menu.menu, alias: top} # The alias is what is used to retrieve the menu
+    netgen_search_and_filter.route_:
+        class: Netgen\SearchAndFilterBundle\Components\SearchAdapter
+        arguments:
+            - @netgen_search_and_filter.handler.default
+            - @netgen_search_and_filter.form_type.basic_search_form_type
+            - @form.factory
+            - @netgen_search_and_filter.criteria_builder.default_basic_search
+            - @netgen_search_and_filter.result_converter.default
+            - tfkfarteBundle:full:search.html.twig
+            - tfkfarteBundle:search:search.html.twig
+            - 10

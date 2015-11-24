@@ -1,0 +1,14 @@
+{#
+    Article - list view
+#}
+{% if content.contentInfo.mainLocationId %}
+  {% set article_url = path( 'ez_urlalias', {'contentId': content.contentInfo.id} ) %}
+      <h2 class="item__header">
+        <a href={{ article_url }} title="Les artikkelen {{ ez_field_value( content, 'title' ) }}">
+          {{ ez_render_field( content, 'title' ) }}
+        </a>
+      </h2>
+      {% if not ez_is_field_empty( content, 'show_publishdate' ) %}
+        <span class="sidenote">Oppdatert {{ content.contentInfo.modificationDate|date("d.m.Y") }}</span>
+      {% endif %}
+{% endif %}

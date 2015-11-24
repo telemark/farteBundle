@@ -1,0 +1,61 @@
+{#
+    Personprofil - ezfind_line view
+#}
+
+{% set imageId = ez_field_value( content, 'image' ) %}
+
+<li class="search-result__item">
+  {% if imageId is defined and imageId.destinationContentId is not empty %}
+    <div class="search-result__item__img">  
+      {{ render(
+        controller( 
+          "ez_content:viewContent", 
+          {
+            "contentId": imageId.destinationContentId,
+            "viewType": "custom",
+            "params": { "img_render_size": "responsive_03" }
+          }
+        )
+      ) }}
+    </div>
+  {% endif %}
+
+  <div class="search-result__content">
+    <h2 class="search-result__item__header">
+      {{ ez_render_field( content, 'firstname' ) }} {{ ez_render_field( content, 'lastname' ) }}
+    </h2>
+    <div class="sidenote">
+      {{ content.contentInfo.modificationDate|localizeddate( 'short', 'short', app.request.locale ) }}
+    </div>
+    <div class="search-result__item__intro">
+      <p>
+        {% if not ez_is_field_empty( content, 'jobtitle' ) %}
+          <em>{{ ez_render_field( content, 'jobtitle' ) }}</em>
+        {% endif %}
+        {% if not ez_is_field_empty( content, 'workplace' ) %}
+          <br />{{ ez_render_field( content, 'workplace' ) }}
+        {% endif %}
+        {% if not ez_is_field_empty( content, 'mail' ) %}
+          <br />{{ ez_render_field( content, 'mail' ) }}
+        {% endif %}
+        {% if not ez_is_field_empty( content, 'mobile' ) %}
+          <br /><span>{{ ez_render_field( content, 'mobile' ) }}</span>
+        {% endif %}
+        {% if not ez_is_field_empty( content, 'phone' ) %}
+          <br /><span>{{ ez_render_field( content, 'phone' ) }}</span>
+        {% endif %}
+        {% if not ez_is_field_empty( content, 'fax' ) %}
+          <br /><span>{{ ez_render_field( content, 'fax' ) }} (F)</span>
+        {% endif %}
+        {% if not ez_is_field_empty( content, 'url' ) %}
+          <br /><a href="{{ ez_render_field( content, 'url' ) }}">{{ ez_render_field( content, 'url.data_text' ) }}</a>
+        {% endif %}
+      </p>
+      {% if not ez_is_field_empty( content, 'description' ) %}
+        <div>
+          {{ ez_render_field( content, 'description' ) }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</li>

@@ -1,3 +1,20 @@
 tfkfarte_homepage:
     path:     /hello/{name}
     defaults: { _controller: tfkfarteBundle:Default:index }
+tfk_farte_reiseplanlegger:
+    pattern:  /reiseplanlegger/
+    defaults: { _controller: tfkfarteBundle:Reiseplanlegger:sok}
+tfk_farte_sanntid:
+    pattern:  /sanntid/
+    defaults: { _controller: tfkfarteBundle:Reiseplanlegger:sanntid}
+tfk_farte_holdeplasser:
+    pattern:  /reiseplanlegger/holdeplasser/
+    defaults: { _controller: tfkfarteBundle:Reiseplanlegger:holdeplasser}
+tfk_farte_holdeplasser_val:
+    pattern:  /reiseplanlegger/holdeplasser/{val}
+    defaults: { _controller: tfkfarteBundle:Reiseplanlegger:holdeplasser}
+netgen_search_example:
+    path: /search/{context}
+    defaults:  { _controller: NetgenSearchAndFilterBundle:Search:searchRoute, context: null }
+    requirements:
+        locationId:  \s

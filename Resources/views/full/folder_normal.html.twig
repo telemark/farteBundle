@@ -37,7 +37,11 @@
     }}
   {% endif %}
       <div class="main">
+ {% if content.getFieldValue('show_fullscreen').bool %}
+    <div class="main__main">
+{% else %}
         <div class="main__center">
+{% endif %}
 
           {% if not ez_is_field_empty( content, 'show_name' ) %}
             <h1>{{ ez_render_field(content, 'name') }}</h1>
@@ -70,7 +74,7 @@
               {{ ez_render_field(content, 'description') }}
             {% endif %}
 
-            {% if content.getFieldValue('show_children') %}
+            {% if content.getFieldValue('show_children').bool %}
               {% if show_pagination %}
                 {% if items|length() > 0 %}
                   <div class="grid grid--12">
@@ -103,10 +107,11 @@
             {% endif %}
 
       </div>
+   {% if content.getFieldValue('show_fullscreen').bool == false %}
    <aside class="main__right">
     {{ render( controller("tfktelemarkBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['infobox'] , 'viewType': 'line' }} )) }}
   </aside>
-
+{% endif %}
    <nav role="navigation" class="main__left">
 
         {% if location.path[2] is defined %}
