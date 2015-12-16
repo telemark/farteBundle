@@ -30,7 +30,7 @@
 
   {% if imageId is defined and imageId.destinationContentId is not empty %}
 
-  <a href={{ this_block_url }} target={{ this_block_target }}>
+  <a href={{ this_block_url }} target={{ this_block_target }} class="item__imglink imglink">
          {{ render(
             controller(
                 "ez_content:viewContent",
@@ -45,7 +45,7 @@
 
   {% endif %}
 
-	<div class="item__content">
+	<div class="news item__content">
 		{% if not ez_is_field_empty( content, 'show_title' ) %}
         	<a href={{ this_block_url }} target={{ this_block_target }}>
         		<h2 class="item__header">{{ ez_render_field( content, 'title' ) }}</h2>

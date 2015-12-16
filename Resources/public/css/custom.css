@@ -70,7 +70,7 @@ h1.tabs__content__header.js-tabs-tab {
        background: url('/bundles/tfkfarte/images/icon/farte_mini_mini.png')no-repeat 4% center #fff;
     padding-left: 3.5em;
     border: 0;
-    font-size: 1.4em;
+        font-size: 1.67em;
 }
 
 .btn, .btn--primary, .btn--link, .pagination__prev, .pagination__next, .pagination__list__link, .see-more {
@@ -91,13 +91,15 @@ h1.tabs__content__header.js-tabs-tab {
 }
 
 .item__content.news {
-    background-color: #fff;
     padding: 1em;
 }
 .news.grid__item--12 {
     background-color: #fff;
 }
-
+.campaign-content .item.item--vertical.grid__item--12-12 {
+    padding: 0px;
+    margin: 0;
+}
 .travelplannner, .realtime {
     background-color: #ffd520;
     font-size: 1.2em;
@@ -368,15 +370,12 @@ li.ui-timepicker-selected .ui-timepicker-duration {
 }
 .campaign-content {
     background: #FFD520;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    padding-right: 3em;
+    padding-right: 2em;
 }
 .campaign-content p {
     font-size: 2.9em;
     line-height: 1.9;
-   padding: 0.5em 0em 0em 1em;
+    padding: .2em 0 0 0.5em;
     font-family: "Telefon", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 }
 .page-header__logo {
@@ -516,6 +515,10 @@ input #basicsearch_term {
 .page-footer__content li.side-menu__item {
     border: 0;
     list-style: none;
+     background-image: url('/bundles/tfkfarte/images/icon/arrow_mini.png');
+     background-position: 0px 10px;
+    background-repeat: no-repeat;
+    padding-left: 1.3em;
 }
 .page-footer__content li.side-menu__item a {
     padding-left: 5px;
@@ -524,7 +527,44 @@ input #basicsearch_term {
     background: none;
 }
 .page-footer__content li.side-menu__item a:hover {
-        background-color: rgba(111, 106, 106, 0.49);
-    border-color: transparent;
-    border-radius: 5px;
+    text-decoration: none;
     }
+
+@media (max-width: 63.9375em) {
+
+.menu-trigger, .menu-search-trigger {
+    background-color: #6ac4ae;
+}
+    .menu-trigger:hover, .menu-trigger:focus, .menu-trigger:active, .menu-search-trigger:hover, .menu-search-trigger:focus, .menu-search-trigger:active {
+    background-color: #99E0CF;
+}
+.menu__item__dropdown {
+    -moz-box-shadow: inset 1px 0 rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 1px 0 rgba(0,0,0,0.1);
+    box-shadow: inset 1px 0 rgba(255, 255, 255, 0.37);
+}
+.menu, .menu a, .page-header .menu a {
+    color: #FFF;
+}
+.menu__level {
+    background: #000000;
+    -moz-transform: translate3d(100%,0,0);
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+}
+.menu__item-content:hover .menu__item-link {
+    background: #6ac4ae;
+}
+.menu__item-link {
+    box-shadow: inset 0 -1px rgba(255, 255, 255, 0.64);
+}
+.menu__item__dropdown {
+    -moz-box-shadow: inset 1px 0 rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 1px 0 rgba(0,0,0,0.1);
+    box-shadow: inset 1px 0 rgba(255,255,255,0.37);
+    background-color: #6ac4ae;
+}
+.menu__back-level:hover, .menu__back-level:focus, .menu__back-level:active {
+    background-color: #6ac4ae;
+}
+}

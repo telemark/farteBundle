@@ -17,18 +17,18 @@ class ReiseplanleggerController extends Controller
 
         $searchString = $val;
         $response = array();
-        $travelmagic_url = "http://reiseplanlegger.vkt.no";
+        $travelmagic_url = "http://reiseplanlegger.farte.no";
         $cnt = 10;
         $values = array();
 
         if ($searchString !== "") {
           $xml = file_get_contents($travelmagic_url . "/scripts/TravelMagic/TravelMagicWE.dll/StageXML?cnt=$cnt&filter=".urlencode($searchString));
           $sxm = simplexml_load_string($xml);
-          
+
           foreach ($sxm->i as $i) {
             array_push($values, $this->stageNameWithoutType($i['n']));
           }
-          
+
           foreach (array_unique($values) as $v) {
 
             $response[] = array( 'title' => htmlspecialchars_decode($v));
@@ -43,12 +43,12 @@ class ReiseplanleggerController extends Controller
 
         //return new JsonResponse($response);
 
-        /*return $this->render('VPHedmarkTrafikkBundle:parts:holdeplasser.html.twig', 
+        /*return $this->render('VPHedmarkTrafikkBundle:parts:holdeplasser.html.twig',
             array(
                 'response' => $response
             )
         );*/
-      
+
     }
 
     public function stageNameWithoutType($value)
@@ -70,15 +70,15 @@ class ReiseplanleggerController extends Controller
         $date = $request->request->get('date');
         $time = $request->request->get('time');
 
-        $iframeUrl = 'http://reiseplanlegger.vkt.no/scripts/TravelMagic/TravelMagicWE.dll/svar?'
+        $iframeUrl = 'http://reiseplanlegger.farte.no/scripts/TravelMagic/TravelMagicWE.dll/svar?'
                     . 'from=' . urlencode($from)
-                    . "&to=" . urlencode($to) 
-                    . "&date=" . urlencode($date) 
+                    . "&to=" . urlencode($to)
+                    . "&date=" . urlencode($date)
                     . "&time=" . $time;
 
-      return $this->render(                   
-          "tfkfarteBundle:full:reiseplanlegger.html.twig", 
-          array(     
+      return $this->render(
+          "tfkfarteBundle:full:reiseplanlegger.html.twig",
+          array(
             'iframeUrl' => $iframeUrl,
             'content' => $content,
             'location' => $location
@@ -92,11 +92,11 @@ class ReiseplanleggerController extends Controller
         $content = $this->getRepository()->getContentService()->loadContent(173);
         $location = $this->getRepository()->getLocationService()->loadLocation(173);
 
-        $iframeUrl = 'http://reiseplanlegger.vkt.no/scripts/TravelMagic/TravelMagicWE.dll/?dep1=1&now=1';
+        $iframeUrl = 'http://reiseplanlegger.farte.no/scripts/TravelMagic/TravelMagicWE.dll/?dep1=1&now=1';
 
-      return $this->render (                   
+      return $this->render (
           "tfkfarteBundle:full:reiseplanlegger_sanntid.html.twig",
-            array(     
+            array(
             'iframeUrl' => $iframeUrl
           )
       );
