@@ -1,51 +1,62 @@
 <div class="grid grid--6">
-<div class="grid__item grid__item--2-6">
-<form class="object-left" action="{{path('tfk_farte_reiseplanlegger')}}" method="post">
-      <button class="btn realtime" title="Trykk her for å kjøre søk" tabindex="10" name="travel" id="realtime" type="submit"><span>Reiseplanlegger</span></button>
-</form>
+  <div class="grid__item travel-tabs grid__item--2-6">
+    <form class="object-left" action="{{path('tfk_farte_reiseplanlegger')}}" method="post">
+          <button class="btn planner" title="Trykk her for å kjøre søk" tabindex="10" name="travel" id="realtime" type="submit"><span>Reiseplanlegger</span></button>
+    </form>
 
-<form class="object-left" action="{{path('tfk_farte_sanntid')}}" method="post">
-      <button class="btn realtime" title="Trykk her for å kjøre søk" tabindex="10" name="realtime" id="travel" type="submit"><span>Sanntid</span></button>
-</form>
+    <form class="object-left" action="{{path('tfk_farte_sanntid')}}" method="post">
+          <button class="btn realtime" title="Trykk her for å kjøre søk" tabindex="10" name="realtime" id="travel" type="submit"><span>Sanntid</span></button>
+    </form>
+  </div>
 </div>
-</div>
+
+
 <div id="farte-reiseplanlegger">
-<form id="searchForm" action="{{path('tfk_farte_reiseplanlegger')}}" method="post">
-<div class="grid grid--12">
-     <div class="grid__item grid__item--3-12">
-      <label for="from">Jeg reiser fra</label>
-      <input type="text" id="from" name="from" autocomplete="off" size="30"
-        title="Fra og til kan være en gateadresse, en holdeplass eller et sted. For adresser må et gyldig husnummer fylles ut. Mens du skriver vil listen under oppdateres med de mulige oppføringene som passer til det du har skrevet." />
-      <div id="from_choices" class="autocomplete"></div>
-    </div>
+  <form id="searchForm" action="{{path('tfk_farte_reiseplanlegger')}}" method="post">
+    <div class="grid grid--12">
 
-     <div class="grid__item grid__item--3-12">
-      <label for="to">Jeg reiser til</label>
-      <input type="text" id="to" name="to" autocomplete="off" size="30"
-        title="Fra og til kan være en gateadresse, en holdeplass eller et sted. For adresser må et gyldig husnummer fylles ut. Mens du skriver vil listen under oppdateres med de mulige oppføringene som passer til det du har skrevet." />
-      <div id="to_choices" class="autocomplete"></div>
-    </div>
 
-     <div class="grid__item grid__item--3-12">
-      <label for="date">Dato</label>
-      <input id="date" name="date" type="text" size="10"
-        title="Dato- og tidsfeltet angir når du ønsker å søke etter reiseforslag. Disse feltene settes automatisk til dagens dato og klokkeslett. Kalenderen kan brukes til å oppdatere datofeltet, ellers kan man og endre dato/tid manuelt." />
-    </div>
 
-    <div class="grid__item grid__item--3-12">
-      <label for="time">Tid</label>
-      <input id="time" name="time" type="text" size="5"
-        title="Dato- og tidsfeltet angir når du ønsker å søke etter reiseforslag. Disse feltene settes automatisk til dagens dato og klokkeslett. Kalenderen kan brukes til å oppdatere datofeltet, ellers kan man og endre dato/tid manuelt." />
-    </div>
-  </div>
+           <div class="grid__item grid__item--4-12">
+            <label for="from">Jeg reiser fra</label>
+            <input type="text" id="from" name="from" autocomplete="off" size="30"
+              title="Fra og til kan være en gateadresse, en holdeplass eller et sted. For adresser må et gyldig husnummer fylles ut. Mens du skriver vil listen under oppdateres med de mulige oppføringene som passer til det du har skrevet." />
+            <div id="from_choices" class="autocomplete"></div>
+          </div>
 
-  <div class="grid grid--12">
-       <div class="grid__item grid__item--12-12">
-         <button class="btn btn--primary travelplannner object-right" title="Trykk her for å kjøre søk" tabindex="10" name="submit" id="submit" type="submit"><span>Søk</span></button>
-  </div>
-  </div>
-</form>
+           <div class="grid__item grid__item--4-12">
+            <label for="to">Og skal til</label>
+            <input type="text" id="to" name="to" autocomplete="off" size="30"
+              title="Fra og til kan være en gateadresse, en holdeplass eller et sted. For adresser må et gyldig husnummer fylles ut. Mens du skriver vil listen under oppdateres med de mulige oppføringene som passer til det du har skrevet." />
+            <div id="to_choices" class="autocomplete"></div>
+          </div>
+
+          
+         <div class="grid__item grid__item--2-12 custom">
+          <label for="date">Dato</label>
+          <input id="date" name="date" type="text" size="10"
+            title="Dato- og tidsfeltet angir når du ønsker å søke etter reiseforslag. Disse feltene settes automatisk til dagens dato og klokkeslett. Kalenderen kan brukes til å oppdatere datofeltet, ellers kan man og endre dato/tid manuelt." />
+         </div>
+
+        <div class="grid__item grid__item--1-12">
+          <label for="time">Klokken</label>
+          <input id="time" name="time" type="text" size="5"
+            title="Dato- og tidsfeltet angir når du ønsker å søke etter reiseforslag. Disse feltene settes automatisk til dagens dato og klokkeslett. Kalenderen kan brukes til å oppdatere datofeltet, ellers kan man og endre dato/tid manuelt." />
+        
+        </div>
+
+         <div class="grid__item search--btn grid__item--1-12">
+           <button class="btn btn--primary travelplannner object-right" title="Trykk her for å kjøre søk" tabindex="10" name="submit" id="submit" type="submit"><span>Søk</span></button>
+        </div>
+
+        
+
+    </div>
+  </form>
 </div>
+
+
+
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 
 <script type="text/javascript">

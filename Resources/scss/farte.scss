@@ -1,0 +1,245 @@
+// Susy 
+
+
+		@import "susy";
+
+
+
+
+
+
+// FONT FACE 
+
+
+		// Open sans 
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+		// Telefon 
+		body:after { content: ''; background-image: url('//pls.webtype.com/v.gif?ct=140543,140543,140543,140543,140542,140542,140542,140542&r=50150&p=47997&h=pMoMUM9LP0%2bO9t8t%2fbX%2bnA%3d%3d'); }
+
+		@font-face {
+		 font-family: "Telefon";
+		 src: url("//cloud.webtype.com/webtype/ff2/2/066731ed-4a67-4240-9b6c-ea827d1b6477?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd70d48a6bdaafa14edde229a39f740ddb35f74acff3fb56e39d87ef10634859b94c596d32a9aafde61b1144ff183ec04e95682c8fae133e5d2b7a8a2a5044e");
+		 src:  url("//cloud.webtype.com/webtype/ff2/2/066731ed-4a67-4240-9b6c-ea827d1b6477?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd70d48a6bdaafa14edde229a39f740ddb35f74acff3fb56e39d87ef10634859b94c596d32a9aafde61b1144ff183ec04e95682c8fae133e5d2b7a8a2a5044e#iefix")  format("embedded-opentype"),
+			url("//cloud.webtype.com/webtype/ff2/1/67255ea1-109b-428a-a695-a71ceab7a8f8?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5cd70b49a2bfacae2316a9d31249a18974d040705e98c83ba1f912e06d72b15629de946192a830b66c57968013b944b4d1dac6e127fa7b13bd6be6b8260bcb4b") format("truetype"),
+			url("//cloud.webtype.com/webtype/ff2/3/1c5ae91c-40e5-4c24-8ee4-322d91609f98?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5ed70c1da5ebfcf277b9821f343d478188b4c4f244fa64fd0a01a4c9fc2ae27cfd8a9c28c382b5152c373acea2c98268ddcfce2c735bea2d646c026b7bd96350") format("woff"),
+			url("//cloud.webtype.com/webtype/ff2/4/18881d3c-cc3e-4175-9adc-d1c53a7488ce?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad59d70c46a8b2a8afbc64122858beae8ba1b965cae288529e72bfa416d1f04868513d7530f1829cb175a0cd75e7d4fb5d1b0534e996910329d844b553eb4cd4f3#web") format("svg");
+		 font-style: normal;
+		 font-weight: normal;
+		}
+
+
+
+
+// Farger 
+
+		$black:                 #333;
+		$white:                 #fff;
+		$turkis:                #6ac4ae;
+		$yellow:                #FFD520;
+
+		$l-gray:                #f3f4f5;
+		$m-gray:                #ededed;
+
+
+
+// Typografiske variabler
+
+		$open-sans:             "Open Sans", sans-serif;
+		$telefon:               "Telefon", sans-serif;
+
+
+
+// Diverse variabler 
+
+		$box-shadow:            1px 0px 2px 0px rgba(0,0,0,0.25);
+		$radius:                3px;
+
+
+
+// Typografi og generelle stiler
+
+		body, html, input {
+				font-family: $open-sans;
+				color:$black;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+				font-family: $telefon;
+		}
+
+
+
+
+
+// Head 
+
+		.page-header__logo {
+				margin: .5em 0;
+				margin-top: .75em;
+		}
+
+		.menu {
+				background: $black;
+		}
+
+		.menu__item-link {
+				color: $white;
+				transition: background .2s;
+				text-decoration: none;
+		}
+
+		.menu__item-link:hover, 
+		.menu__item-link:focus, 
+		.menu__item-link:active
+		.page-header {
+				transition: all 100ms ease;
+				text-decoration: none;
+				background: $turkis;
+				color: $black;
+		}
+
+		.menu__submenu {
+				background-color: $black;
+		}
+
+
+
+
+// Reiseplanlegger 
+
+		#farte-reiseplanlegger {
+				// @include span(4 of 4);
+				// @include gutters(0);
+				position: relative;
+				z-index: 10;
+				padding: 1.25em 1.875em;
+				box-shadow: $box-shadow;
+				border-radius: $radius;
+				background: $white;
+
+				label {
+						font-family: $telefon;
+				}
+
+				input[type="text"], input {
+						background-color:$l-gray;
+						font-size: 1.5em;
+						border:none;
+						padding: 1em 0.25em;
+						box-sizing: border-box;
+						max-width: 100%;
+						border-radius: $radius;
+						margin-top: 0.25em;
+				}
+
+
+				label[for="date"],
+				label[for="time"] {
+						display: block;
+				}
+
+				.grid.grid--12 {
+				    padding: .5em;
+				}
+
+				.grid__item {
+						box-sizing:border-box;
+				}
+
+				.grid.grid--12 {
+				    padding: .5em;
+				}
+
+				.grid__item--4-12 {
+						@include span(4 of 12);
+						margin-left:0;
+				}
+
+				.grid__item--2-12 {
+						@include span(1.85 of 12);
+						margin-left:0;
+				}
+
+				.grid__item--1-12 {
+						@include span(1 of 12);
+
+						&:last-child{
+								margin:0;
+						}
+				}
+
+				.grid__item.search--btn {
+
+						.object-right {
+								margin: 0;
+						}
+
+				}
+
+				button#submit {
+						height: 47px;
+						width: 100%;
+						margin-top: 1.85em!important;
+				}
+		}
+
+
+
+		.grid__item.travel-tabs {
+		    margin-left: 3em;
+
+
+					button.btn {
+							border-radius: 3px;
+							border-bottom-left-radius: 0;
+							border-bottom-right-radius: 0;
+							margin-bottom: -2px;
+							margin-left: -1px;
+							margin-right: 0.75em;
+							padding: .5em .5em;
+					}
+
+
+		}
+
+
+		.background-front {
+				background-color:$turkis;
+		}
+
+		.object-left {
+				margin: 0;
+		}
+
+
+
+
+// Kampanjefelt forside under reiseplanlegger
+
+.campaign-content  {
+		font-family: $telefon;
+		font-size: 2.5em;
+		padding: 0 1.5em;
+		background-color:$yellow;
+		border-radius: $radius;
+
+		.item {
+				padding-bottom: 0;
+
+				.item__content {
+
+						.item__intro {
+								padding-bottom: 0em;
+
+								.class-image {
+										margin-top:-.3em;
+								}
+						}
+
+				}
+		}
+}
+
+
+

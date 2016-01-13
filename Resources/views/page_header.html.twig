@@ -12,12 +12,6 @@
                               </li>
                             </ul>
                 </nav>
-                <div class="page-header__search">
-                {% block searchbox %}
-                  {{ render( controller("tfktelemarkBundle:Search:searchBox" )) }}
-                {% endblock %}
-                </div>
-                <div class="font-adjust__message js-font-adjust-message">For å endre tekststørrelsen, hold inne <kbd>Ctrl</kbd> (Windows/Linux) eller <kbd>Cmd</kbd> (Mac) og trykk på <kbd>+</kbd> for å forstørre eller <kbd>-</kbd> for å forminske.</div>
               </div>
             </div>
           </div>
@@ -73,4 +67,6 @@
                 </ul>
               </div>
             </nav>
+
+            <div class="font-adjust__message js-font-adjust-message">For å endre tekststørrelsen, hold inne <kbd>Ctrl</kbd> (Windows/Linux) eller <kbd>Cmd</kbd> (Mac) og trykk på <kbd>+</kbd> for å forstørre eller <kbd>-</kbd> for å forminske.</div>
 </header>

@@ -1,0 +1,572 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+/*
+This CSS resource incorporates links to font software which is
+the valuable copyrighted property of WebType LLC, The Font Bureau
+and/or their suppliers. You may not attempt to copy, install,
+redistribute, convert, modify or reverse engineer this font
+software. Please contact WebType with any questions: www.webtype.com
+*/
+
+body:after { content: ''; background-image: url(//pls.webtype.com/v.gif?ct=140543,140543,140543,140543,140542,140542,140542,140542&r=50150&p=47997&h=pMoMUM9LP0%2bO9t8t%2fbX%2bnA%3d%3d); }
+
+@font-face {
+ font-family: "Telefon";
+ src: url("//cloud.webtype.com/webtype/ff2/2/b89005dd-0ed8-4dca-87dd-7777b80a89ba?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd75f46a9baa9fe2a5b6c4f55ae56a3525af40f511dfc5e705623e287680168214b98026ad13996b8e750fca784a1d713302b3ac13a859293be651e06e43027");
+ src:  url("//cloud.webtype.com/webtype/ff2/2/b89005dd-0ed8-4dca-87dd-7777b80a89ba?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd75f46a9baa9fe2a5b6c4f55ae56a3525af40f511dfc5e705623e287680168214b98026ad13996b8e750fca784a1d713302b3ac13a859293be651e06e43027#iefix")  format("embedded-opentype"),
+  url("//cloud.webtype.com/webtype/ff2/1/453d40fa-e66c-45ac-bee0-e8d8ede3ec05?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5cd7094ba3eeadfb90309f2dcc1793193479579c81a93b10d617ca864112682789285788078937947c6b24cec1dc41ab5cb99fa828d8ccbe31e3f0fcb919a430") format("truetype"),
+  url("//cloud.webtype.com/webtype/ff2/3/20ab74fb-5d61-4801-903f-a45d0a4118cc?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5ed70f4ef1e8aeff4814016f91856a4dd86677af62cd687afdec11ea9f651e96f4bf47fb2f4dc7132b46eac273756059bcd85687d7a041cc203c4e9c6ab54cda") format("woff"),
+  url("//cloud.webtype.com/webtype/ff2/4/20b6763e-bae4-4098-9342-e5d04ebc803c?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad59d70f4ef2bcaefd813bf2fbc1f31f71916d02412f29a72259813e952f03ad5dfe99f83c0cf00a62103ba6fa99d3723ba162c931a3b9255f5133eb60a31ea842#web") format("svg");
+ font-style: normal;
+ font-weight: bold;
+}
+@font-face {
+ font-family: "Telefon";
+ src: url("//cloud.webtype.com/webtype/ff2/2/066731ed-4a67-4240-9b6c-ea827d1b6477?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd70d48a6bdaafa14edde229a39f740ddb35f74acff3fb56e39d87ef10634859b94c596d32a9aafde61b1144ff183ec04e95682c8fae133e5d2b7a8a2a5044e");
+ src:  url("//cloud.webtype.com/webtype/ff2/2/066731ed-4a67-4240-9b6c-ea827d1b6477?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd70d48a6bdaafa14edde229a39f740ddb35f74acff3fb56e39d87ef10634859b94c596d32a9aafde61b1144ff183ec04e95682c8fae133e5d2b7a8a2a5044e#iefix")  format("embedded-opentype"),
+  url("//cloud.webtype.com/webtype/ff2/1/67255ea1-109b-428a-a695-a71ceab7a8f8?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5cd70b49a2bfacae2316a9d31249a18974d040705e98c83ba1f912e06d72b15629de946192a830b66c57968013b944b4d1dac6e127fa7b13bd6be6b8260bcb4b") format("truetype"),
+  url("//cloud.webtype.com/webtype/ff2/3/1c5ae91c-40e5-4c24-8ee4-322d91609f98?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5ed70c1da5ebfcf277b9821f343d478188b4c4f244fa64fd0a01a4c9fc2ae27cfd8a9c28c382b5152c373acea2c98268ddcfce2c735bea2d646c026b7bd96350") format("woff"),
+  url("//cloud.webtype.com/webtype/ff2/4/18881d3c-cc3e-4175-9adc-d1c53a7488ce?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad59d70c46a8b2a8afbc64122858beae8ba1b965cae288529e72bfa416d1f04868513d7530f1829cb175a0cd75e7d4fb5d1b0534e996910329d844b553eb4cd4f3#web") format("svg");
+ font-style: normal;
+ font-weight: normal;
+}
+
+body {
+    ms-word-wrap: normal;
+    word-wrap: normal;
+    background-color: #fff;
+      font-family: 'Open Sans', sans-serif "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+
+iframe, object, embed {
+        max-width: 100%;
+        border: none;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+
+main#main {
+    background-color: #fff;
+}
+.page-header {
+    background-color: #fff;
+}
+
+button.btn.lost, button.btn.traffic, button.btn.travel, button.btn.routes {
+    background-color: #fff;
+    width: 100%;
+    line-height: 2em;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+
+button.btn.lost:hover, button.btn.traffic:hover, button.btn.travel:hover, button.btn.routes:hover {
+    background-color: #FFD520;
+}
+
+h1.tabs__content__header.js-tabs-tab {
+       background: url('/bundles/tfkfarte/images/icon/farte_mini_mini.png')no-repeat 4% center #fff;
+    padding-left: 3.5em;
+    border: 0;
+        font-size: 1.67em;
+}
+
+.btn, .btn--primary, .btn--link, .pagination__prev, .pagination__next, .pagination__list__link, .see-more {
+    border-radius: 5px;
+}
+
+.tabs {
+    margin-top: 2em;
+    margin-bottom: 0em;
+}
+
+.main__main {
+    width: 72.22222%;
+    float: left;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%;
+    margin-left: 26.38889%;
+}
+
+.item__content.news {
+    background-color: #fff;
+    padding: 1em;
+}
+.news.grid__item--12 {
+    background-color: #fff;
+}
+.campaign-content .item.item--vertical.grid__item--12-12 {
+    padding: 0px;
+    font-size: 0.82em;
+    margin: 0;
+}
+.travelplannner, .realtime {
+    background-color: #ffd520;
+    font-size: 1.2em;
+}
+.background-front {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #6AC4AE;
+}
+
+.ui-autocomplete-loading {
+    background: url('/bundles/tfkfarte/images/ajax-loader.gif')no-repeat 95% center #fff;
+}
+
+#ui-datepicker-div {
+    background-color: #fff;
+    border:1px solid #bdbdbd;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px 3px 0 rgba(51, 51, 51, .2);
+    color: #333;
+    margin-left: -85px;
+    max-width: 280px;
+    width: 100%;
+    display: none;
+     font-family: "Telefon", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+#ui-datepicker-div .ui-datepicker-header {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+    display: inline-block;
+    width: 100%
+}
+#ui-datepicker-div .ui-datepicker-header a.ui-datepicker-prev {
+    color: #333;
+    float: left;
+    padding: 2%;
+    text-align: center;
+    width: 20%
+}
+#ui-datepicker-div .ui-datepicker-header a.ui-datepicker-next {
+    color: #333;
+    float: right;
+    padding: 2%;
+    text-align: center;
+    width: 20%
+}
+#ui-datepicker-div .ui-datepicker-header .ui-datepicker-title {
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    box-shadow: -1px 0 0 0 #333 inset, 1px 0 0 0 #333 inset;
+    float: left;
+    font-weight: 500;
+    padding: 2%;
+    text-align: center;
+    width: 60%;
+    background-color: #ededed;
+}
+#ui-datepicker-div a:hover {
+    background-color: #ffd520;
+    border: medium none;
+    cursor: pointer
+}
+#ui-datepicker-div .ui-datepicker-calendar thead {
+    border-bottom: 1px solid #333;
+    box-shadow: 0 1px 0 0 #333;
+    height: 30px
+}
+#ui-datepicker-div .ui-datepicker-calendar thead tr {
+    float: left;
+    width: 100%
+}
+#ui-datepicker-div .ui-datepicker-calendar thead tr th {
+    width: 40px
+}
+#ui-datepicker-div .ui-datepicker-calendar thead tr th:last-child {
+    color: red
+}
+#ui-datepicker-div .ui-datepicker-calendar tbody {
+    background-color: #fff
+}
+#ui-datepicker-div .ui-datepicker-calendar tbody tr {
+    float: left;
+    width: 100%
+}
+#ui-datepicker-div .ui-datepicker-calendar tbody tr td {
+    border-bottom: 1px solid #999;
+    border-right: none;
+    box-shadow: none;
+    display: table-cell;
+    float: none;
+    height: 30px;
+    vertical-align: middle;
+    width: 40px
+}
+#ui-datepicker-div .ui-datepicker-calendar tbody tr td a {
+    color: #333;
+    display: block;
+    height: 100%;
+    padding: 9%;
+    text-align: center;
+    width: 100%
+}
+#ui-datepicker-div .ui-datepicker-calendar tbody tr td:last-child {
+    border-right: medium none
+}
+#farte-reiseplanlegger {
+    margin: 1em 0;
+    background-color: #fff;
+    padding: 0em 2em 0em 2em;
+    display: block;
+    border-radius: 5px;
+}
+#farte-reiseplanlegger label {
+    font-size: 1.5em;
+    line-height: 2em;
+    display: block;
+         font-family: "Telefon", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+
+div#farte-reiseplanlegger input {
+    height: 2.5em;
+    background-color: #f3f4f5;
+    border: none;
+    width: 100%
+}
+
+@media screen and (min-width: 856px) {
+    #farte-reiseplanlegger {
+        margin: 0;
+        margin-bottom: 1em;
+        display: block
+    }
+}
+
+#farte-reiseplanlegger .autocomplete {
+    display: block;
+    position: fixed;
+    width: 50%;
+    background-color: #fff;
+}
+#farte-reiseplanlegger .autocomplete .ui-autocomplete {
+
+}
+#farte-reiseplanlegger .autocomplete .ui-autocomplete li {
+    padding: .3em .6em;
+    list-style: none;
+}
+
+
+.ui-autocomplete {
+    top: 0;
+    left: 0;
+    cursor: default;
+    background-color: #fff;
+    box-shadow: none;
+    max-height: 500px;
+    overflow: none;
+    text-align: left;
+    z-index: 99999;
+    width: 90%
+}
+.ui-autocomplete li:focus,
+.ui-autocomplete li:hover {
+    background-color: #6AC4AE;
+    color: #f9f9f9
+}
+.ui-autocomplete a {
+    color: #FFF;
+    text-shadow: 0 -1px 0 #68a03d;
+    text-decoration: none;
+    display: block;
+    padding: 5px 28px 5px 5px;
+    position: relative
+}
+.ui-helper-hidden-accessible {
+    display: none
+}
+.ui-state-focus {
+    background-color: #6AC4AE
+}
+
+.ui-timepicker-wrapper {
+    overflow-y: auto;
+    height: 150px;
+    width: 6.5em;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    outline: 0;
+    z-index: 10001;
+    margin: 0
+}
+.ui-timepicker-wrapper.ui-timepicker-with-duration {
+    width: 11em
+}
+.ui-timepicker-list {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+.ui-timepicker-duration {
+    margin-left: 5px;
+    color: #888
+}
+.ui-timepicker-list:hover .ui-timepicker-duration {
+    color: #888
+}
+.ui-timepicker-list li {
+    padding: 3px 0 3px 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    color: #000;
+    list-style: none;
+    margin: 0
+}
+.ui-timepicker-list:hover .ui-timepicker-selected {
+    background: #fff;
+    color: #000
+}
+.ui-timepicker-list .ui-timepicker-selected:hover,
+.ui-timepicker-list li:hover,
+li.ui-timepicker-selected {
+    background: #7BC142;
+    color: #fff
+}
+.ui-timepicker-list li:hover .ui-timepicker-duration,
+li.ui-timepicker-selected .ui-timepicker-duration {
+    color: #ccc
+}
+.ui-timepicker-list li.ui-timepicker-disabled,
+.ui-timepicker-list li.ui-timepicker-disabled:hover,
+.ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
+    color: #888;
+    cursor: default
+}
+.ui-timepicker-list li.ui-timepicker-disabled:hover,
+.ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
+    background: #f2f2f2
+}
+.ht_knapp .gronn {
+    background-color: #7BC142
+}
+.ht_knapp .gronn a,
+.ht_knapp .gronn h1 {
+    text-shadow: 0 1px 0 #68A03D
+}
+.ht_knapp .gronn a:hover {
+    color: #333
+}
+
+@media all and (max-width: 544px) {
+    .ui-autocomplete {
+        width: 100%!important;
+        left: 0!important
+    }
+}
+.item {
+    position: initial;
+    padding: 1em 0;
+    overflow: hidden;
+}
+.item__content {
+    overflow: hidden;
+    padding-left: 0.5em;
+}
+.campaign-content {
+    background: #FFD520;
+    padding-right: 2em;
+}
+.campaign-content p {
+    font-size: 2.9em;
+    line-height: 1.9;
+    padding: .2em 0 0 0.5em;
+    font-family: "Telefon", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+.page-header__logo {
+    margin: 1.5em 0;
+}
+
+.menu {
+    background: #000;
+}
+
+.menu__item-link {
+    display: block;
+    color: #fff;
+    -moz-transition: background .2s;
+    -o-transition: background .2s;
+    -webkit-transition: background .2s;
+    transition: background .2s;
+    text-decoration: none;
+}
+
+.menu__item-link:hover, .menu__item-link:focus, .menu__item-link:active
+.page-header {
+    -webkit-transition: all 100ms ease;
+    -moz-transition: all 100ms ease;
+    -ms-transition: all 100ms ease;
+    -o-transition: all 100ms ease;
+    transition: all 100ms ease;
+    text-decoration: none;
+    background: #6ac4ae;
+    color: #333;
+}
+
+.menu__submenu {
+    background-color: #000;
+    }
+.page-header__logo img {
+    display: block;
+}
+
+
+.pagination {
+    position: relative;
+    text-align: center;
+}
+
+.pagination ul {
+    list-style: none;
+    padding-left: 85px;
+    padding-right: 85px;
+}
+
+.pagination li {
+    display: inline-block;
+    margin: 5px;
+}
+
+.pagination .prev {
+    position: absolute;
+    left: 0;
+}
+
+.pagination .prev a:before {
+    color: #383838;
+    font-size: 27px;
+    margin-left: -13px;
+    position: absolute;
+}
+
+.pagination .next {
+    position: absolute;
+    right: 0;
+}
+
+.pagination .next a:after {
+    color: #383838;
+    font-size: 27px;
+    margin-left: 4px;
+    position: absolute;
+}
+
+.pagination .next span, .pagination .prev span {
+    background-color: #e8f3f0;
+    border: 0 none;
+    color: #6c6c6c;
+    display: inline-block;
+    padding: 0.5em 1em;
+}
+
+.pagination a {
+    background-color: #e8f3f0;
+    border: 0 none;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: underline;
+}
+
+.pagination li.active span {
+    background-color: #ffd520;
+    color: #000;
+    border: 0 none;
+    display: inline-block;
+    padding: 0.5em 1em;
+}
+
+.pagination__next a, .pagination__prev a {
+    padding: 0;
+}
+
+.main .pagination {
+    float: left;
+    width: 100%;
+}
+
+/*.main__center {
+    display: inline-block;
+    float: none;
+    margin-left: 1.38889%;
+}
+
+.main__left {
+    margin-left: 0;
+}
+.main__right {
+    float: right;
+}
+*/
+input #basicsearch_term {
+    font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+}
+
+.slider__slide a {
+    float: left;
+}
+
+.page-footer__content li.side-menu__item {
+    border: 0;
+    list-style: none;
+     background-image: url('/bundles/tfkfarte/images/icon/arrow_mini.png');
+     background-position: 0px 10px;
+    background-repeat: no-repeat;
+    padding-left: 1.3em;
+}
+.page-footer__content li.side-menu__item a {
+    padding-left: 5px;
+}
+.page-footer__content li.side-menu__item a:after {
+    background: none;
+}
+.page-footer__content li.side-menu__item a:hover {
+    text-decoration: none;
+    }
+
+@media (max-width: 63.9375em) {
+
+.menu-trigger, .menu-search-trigger {
+    background-color: #6ac4ae;
+}
+    .menu-trigger:hover, .menu-trigger:focus, .menu-trigger:active, .menu-search-trigger:hover, .menu-search-trigger:focus, .menu-search-trigger:active {
+    background-color: #99E0CF;
+}
+.menu__item__dropdown {
+    -moz-box-shadow: inset 1px 0 rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 1px 0 rgba(0,0,0,0.1);
+    box-shadow: inset 1px 0 rgba(255, 255, 255, 0.37);
+}
+.menu, .menu a, .page-header .menu a {
+    color: #FFF;
+}
+.menu__level {
+    background: #000000;
+    -moz-transform: translate3d(100%,0,0);
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+}
+.menu__item-content:hover .menu__item-link {
+    background: #6ac4ae;
+}
+.menu__item-link {
+    box-shadow: inset 0 -1px rgba(255, 255, 255, 0.64);
+}
+.menu__item__dropdown {
+    -moz-box-shadow: inset 1px 0 rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 1px 0 rgba(0,0,0,0.1);
+    box-shadow: inset 1px 0 rgba(255,255,255,0.37);
+    background-color: #6ac4ae;
+}
+.menu__back-level:hover, .menu__back-level:focus, .menu__back-level:active {
+    background-color: #6ac4ae;
+}
+}
