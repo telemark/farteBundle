@@ -1,7 +1,5 @@
 {% set element_size = params.tabboks_size|default('large')%}
 
-    <div class="tabs js-tabs">
       <ul class="tabs__content">
         {{ render( controller("tfktelemarkBundle:Item:children", {'locationId': content.contentInfo.mainLocationId,  'params' : { 'class' : ['tabboks_tab'] , 'viewType': 'line', 'element_size': element_size }} )) }}
       </ul>
-    </div>

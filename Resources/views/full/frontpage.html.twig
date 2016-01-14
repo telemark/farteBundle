@@ -3,11 +3,13 @@
 {% block content %}
 <div class="content background-front">
 
-<div class="constrained-content">
-{% include 'tfkfarteBundle:frontpage:reiseplanlegger.html.twig' %}
-</div>
+  <div class="constrained-content">
+  {% include 'tfkfarteBundle:frontpage:reiseplanlegger.html.twig' %}
+  </div>
 
 </div>
+
+
 <div class="constrained-content">
   <div class="campaign-content">
   {{ render(
@@ -20,53 +22,257 @@
     )
   ) }}
   </div>
-<div class="grid grid--12">
-  <div class="grid__item grid__item--4-12 media item item--horizontal">
-   {{ render(
-    controller(
-      "ez_content:viewContent",
-        {
-          "contentId": 186,
-          "viewType": "line",
-          "params": {
-            "tabboks_size":"large"
-          }
-        }
-    )
-  ) }}
-    {{ render( controller("tfkfarteBundle:Item:messages", {'locationId': 189,  'params' : { 'class' : ['article'] , 'viewType': 'list', 'limit': '3' }} )) }}
-  </div>
+</div>
+
+
+<div class="constrained-content news">
+
+
+  <h1 class="news js-tabs-tab"><span class="ezstring-field">Aktuelt</span></h1>
+
+
+
+  <div class="grid grid--12">
     <div class="grid__item grid__item--4-12 media item item--horizontal">
-       {{ render(
-    controller(
-      "ez_content:viewContent",
-        {
-          "contentId": 187,
-          "viewType": "line",
-          "params": {
-            "tabboks_size":"large"
-          }
-        }
-    )
-  ) }}
+
+          <ul class="tabs__content">
+              <li id="tabboks-tab-145" class="tabs__content__item tabs__content__item--active">
+                    <div class="tabs__content__block">
+                       <div class="grid grid--12">
+                          <div class="item item--vertical grid__item--12"><a href="/Aktuelt/Velkommen-til-farte.no" title="Les artikkelen Velkommen til farte.no" class="item__imglink imglink"><img src="https://unsplash.it/368/181?image=20" alt=""></a>
+
+                          <div class="news item__content">
+                            <h2 class="item__header">
+                              <a href="/Aktuelt/Velkommen-til-farte.no" title="Les artikkelen Velkommen til farte.no"><span class="ezstring-field">Velkommen til farte.no</span></a>
+                            </h2>
+
+                            <span class="sidenote">Oppdatert 13.11.2015</span>
+
+                            <div class="item__intro">
+                              <div class="ezxmltext-field">
+                                <p>Telemark fylkeskommune er stolt eier av farte.no!&nbsp; Fylkeskommune lanserer nå sin egen nettside for kollektivtrafikk. &nbsp;</p>
+                              </div>
+                            </div>
+
+                          </div>
+                          </div>
+                       </div>
+                    </div>
+                </li>
+            </ul>
     </div>
-  <div class="grid__item grid__item--4-12 media item item--horizontal">
-   {{ render(
-    controller(
-      "ez_content:viewContent",
-        {
-          "contentId": 160,
-          "viewType": "line",
-          "params": {
-            "tabboks_size":"large"
-          }
-        }
-    )
-  ) }}
+
+    <div class="grid__item grid__item--4-12 media item item--horizontal">
+
+          <ul class="tabs__content">
+              <li id="tabboks-tab-145" class="tabs__content__item tabs__content__item--active">
+                    <div class="tabs__content__block">
+                       <div class="grid grid--12">
+                          <div class="item item--vertical grid__item--12"><a href="/Aktuelt/Velkommen-til-farte.no" title="Les artikkelen Velkommen til farte.no" class="item__imglink imglink"><img src="https://unsplash.it/368/181?image=42" alt=""></a>
+
+                          <div class="news item__content">
+                            <h2 class="item__header">
+                              <a href="/Aktuelt/Velkommen-til-farte.no" title="Les artikkelen Velkommen til farte.no"><span class="ezstring-field">Velkommen til farte.no</span></a>
+                            </h2>
+
+                            <span class="sidenote">Oppdatert 13.11.2015</span>
+
+                            <div class="item__intro">
+                              <div class="ezxmltext-field">
+                                <p>Telemark fylkeskommune er stolt eier av farte.no!&nbsp; Fylkeskommune lanserer nå sin egen nettside for kollektivtrafikk. &nbsp;</p>
+                              </div>
+                            </div>
+
+                          </div>
+                          </div>
+                       </div>
+                    </div>
+                </li>
+            </ul>
+    </div>
+
+    <div class="grid__item grid__item--4-12 media item item--horizontal">
+
+          <ul class="tabs__content">
+              <li id="tabboks-tab-145" class="tabs__content__item tabs__content__item--active">
+                    <div class="tabs__content__block">
+                       <div class="grid grid--12">
+                          <div class="item item--vertical grid__item--12"><a href="/Aktuelt/Velkommen-til-farte.no" title="Les artikkelen Velkommen til farte.no" class="item__imglink imglink"><img src="https://unsplash.it/368/181" alt=""></a>
+
+                          <div class="news item__content">
+                            <h2 class="item__header">
+                              <a href="/Aktuelt/Velkommen-til-farte.no" title="Les artikkelen Velkommen til farte.no"><span class="ezstring-field">Velkommen til farte.no</span></a>
+                            </h2>
+
+                            <span class="sidenote">Oppdatert 13.11.2015</span>
+
+                            <div class="item__intro">
+                              <div class="ezxmltext-field">
+                                <p>Telemark fylkeskommune er stolt eier av farte.no!&nbsp; Fylkeskommune lanserer nå sin egen nettside for kollektivtrafikk. &nbsp;</p>
+                              </div>
+                            </div>
+
+                          </div>
+                          </div>
+                       </div>
+                    </div>
+                </li>
+            </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="constrained-content news">
+
+    <div class="grid grid--12">
+      <div class="grid__item grid__item--4-12 media item item--horizontal">
+
+            <ul class="tabs__content">
+                <li id="tabboks-tab-145" class="tabs__content__item tabs__content__item--active">
+                <h1 class="tabs__content__header js-tabs-tab"><span class="ezstring-field">Trafikkmeldinger</span></h1>
+                      <div class="tabs__content__block">
+                         <div class="grid grid--12">
+                            <div class="item item--vertical grid__item--12"><a href="/Aktuelt/Velkommen-til-farte.no" title="Les artikkelen Velkommen til farte.no" class="item__imglink imglink"><img src="https://unsplash.it/368/181?image=19" alt=""></a>
+
+                            <div class="news item__content">
+                              <h2 class="item__header">
+                                <a href="/Aktuelt/Velkommen-til-farte.no" title="Les artikkelen Velkommen til farte.no"><span class="ezstring-field">Velkommen til farte.no</span></a>
+                              </h2>
+
+                              <span class="sidenote">Oppdatert 13.11.2015</span>
+
+                              <div class="item__intro">
+                                <div class="ezxmltext-field">
+                                  <p>Telemark fylkeskommune er stolt eier av farte.no!&nbsp; Fylkeskommune lanserer nå sin egen nettside for kollektivtrafikk. &nbsp;</p>
+                                </div>
+                              </div>
+
+                            </div>
+                            </div>
+                         </div>
+                      </div>
+                  </li>
+              </ul>
+      </div>
+
+      <div class="grid__item grid__item--4-12 media item item--horizontal">
+
+            <ul class="tabs__content">
+                <li id="tabboks-tab-145" class="tabs__content__item tabs__content__item--active">
+                <h1 class="tabs__content__header js-tabs-tab"><span class="ezstring-field">Skoleskyss</span></h1>
+                      <div class="tabs__content__block">
+                         <div class="grid grid--12">
+                            <div class="item item--vertical grid__item--12"><a href="/Aktuelt/Velkommen-til-farte.no" title="Les artikkelen Velkommen til farte.no" class="item__imglink imglink"><img src="https://unsplash.it/368/181?image=142" alt=""></a>
+
+                            <div class="news item__content">
+                              <h2 class="item__header">
+                                <a href="/Aktuelt/Velkommen-til-farte.no" title="Les artikkelen Velkommen til farte.no"><span class="ezstring-field">Velkommen til farte.no</span></a>
+                              </h2>
+
+                              <span class="sidenote">Oppdatert 13.11.2015</span>
+
+                              <div class="item__intro">
+                                <div class="ezxmltext-field">
+                                  <p>Telemark fylkeskommune er stolt eier av farte.no!&nbsp; Fylkeskommune lanserer nå sin egen nettside for kollektivtrafikk. &nbsp;</p>
+                                </div>
+                              </div>
+
+                            </div>
+                            </div>
+                         </div>
+                      </div>
+                  </li>
+              </ul>
+      </div>
+
+      <div class="grid__item grid__item--4-12 media item item--horizontal">
+
+            <ul class="tabs__content">
+                <li id="tabboks-tab-145" class="tabs__content__item tabs__content__item--active">
+                <h1 class="tabs__content__header js-tabs-tab"><span class="ezstring-field">Skoleskyss</span></h1>
+                      <div class="tabs__content__block">
+                         <div class="grid grid--12">
+                            <div class="item item--vertical grid__item--12"><a href="/Aktuelt/Velkommen-til-farte.no" title="Les artikkelen Velkommen til farte.no" class="item__imglink imglink"><img src="https://unsplash.it/368/181?image=5" alt=""></a>
+
+                            <div class="news item__content">
+                              <h2 class="item__header">
+                                <a href="/Aktuelt/Velkommen-til-farte.no" title="Les artikkelen Velkommen til farte.no"><span class="ezstring-field">Velkommen til farte.no</span></a>
+                              </h2>
+
+                              <span class="sidenote">Oppdatert 13.11.2015</span>
+
+                              <div class="item__intro">
+                                <div class="ezxmltext-field">
+                                  <p>Telemark fylkeskommune er stolt eier av farte.no!&nbsp; Fylkeskommune lanserer nå sin egen nettside for kollektivtrafikk. &nbsp;</p>
+                                </div>
+                              </div>
+
+                            </div>
+                            </div>
+                         </div>
+                      </div>
+                  </li>
+              </ul>
+
+      </div>
+    </div>
+
+</div>
+
+
+{#
+<div class="constrained-content">
+
+    <div class="grid grid--12">
+      <div class="grid__item grid__item--4-12 media item item--horizontal">
+       {{ render(
+        controller(
+          "ez_content:viewContent",
+            {
+              "contentId": 186,
+              "viewType": "line",
+              "params": {
+                "tabboks_size":"large"
+              }
+            }
+        )
+      ) }}
+        {{ render( controller("tfkfarteBundle:Item:messages", {'locationId': 189,  'params' : { 'class' : ['article'] , 'viewType': 'list', 'limit': '3' }} )) }}
+      </div>
+        <div class="grid__item grid__item--4-12 media item item--horizontal">
+           {{ render(
+        controller(
+          "ez_content:viewContent",
+            {
+              "contentId": 187,
+              "viewType": "line",
+              "params": {
+                "tabboks_size":"large"
+              }
+            }
+        )
+      ) }}
+        </div>
+      <div class="grid__item grid__item--4-12 media item item--horizontal">
+       {{ render(
+        controller(
+          "ez_content:viewContent",
+            {
+              "contentId": 160,
+              "viewType": "line",
+              "params": {
+                "tabboks_size":"large"
+              }
+            }
+        )
+      ) }}
+      </div>
+
   </div>
 
-</div>
-
 
 </div>
+#}
 {% endblock %}

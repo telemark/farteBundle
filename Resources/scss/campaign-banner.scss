@@ -1,0 +1,27 @@
+// Kampanjefelt forside under reiseplanlegger
+
+.campaign-content  {
+        font-family: $telefon;
+        font-size: 2.5em;
+        padding: 0em 1em 0px 1.25em;
+        background-color:$yellow;
+        border-radius: $radius;
+        line-height: 1.25em;
+
+        .item {
+                padding-bottom: 0;
+
+                .item__content {
+
+                        .item__intro {
+                                padding-bottom: 0em;
+                                margin:0;
+
+                                .class-image {
+                                        margin-top:-.3em;
+                                }
+                        }
+
+                }
+        }
+}

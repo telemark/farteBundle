@@ -1,14 +1,14 @@
-<div class="grid grid--6">
-  <div class="grid__item travel-tabs grid__item--2-6">
-    <form class="object-left" action="{{path('tfk_farte_reiseplanlegger')}}" method="post">
-          <button class="btn planner" title="Trykk her for å kjøre søk" tabindex="10" name="travel" id="realtime" type="submit"><span>Reiseplanlegger</span></button>
+
+  <div class="travel-tabs">
+    <form class="tabs object-left" action="{{path('tfk_farte_reiseplanlegger')}}" method="post">
+          <button class="btn planner active" title="Trykk her for å kjøre søk" tabindex="10" name="travel" id="realtime" type="submit"><span>Reiseplanlegger</span></button>
     </form>
 
-    <form class="object-left" action="{{path('tfk_farte_sanntid')}}" method="post">
+    <form class="tabs object-left" action="{{path('tfk_farte_sanntid')}}" method="post">
           <button class="btn realtime" title="Trykk her for å kjøre søk" tabindex="10" name="realtime" id="travel" type="submit"><span>Sanntid</span></button>
     </form>
   </div>
-</div>
+
 
 
 <div id="farte-reiseplanlegger">
