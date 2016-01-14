@@ -280,13 +280,15 @@ li.ui-timepicker-selected .ui-timepicker-duration {
     display: block; }
   #farte-reiseplanlegger input[type="text"], #farte-reiseplanlegger input {
     background-color: #f3f4f5;
-    font-size: 1.375em;
+    font-size: 1.25em;
     border: none;
     padding: 1em 0.25em;
     box-sizing: border-box;
     max-width: 100%;
     border-radius: 5px;
-    margin-top: 0.25em; }
+    margin-top: 0.25em;
+    font-family: "Open Sans";
+    color: #333; }
   @media screen and (min-width: 800px) {
     #farte-reiseplanlegger .grid.grid--12 {
       padding: .5em; }
@@ -329,6 +331,9 @@ li.ui-timepicker-selected .ui-timepicker-duration {
       width: 100%; }
     #farte-reiseplanlegger .grid__item.search--btn.grid__item--1-12 {
       margin-right: 0em; }
+    #farte-reiseplanlegger .grid__item.grid__item--1-12,
+    #farte-reiseplanlegger .grid__item.grid__item--2-12 {
+      margin-top: 0em; }
     #farte-reiseplanlegger input {
       min-width: 100%;
       margin-bottom: .75em; }
@@ -357,6 +362,7 @@ li.ui-timepicker-selected .ui-timepicker-duration {
 
 body, html, input {
   font-family: "Open Sans", sans-serif;
+  font-weight: 300;
   color: #333; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -366,33 +372,36 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
 .item__content.news {
-  background-color: #fff;
-  padding: 1em; }
+  background-color: #fff; }
 
 .news.grid__item--12 {
   background-color: #fff; }
 
 .item {
   position: initial;
-  padding: 1em 0;
   overflow: hidden; }
 
 .item__content {
-  overflow: hidden;
-  padding-left: 0.5em; }
+  overflow: hidden; }
 
 h1.news.js-tabs-tab {
-  background: url("/bundles/tfkfarte/images/icon/farte_mini_mini.png") no-repeat 0% center #fff;
+  background: url("/bundles/tfkfarte/images/icon/farte_mini_mini.png") no-repeat 0% top #fff;
   padding-left: 3.25em;
   border: 0;
   font-size: 1.67em;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  border-bottom: 1px solid #333;
+  padding-bottom: .5em; }
 
 h1.tabs__content__header.js-tabs-tab {
   background: url("/bundles/tfkfarte/images/icon/farte_mini_mini.png") no-repeat 4% center #fff;
   padding-left: 3.5em;
   border: 0;
-  font-size: 1.67em; }
+  font-size: 1.67em;
+  border-bottom: 1px solid #333; }
+
+.tabs__content {
+  border: none; }
 
 @media (max-width: 63.9375em) {
   .menu-trigger,
@@ -429,21 +438,48 @@ h1.tabs__content__header.js-tabs-tab {
 @media screen and (max-width: 37.5em) {
   .item--vertical .item__imglink {
     margin-top: 3px; }
+  .page-header__logo img {
+    height: 2.25em; }
+  #ui-datepicker-div {
+    margin-left: -1.19em;
+    z-index: 200 !important; }
+  .menu-trigger, .menu-search-trigger {
+    width: 2.75em;
+    height: 2.75em;
+    top: .29em;
+    margin-top: 0; }
+  .item:first-child {
+    padding-top: 1.25em; }
+  .news .item {
+    padding-bottom: 0em;
+    padding-top: .7em; }
+  .item__content {
+    padding: .75em .5em 0em 1em; }
   .item__content.news {
-    padding-top: 0; }
+    border-bottom: 1px solid; }
+    .item__content.news:last-child {
+      border: none; }
   .campaign-content {
     font-size: 1.75em;
-    padding: 1em; }
+    padding: 1em;
+    text-align: center; }
     .campaign-content .item {
-      padding: 0; }
+      padding: 0;
+      padding-top: 0; }
       .campaign-content .item .item__content {
         padding-left: 0; }
         .campaign-content .item .item__content .item__intro {
           padding-bottom: 0;
-          margin: 0; }
+          margin: 0;
+          line-height: 1.125em; }
           .campaign-content .item .item__content .item__intro .class-image {
             margin-top: 0em; }
       .campaign-content .item .full-head img {
         margin: 0 auto;
         width: 146px;
         display: block; } }
+
+@media screen and (max-width: 368px) {
+  #farte-reiseplanlegger button#submit {
+    margin-top: 0.5em !important; } }
+/*# sourceMappingURL=custom.css.map */

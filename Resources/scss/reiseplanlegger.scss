@@ -70,13 +70,15 @@
 
                 input[type="text"], input {
                         background-color:$l-gray;
-                        font-size: 1.375em;
+                        font-size: 1.25em;
                         border:none;
                         padding: 1em 0.25em;
                         box-sizing: border-box;
                         max-width: 100%;
                         border-radius: $radius;
                         margin-top: 0.25em;
+                        font-family: "Open Sans";
+                        color: $black;
                 }
 
 
@@ -146,6 +148,13 @@
                         .grid__item.search--btn.grid__item--1-12 {
                             margin-right: 0em;
                         }
+
+
+                        .grid__item.grid__item--1-12,
+                        .grid__item.grid__item--2-12 {
+                            margin-top:0em;
+                        }
+
 
                         input {
                             min-width: 100%;

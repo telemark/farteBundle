@@ -1,62 +1,31 @@
 // Susy 
-
-		@import "susy";
+@import "susy";
 
 
 
 // FONT FACE 
 
-		// Open sans 
-
-		@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
-
-
-		// Telefon 
-
-		body:after { content: ''; background-image: url('//pls.webtype.com/v.gif?ct=140543,140543,140543,140543,140542,140542,140542,140542&r=50150&p=47997&h=pMoMUM9LP0%2bO9t8t%2fbX%2bnA%3d%3d'); }
-
-		@font-face {
-		 font-family: "Telefon";
-		 src: url("//cloud.webtype.com/webtype/ff2/2/066731ed-4a67-4240-9b6c-ea827d1b6477?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd70d48a6bdaafa14edde229a39f740ddb35f74acff3fb56e39d87ef10634859b94c596d32a9aafde61b1144ff183ec04e95682c8fae133e5d2b7a8a2a5044e");
-		 src:  url("//cloud.webtype.com/webtype/ff2/2/066731ed-4a67-4240-9b6c-ea827d1b6477?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd70d48a6bdaafa14edde229a39f740ddb35f74acff3fb56e39d87ef10634859b94c596d32a9aafde61b1144ff183ec04e95682c8fae133e5d2b7a8a2a5044e#iefix")  format("embedded-opentype"),
-			url("//cloud.webtype.com/webtype/ff2/1/67255ea1-109b-428a-a695-a71ceab7a8f8?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5cd70b49a2bfacae2316a9d31249a18974d040705e98c83ba1f912e06d72b15629de946192a830b66c57968013b944b4d1dac6e127fa7b13bd6be6b8260bcb4b") format("truetype"),
-			url("//cloud.webtype.com/webtype/ff2/3/1c5ae91c-40e5-4c24-8ee4-322d91609f98?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5ed70c1da5ebfcf277b9821f343d478188b4c4f244fa64fd0a01a4c9fc2ae27cfd8a9c28c382b5152c373acea2c98268ddcfce2c735bea2d646c026b7bd96350") format("woff"),
-			url("//cloud.webtype.com/webtype/ff2/4/18881d3c-cc3e-4175-9adc-d1c53a7488ce?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad59d70c46a8b2a8afbc64122858beae8ba1b965cae288529e72bfa416d1f04868513d7530f1829cb175a0cd75e7d4fb5d1b0534e996910329d844b553eb4cd4f3#web") format("svg");
-		 font-style: normal;
-		 font-weight: normal;
-		}
+// Open sans 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 
 
+// Telefon 
+body:after { content: ''; background-image: url('//pls.webtype.com/v.gif?ct=140543,140543,140543,140543,140542,140542,140542,140542&r=50150&p=47997&h=pMoMUM9LP0%2bO9t8t%2fbX%2bnA%3d%3d'); }
 
-// Farger 
-
-$black:                 #333;
-$white:                 #fff;
-$turkis:                #6ac4ae;
-$l-turkis:							#99E0CF;
-$yellow:                #FFD520;
-
-$l-gray:                #f3f4f5;
-$m-gray:                #ededed;
-
-
-
-// Typografiske variabler
-
-$open-sans:             "Open Sans", sans-serif;
-$telefon:               "Telefon", sans-serif;
-
-
-
-// Diverse variabler 
-
-$box-shadow:            1px 0px 2px 0px rgba(0,0,0,0.25);
-$radius:                5px;
-
+    @font-face {
+     font-family: "Telefon";
+     src: url("//cloud.webtype.com/webtype/ff2/2/066731ed-4a67-4240-9b6c-ea827d1b6477?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd70d48a6bdaafa14edde229a39f740ddb35f74acff3fb56e39d87ef10634859b94c596d32a9aafde61b1144ff183ec04e95682c8fae133e5d2b7a8a2a5044e");
+     src:  url("//cloud.webtype.com/webtype/ff2/2/066731ed-4a67-4240-9b6c-ea827d1b6477?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd70d48a6bdaafa14edde229a39f740ddb35f74acff3fb56e39d87ef10634859b94c596d32a9aafde61b1144ff183ec04e95682c8fae133e5d2b7a8a2a5044e#iefix")  format("embedded-opentype"),
+    	url("//cloud.webtype.com/webtype/ff2/1/67255ea1-109b-428a-a695-a71ceab7a8f8?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5cd70b49a2bfacae2316a9d31249a18974d040705e98c83ba1f912e06d72b15629de946192a830b66c57968013b944b4d1dac6e127fa7b13bd6be6b8260bcb4b") format("truetype"),
+    	url("//cloud.webtype.com/webtype/ff2/3/1c5ae91c-40e5-4c24-8ee4-322d91609f98?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5ed70c1da5ebfcf277b9821f343d478188b4c4f244fa64fd0a01a4c9fc2ae27cfd8a9c28c382b5152c373acea2c98268ddcfce2c735bea2d646c026b7bd96350") format("woff"),
+    	url("//cloud.webtype.com/webtype/ff2/4/18881d3c-cc3e-4175-9adc-d1c53a7488ce?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad59d70c46a8b2a8afbc64122858beae8ba1b965cae288529e72bfa416d1f04868513d7530f1829cb175a0cd75e7d4fb5d1b0534e996910329d844b553eb4cd4f3#web") format("svg");
+     font-style: normal;
+     font-weight: normal;
+    }
 
 
 // Importere stiler
-
+@import "variables.scss";
 @import "header.scss";
 @import "datepicker.scss";
 @import "autocomplete.scss";
@@ -65,10 +34,11 @@ $radius:                5px;
 
 
 
-// Typografi og generelle stiler
 
+// Typografi og generelle stiler
 body, html, input {
 		font-family: $open-sans;
+        font-weight: 300;
 		color:$black;
 }
 
@@ -88,10 +58,8 @@ h1, h2, h3, h4, h5, h6 {
 
 
 // Nyhetssaker 
-
 .item__content.news {
     background-color: $white;
-    padding: 1em;
 }
 .news.grid__item--12 {
     background-color: $white;
@@ -99,21 +67,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .item {
     position: initial;
-    padding: 1em 0;
     overflow: hidden;
 }
 .item__content {
     overflow: hidden;
-    padding-left: 0.5em;
 }
 
 
 h1.news.js-tabs-tab {
-    background: url('/bundles/tfkfarte/images/icon/farte_mini_mini.png')no-repeat 0% center #fff;
+    background: url('/bundles/tfkfarte/images/icon/farte_mini_mini.png')no-repeat 0% top #fff;
     padding-left: 3.25em;
     border: 0;
     font-size: 1.67em;
     margin-bottom: 0;
+    border-bottom: 1px solid #333;
+    padding-bottom: .5em;
 }
 
 h1.tabs__content__header.js-tabs-tab {
@@ -121,12 +89,12 @@ h1.tabs__content__header.js-tabs-tab {
     padding-left: 3.5em;
     border: 0;
     font-size: 1.67em;
+    border-bottom:1px solid $black;
 }
 
-
-
-
-
+.tabs__content {
+    border: none;
+}
 
 
 
@@ -178,11 +146,7 @@ h1.tabs__content__header.js-tabs-tab {
         left: 0!important
     }
 
-
-
 }
-
-
 
 
 @media screen and (max-width: 37.5em) {
@@ -190,41 +154,87 @@ h1.tabs__content__header.js-tabs-tab {
 	    margin-top: 3px;
 	}
 
-	.item__content.news {
-	    padding-top:0;
-	}
+
+
+    .page-header__logo img {
+        height: 2.25em;
+    }
+
+    #ui-datepicker-div {
+        margin-left: -1.19em;
+        z-index: 200!important;
+    }
+
+    .menu-trigger, .menu-search-trigger {
+        width: 2.75em;
+        height: 2.75em;
+        top: .29em;
+        margin-top: 0;
+    }
 
 
 
+    .item:first-child {
+        padding-top: 1.25em;
+    }
 
-	.campaign-content {
-	    font-size: 1.75em;
-	    padding: 1em;
+    .news .item {
+        padding-bottom: 0em;
+        padding-top: .7em;
+    }
 
-	    .item {
-	    	padding: 0;
+    .item__content {
+        padding: .75em .5em 0em 1em;
+    }
 
-	    	.item__content {
-	    	    padding-left: 0;
+    .item__content.news {
+        border-bottom: 1px solid;
 
-	    	    .item__intro {
-	    	        padding-bottom: 0;
-	    	        margin: 0;
-
-	    	        .class-image {
-	    	            margin-top: 0em;
-	    	        }
-	    	    }
-	    	}
-
-	    	.full-head img {
-	    	    margin: 0 auto;
-	    	    width: 146px;
-	    	    display: block;
-	    	}
-
-	    }
-	}
+        &:last-child {
+            border:none;
+        }
+    }
 
 
+        .campaign-content {
+            font-size: 1.75em;
+            padding: 1em;
+            text-align: center;
+
+
+            .item {
+                padding: 0;
+                padding-top:0;
+
+                .item__content {
+                    padding-left: 0;
+
+                    .item__intro {
+                        padding-bottom: 0;
+                        margin: 0;
+                        line-height: 1.125em;
+
+                        .class-image {
+                            margin-top: 0em;
+                        }
+                    }
+                }
+
+                .full-head img {
+                    margin: 0 auto;
+                    width: 146px;
+                    display: block;
+                }
+
+            }
+        }
+
+
+}
+
+
+@media screen and (max-width:368px) {
+    #farte-reiseplanlegger button#submit {
+        margin-top: .5em!important;
+    }
 }
