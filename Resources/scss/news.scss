@@ -1,0 +1,51 @@
+// Nyhetssaker 
+.item__content.news {
+    background-color: $white;
+}
+.news.grid__item--12 {
+    background-color: $white;
+}
+
+
+.grid__item {
+    
+    .item {
+        position: initial;
+
+        .item__header a {
+            text-decoration: none;
+            margin: .5em 0 -.25em 0px;
+            display: block;
+        }
+
+    }
+
+}
+
+
+
+h1.news.js-tabs-tab {
+    background: url('/bundles/tfkfarte/images/icon/farte_mini_mini.png')no-repeat 0% top #fff;
+    padding-left: 3.25em;
+    border:0;
+    font-size: 1.67em;
+    margin-bottom: -1.375em;
+    padding-bottom: .5em;
+    margin-top: 2em;
+}
+
+h1.tabs__content__header.js-tabs-tab {
+    background: url('/bundles/tfkfarte/images/icon/farte_mini_mini.png')no-repeat 4% center #fff;
+    padding-left: 3.5em;
+    border: 0;
+    font-size: 1.67em;
+    margin-bottom: .1em;
+}
+
+.tabs__content {
+    border: none;
+}
+
+
+
+

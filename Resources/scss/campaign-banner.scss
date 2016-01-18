@@ -10,7 +10,8 @@
 
         .item { 
                 padding-top: 1.5em;
-                padding-bottom: 0;
+                padding-bottom: 1.60em;
+                overflow: visible;
 
                 .item__content {
                     overflow:visible;
@@ -44,13 +45,35 @@
 
 
 
-@media screen and (max-width:1000px) and (min-width: 600px) {
+
+@media screen and (max-width:1000px) and (min-width: 800px) {
 
 
     .campaign-content {
 
         .item {
-            padding-bottom: .5em;
+            padding-bottom: 1.5em;
+
+            .item__intro {
+                    font-size: .675em;
+            }
+
+        }
+
+
+    }
+
+}
+
+
+
+@media screen and (max-width:8000px) and (min-width: 600px) {
+
+
+    .campaign-content {
+
+        .item {
+            padding-bottom: 2.125em;
 
             .item__intro {
                     font-size: .675em;

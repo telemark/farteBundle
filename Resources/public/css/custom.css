@@ -354,7 +354,8 @@ li.ui-timepicker-selected .ui-timepicker-duration {
   line-height: 1.25em; }
   .campaign-content .item {
     padding-top: 1.5em;
-    padding-bottom: 0; }
+    padding-bottom: 1.60em;
+    overflow: visible; }
     .campaign-content .item .item__content {
       overflow: visible; }
       .campaign-content .item .item__content .item__intro {
@@ -369,22 +370,17 @@ li.ui-timepicker-selected .ui-timepicker-duration {
         .campaign-content .item .item__content .item__intro .class-image {
           margin-top: -.3em; }
 
-@media screen and (max-width: 1000px) and (min-width: 600px) {
+@media screen and (max-width: 1000px) and (min-width: 800px) {
   .campaign-content .item {
-    padding-bottom: .5em; }
+    padding-bottom: 1.5em; }
     .campaign-content .item .item__intro {
       font-size: .675em; } }
 
-body, html, input {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-  color: #333; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Telefon", sans-serif; }
-
-.object-left {
-  margin: 0; }
+@media screen and (max-width: 8000px) and (min-width: 600px) {
+  .campaign-content .item {
+    padding-bottom: 2.125em; }
+    .campaign-content .item .item__intro {
+      font-size: .675em; } }
 
 .item__content.news {
   background-color: #fff; }
@@ -392,8 +388,12 @@ h1, h2, h3, h4, h5, h6 {
 .news.grid__item--12 {
   background-color: #fff; }
 
-.item {
+.grid__item .item {
   position: initial; }
+  .grid__item .item .item__header a {
+    text-decoration: none;
+    margin: .5em 0 -.25em 0px;
+    display: block; }
 
 h1.news.js-tabs-tab {
   background: url("/bundles/tfkfarte/images/icon/farte_mini_mini.png") no-repeat 0% top #fff;
@@ -413,6 +413,17 @@ h1.tabs__content__header.js-tabs-tab {
 
 .tabs__content {
   border: none; }
+
+body, html, input {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: #333; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Telefon", sans-serif; }
+
+.object-left {
+  margin: 0; }
 
 @media (max-width: 63.9375em) {
   .menu-trigger,
@@ -444,10 +455,7 @@ h1.tabs__content__header.js-tabs-tab {
             transform: translate3d(100%, 0, 0); }
   .ui-autocomplete {
     width: 100% !important;
-    left: 0 !important; }
-  h1.news.js-tabs-tab,
-  h1.tabs__content__header.js-tabs-tab {
-    border-bottom: 1px solid #99E0CF; } }
+    left: 0 !important; } }
 
 @media screen and (max-width: 37.5em) {
   .item--vertical .item__imglink {
@@ -491,7 +499,13 @@ h1.tabs__content__header.js-tabs-tab {
       .campaign-content .item .full-head img {
         margin: 0 auto;
         width: 146px;
-        display: block; } }
+        display: block; }
+  .item--vertical .item__imglink {
+    margin-top: .875em; }
+  .item__content, .news.item__content {
+    padding: 0; }
+  h1.news.js-tabs-tab {
+    margin-bottom: -.950em; } }
 
 @media screen and (max-width: 368px) {
   #farte-reiseplanlegger button#submit {

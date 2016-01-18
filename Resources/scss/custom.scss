@@ -31,7 +31,7 @@ body:after { content: ''; background-image: url('//pls.webtype.com/v.gif?ct=1405
 @import "autocomplete.scss";
 @import "reiseplanlegger.scss";
 @import "campaign-banner.scss";
-
+@import "news.scss";
 
 
 
@@ -54,43 +54,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-
-
-// Nyhetssaker 
-.item__content.news {
-    background-color: $white;
-}
-.news.grid__item--12 {
-    background-color: $white;
-}
-
-.item {
-    position: initial;
-
-}
-
-
-h1.news.js-tabs-tab {
-    background: url('/bundles/tfkfarte/images/icon/farte_mini_mini.png')no-repeat 0% top #fff;
-    padding-left: 3.25em;
-    border:0;
-    font-size: 1.67em;
-    margin-bottom: -1.375em;
-    padding-bottom: .5em;
-    margin-top: 2em;
-}
-
-h1.tabs__content__header.js-tabs-tab {
-    background: url('/bundles/tfkfarte/images/icon/farte_mini_mini.png')no-repeat 4% center #fff;
-    padding-left: 3.5em;
-    border: 0;
-    font-size: 1.67em;
-    margin-bottom: .1em;
-}
-
-.tabs__content {
-    border: none;
-}
 
 
 
@@ -143,21 +106,12 @@ h1.tabs__content__header.js-tabs-tab {
     }
 
 
-
-    h1.news.js-tabs-tab,
-    h1.tabs__content__header.js-tabs-tab {
-
-        border-bottom: 1px solid $l-turkis;
-    }
-
 }
 
 @media screen and (max-width: 37.5em) {
 	.item--vertical .item__imglink {
 	    margin-top: 3px;
 	}
-
-
 
     .page-header__logo img {
         height: 2.25em;
@@ -174,8 +128,6 @@ h1.tabs__content__header.js-tabs-tab {
         top: .29em;
         margin-top: 0;
     }
-
-
 
     .item:first-child {
         padding-top: 1.25em;
@@ -231,6 +183,19 @@ h1.tabs__content__header.js-tabs-tab {
 
             }
         }
+
+
+    .item--vertical .item__imglink {
+        margin-top: .875em;
+      }
+
+    .item__content, .news.item__content {
+        padding: 0;
+    	}
+
+    h1.news.js-tabs-tab {
+        margin-bottom: -.950em;
+    	}
 
 
 }
