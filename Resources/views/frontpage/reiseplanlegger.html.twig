@@ -17,14 +17,14 @@
 
 
 
-           <div class="grid__item grid__item--4-12">
+           <div class="grid__item grid__item--4-12 from">
             <label for="from">Jeg reiser fra</label>
             <input type="text" id="from" name="from" autocomplete="off" size="30"
               title="Fra og til kan være en gateadresse, en holdeplass eller et sted. For adresser må et gyldig husnummer fylles ut. Mens du skriver vil listen under oppdateres med de mulige oppføringene som passer til det du har skrevet." />
             <div id="from_choices" class="autocomplete"></div>
           </div>
 
-           <div class="grid__item grid__item--4-12">
+           <div class="grid__item grid__item--4-12 to">
             <label for="to">Og skal til</label>
             <input type="text" id="to" name="to" autocomplete="off" size="30"
               title="Fra og til kan være en gateadresse, en holdeplass eller et sted. For adresser må et gyldig husnummer fylles ut. Mens du skriver vil listen under oppdateres med de mulige oppføringene som passer til det du har skrevet." />
@@ -32,20 +32,20 @@
           </div>
 
           
-         <div class="grid__item grid__item--2-12 custom">
+         <div class="grid__item grid__item--2-12 date">
           <label for="date">Dato</label>
           <input id="date" name="date" type="text" size="10"
             title="Dato- og tidsfeltet angir når du ønsker å søke etter reiseforslag. Disse feltene settes automatisk til dagens dato og klokkeslett. Kalenderen kan brukes til å oppdatere datofeltet, ellers kan man og endre dato/tid manuelt." />
          </div>
 
-        <div class="grid__item grid__item--1-12">
+        <div class="grid__item grid__item--1-12 time">
           <label for="time">Klokken</label>
           <input id="time" name="time" type="text" size="5"
             title="Dato- og tidsfeltet angir når du ønsker å søke etter reiseforslag. Disse feltene settes automatisk til dagens dato og klokkeslett. Kalenderen kan brukes til å oppdatere datofeltet, ellers kan man og endre dato/tid manuelt." />
         
         </div>
 
-         <div class="grid__item search--btn grid__item--1-12">
+         <div class="grid__item search--btn grid__item--1-12 search-btn">
            <button class="btn btn--primary travelplannner object-right" title="Trykk her for å kjøre søk" tabindex="10" name="submit" id="submit" type="submit"><span>Søk</span></button>
         </div>
 
@@ -54,6 +54,7 @@
     </div>
   </form>
 </div>
+
 
 
 

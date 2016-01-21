@@ -1,0 +1,31 @@
+#farte-reiseplanlegger {
+
+    input {
+        background-repeat: no-repeat;
+    }
+
+    input#from,
+    input#to,
+    input#date,
+    input#time {
+        padding-left:36px;
+    }
+
+    input#from {
+        background-image:url('/bundles/tfkfarte/images/icon/icon-fra.svg');
+    }
+
+    input#to {
+        background-image:url('/bundles/tfkfarte/images/icon/icon-til.svg');
+    }
+
+    input#date {
+        background-image:url('/bundles/tfkfarte/images/icon/icon-dato.svg');
+    }
+
+    input#time {
+        background-image:url('/bundles/tfkfarte/images/icon/icon-tid.svg');
+    }
+
+
+}

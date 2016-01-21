@@ -1,17 +1,11 @@
 // Susy 
 @import "susy";
 
-
-
-// FONT FACE 
-
-// Open sans 
+// Font: Open sans 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 
-
-// Telefon 
+// Font: Telefon 
 body:after { content: ''; background-image: url('//pls.webtype.com/v.gif?ct=140543,140543,140543,140543,140542,140542,140542,140542&r=50150&p=47997&h=pMoMUM9LP0%2bO9t8t%2fbX%2bnA%3d%3d'); }
-
     @font-face {
      font-family: "Telefon";
      src: url("//cloud.webtype.com/webtype/ff2/2/066731ed-4a67-4240-9b6c-ea827d1b6477?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd70d48a6bdaafa14edde229a39f740ddb35f74acff3fb56e39d87ef10634859b94c596d32a9aafde61b1144ff183ec04e95682c8fae133e5d2b7a8a2a5044e");
@@ -23,6 +17,8 @@ body:after { content: ''; background-image: url('//pls.webtype.com/v.gif?ct=1405
      font-weight: normal;
     }
 
+// Ikonfont Metro
+@import "icomoon.scss";
 
 // Importere stiler
 @import "variables.scss";
@@ -32,8 +28,7 @@ body:after { content: ''; background-image: url('//pls.webtype.com/v.gif?ct=1405
 @import "reiseplanlegger.scss";
 @import "campaign-banner.scss";
 @import "news.scss";
-
-
+@import "input.scss";
 
 // Typografi og generelle stiler
 body, html, input {
@@ -105,6 +100,19 @@ h1, h2, h3, h4, h5, h6 {
         left: 0!important
     }
 
+    .constrained-content {
+      margin-bottom: 0em;
+
+      .item {
+          .item {
+              padding:0;
+          }
+      }
+      
+    }
+
+
+
 
 }
 
@@ -129,10 +137,12 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 0;
     }
 
-    .item:first-child {
-        padding-top: 1.25em;
+    .news {
+        .item:first-child {
+            padding-top: 1.25em;
+        }    
     }
-
+    
     .news .item {
         padding-bottom: 0em;
         padding-top: .7em;
