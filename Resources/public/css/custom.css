@@ -1279,45 +1279,44 @@ li.ui-timepicker-selected .ui-timepicker-duration {
   font-size: 2.5em;
   padding: 0em 1em 0px 1.25em;
   background-color: #FFD520;
-  border-radius: 5px;
   line-height: 1.25em; }
-  /* line 11, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
+  /* line 10, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
   .campaign-content .item {
     padding-top: 1.5em;
     padding-bottom: 1.60em;
     overflow: visible; }
-    /* line 16, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
+    /* line 15, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
     .campaign-content .item .item__content {
       overflow: visible; }
-      /* line 21, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
+      /* line 18, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
       .campaign-content .item .item__content .item__intro {
         padding-bottom: 0em;
         margin: 0;
         line-height: 1.25em; }
-        /* line 27, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
+        /* line 24, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
         .campaign-content .item .item__content .item__intro .object-right {
           margin: -0.3em 0 .75em 1em; }
-        /* line 31, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
+        /* line 28, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
         .campaign-content .item .item__content .item__intro p {
           margin-bottom: 0;
           margin: 0; }
-        /* line 36, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
+        /* line 33, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
         .campaign-content .item .item__content .item__intro .class-image {
           margin-top: -.3em; }
 
 @media screen and (max-width: 1000px) and (min-width: 800px) {
-  /* line 54, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
+  /* line 51, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
   .campaign-content .item {
     padding-bottom: 1.5em; }
-    /* line 57, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
+    /* line 54, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
     .campaign-content .item .item__intro {
       font-size: .675em; } }
 
-@media screen and (max-width: 8000px) and (min-width: 600px) {
-  /* line 75, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  /* line 72, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
   .campaign-content .item {
     padding-bottom: 2.125em; }
-    /* line 78, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
+    /* line 75, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/campaign-banner.scss */
     .campaign-content .item .item__intro {
       font-size: .675em; } }
 
@@ -1337,28 +1336,68 @@ li.ui-timepicker-selected .ui-timepicker-duration {
     text-decoration: none;
     margin: .5em 0 -.25em 0px;
     display: block; }
+  /* line 21, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/news.scss */
+  .grid__item .item img {
+    margin-bottom: -4px; }
+  /* line 27, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/news.scss */
+  .grid__item .item .line.item__content .item__intro {
+    border-bottom: 1px solid lightgrey;
+    padding: .5em;
+    margin: 0; }
 
-/* line 27, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/news.scss */
-h1.news.js-tabs-tab {
-  background: url("/bundles/tfkfarte/images/icon/farte_mini_mini.png") no-repeat 0% top #fff;
-  padding-left: 3.25em;
+/* line 39, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/news.scss */
+h1.tabs__content__header.news {
+  background: url("/bundles/tfkfarte/images/icon/farte_mini_mini.png") no-repeat 4% 48% #fff;
+  padding-left: 2.5em;
   border: 0;
   font-size: 1.67em;
   margin-bottom: -1.375em;
   padding-bottom: .5em;
-  margin-top: 2em; }
-
-/* line 37, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/news.scss */
-h1.tabs__content__header.js-tabs-tab {
-  background: url("/bundles/tfkfarte/images/icon/farte_mini_mini.png") no-repeat 4% center #fff;
-  padding-left: 3.5em;
-  border: 0;
-  font-size: 1.67em;
+  margin-top: 0em;
+  background-size: 1.5em;
   margin-bottom: .1em; }
 
-/* line 45, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/news.scss */
+/* line 51, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/news.scss */
 .tabs__content {
   border: none; }
+
+/* line 58, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/news.scss */
+.grid.pictos .item {
+  overflow: hidden;
+  min-height: 220px; }
+
+/* line 63, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/news.scss */
+.grid.pictos .item-content {
+  padding: 0em 1.5em 0em 1.5em; }
+  /* line 66, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/news.scss */
+  .grid.pictos .item-content hr {
+    border-color: #333;
+    border-style: solid;
+    border-width: 1px; }
+  /* line 72, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/news.scss */
+  .grid.pictos .item-content h2 {
+    padding: 0;
+    margin: 0; }
+  /* line 77, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/news.scss */
+  .grid.pictos .item-content p {
+    padding: .5em 1.5em 0 8em; }
+
+/* line 83, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/news.scss */
+.grid.pictos .item-content.white p, .grid.pictos .item-content.white h2, .grid.pictos .item-content.white hr {
+  color: #fff;
+  border-color: #fff; }
+
+/* line 89, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/news.scss */
+.grid.pictos .item.school {
+  background: url("/bundles/tfkfarte/images/icon/skoleskyss.svg") no-repeat 0% 0% #fff; }
+
+/* line 93, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/news.scss */
+.grid.pictos .item.guarantee {
+  background: url("/bundles/tfkfarte/images/icon/reisegaranti.svg") no-repeat 0% 0% #fff; }
+
+/* line 97, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/news.scss */
+.grid.pictos .item.truetime {
+  background: url("/bundles/tfkfarte/images/icon/sanntid-feil.svg") no-repeat 0% 0% #fff; }
 
 /* line 3, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/input.scss */
 #farte-reiseplanlegger input {
@@ -1373,11 +1412,11 @@ h1.tabs__content__header.js-tabs-tab {
 
 /* line 14, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/input.scss */
 #farte-reiseplanlegger input#from {
-  background-image: url("/bundles/tfkfarte/images/icon/icon-fra.svg"); }
+  background-image: url("/bundles/tfkfarte/images/icon/icon-til.svg"); }
 
 /* line 18, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/input.scss */
 #farte-reiseplanlegger input#to {
-  background-image: url("/bundles/tfkfarte/images/icon/icon-til.svg"); }
+  background-image: url("/bundles/tfkfarte/images/icon/icon-fra.svg"); }
 
 /* line 22, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/input.scss */
 #farte-reiseplanlegger input#date {
@@ -1387,22 +1426,59 @@ h1.tabs__content__header.js-tabs-tab {
 #farte-reiseplanlegger input#time {
   background-image: url("/bundles/tfkfarte/images/icon/icon-tid.svg"); }
 
-/* line 34, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+/* line 37, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/input.scss */
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: .5em; }
+
+/* line 45, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/input.scss */
+.warn {
+  background-image: url("/bundles/tfkfarte/images/icon/trafikkmeldinger-stor.svg"); }
+
+/* line 1, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/menu.scss */
+.menu__item-link:hover,
+.menu__item-link:focus,
+.menu__item-link:active {
+  background-color: initial;
+  color: #fff; }
+
+/* line 8, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/menu.scss */
+.icon--menu-arrow-down.menu__item__dropdown.hide--to-l {
+  background-image: none;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #000; }
+
+/* line 18, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/menu.scss */
+li.menu__item:hover .icon--menu-arrow-down.menu__item__dropdown.hide--to-l {
+  border-top: 8px solid #6ac4ae; }
+
+/* line 23, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/menu.scss */
+li.menu__submenu-item:hover a {
+  background-color: #6ac4ae;
+  color: #fff; }
+
+/* line 35, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
 body, html, input {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   color: #333; }
 
-/* line 40, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+/* line 41, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Telefon", sans-serif; }
 
-/* line 44, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+/* line 45, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
 .object-left {
   margin: 0; }
 
 @media (max-width: 63.9375em) {
-  /* line 60, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 61, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .menu-trigger,
   .menu-search-trigger,
   .menu__back-level:hover,
@@ -1411,7 +1487,7 @@ h1, h2, h3, h4, h5, h6 {
   .menu__item__dropdown,
   .menu__item-content:hover .menu__item-link {
     background-color: #6ac4ae; }
-  /* line 70, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 71, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .menu-trigger:hover,
   .menu-trigger:focus,
   .menu-trigger:active,
@@ -1419,103 +1495,103 @@ h1, h2, h3, h4, h5, h6 {
   .menu-search-trigger:focus,
   .menu-search-trigger:active {
     background-color: #99E0CF; }
-  /* line 79, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 80, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .menu__item__dropdown {
     box-shadow: inset 1px 0 rgba(255, 255, 255, 0.37); }
-  /* line 83, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 84, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .menu__item-link {
     box-shadow: inset 0 -1px rgba(255, 255, 255, 0.64); }
-  /* line 87, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 88, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .menu,
   .menu a,
   .page-header {
     color: #fff; }
-  /* line 93, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 94, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .menu__level {
     background: #333;
     -webkit-transform: translate3d(100%, 0, 0);
             transform: translate3d(100%, 0, 0); }
-  /* line 98, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 99, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .ui-autocomplete {
     width: 100% !important;
     left: 0 !important; }
-  /* line 103, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 104, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .constrained-content {
     margin-bottom: 0em; }
-    /* line 107, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+    /* line 108, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
     .constrained-content .item .item {
       padding: 0; } }
 
 @media screen and (max-width: 37.5em) {
-  /* line 119, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 121, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .item--vertical .item__imglink {
     margin-top: 3px; }
-  /* line 123, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 125, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .page-header__logo img {
     height: 2.25em; }
-  /* line 127, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 129, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   #ui-datepicker-div {
     margin-left: -1.19em;
     z-index: 200 !important; }
-  /* line 132, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 134, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .menu-trigger, .menu-search-trigger {
     width: 2.75em;
     height: 2.75em;
     top: .29em;
     margin-top: 0; }
-  /* line 140, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 142, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .news .item:first-child {
     padding-top: 1.25em; }
-  /* line 145, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 147, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .news .item {
     padding-bottom: 0em;
     padding-top: .7em; }
-  /* line 150, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 152, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .item__content {
     padding: .75em .5em 0em 1em; }
-  /* line 154, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 156, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .item__content.news {
     border-bottom: 1px solid; }
-    /* line 157, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+    /* line 159, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
     .item__content.news:last-child {
       border: none; }
-  /* line 163, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 165, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .campaign-content {
     font-size: 1.75em;
     padding: 1em;
     text-align: center; }
-    /* line 169, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+    /* line 171, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
     .campaign-content .item {
       padding: 0;
       padding-top: 0; }
-      /* line 173, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+      /* line 175, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
       .campaign-content .item .item__content {
         padding-left: 0; }
-        /* line 176, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+        /* line 178, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
         .campaign-content .item .item__content .item__intro {
           padding-bottom: 0;
           margin: 0;
           line-height: 1.125em; }
-          /* line 181, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+          /* line 183, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
           .campaign-content .item .item__content .item__intro .class-image {
             margin-top: 0em; }
-      /* line 187, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+      /* line 189, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
       .campaign-content .item .full-head img {
         margin: 0 auto;
         width: 146px;
         display: block; }
-  /* line 197, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 199, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .item--vertical .item__imglink {
     margin-top: .875em; }
-  /* line 201, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 203, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   .item__content, .news.item__content {
     padding: 0; }
-  /* line 205, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 207, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   h1.news.js-tabs-tab {
     margin-bottom: -.950em; } }
 
 @media screen and (max-width: 368px) {
-  /* line 214, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
+  /* line 216, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/custom.scss */
   #farte-reiseplanlegger button#submit {
     margin-top: 0.5em !important; } }
 /*# sourceMappingURL=custom.css.map */

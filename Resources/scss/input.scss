@@ -12,11 +12,11 @@
     }
 
     input#from {
-        background-image:url('/bundles/tfkfarte/images/icon/icon-fra.svg');
+        background-image:url('/bundles/tfkfarte/images/icon/icon-til.svg');
     }
 
     input#to {
-        background-image:url('/bundles/tfkfarte/images/icon/icon-til.svg');
+        background-image:url('/bundles/tfkfarte/images/icon/icon-fra.svg');
     }
 
     input#date {
@@ -28,4 +28,20 @@
     }
 
 
+}
+
+
+
+// Icons 
+
+.icon {
+    display: inline-block;
+    width:24px;
+    height:24px;
+    vertical-align: middle;
+    margin-right: .5em;
+}
+
+.warn {
+    background-image:url('/bundles/tfkfarte/images/icon/trafikkmeldinger-stor.svg');
 }

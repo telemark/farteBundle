@@ -18,27 +18,33 @@
             display: block;
         }
 
+        img {
+          margin-bottom:-4px;
+        }
+
+        .line.item__content {
+
+            .item__intro {
+                border-bottom: 1px solid lightgrey;
+                padding: .5em;
+                margin: 0;
+            }
+
+        }
     }
 
 }
 
 
-
-h1.news.js-tabs-tab {
-    background: url('/bundles/tfkfarte/images/icon/farte_mini_mini.png')no-repeat 0% top #fff;
-    padding-left: 3.25em;
-    border:0;
+h1.tabs__content__header.news {
+    background: url("/bundles/tfkfarte/images/icon/farte_mini_mini.png") no-repeat 4% 48% #fff;
+    padding-left: 2.5em;
+    border: 0;
     font-size: 1.67em;
     margin-bottom: -1.375em;
     padding-bottom: .5em;
-    margin-top: 2em;
-}
-
-h1.tabs__content__header.js-tabs-tab {
-    background: url('/bundles/tfkfarte/images/icon/farte_mini_mini.png')no-repeat 4% center #fff;
-    padding-left: 3.5em;
-    border: 0;
-    font-size: 1.67em;
+    margin-top: 0em;
+    background-size: 1.5em;
     margin-bottom: .1em;
 }
 
@@ -47,5 +53,51 @@ h1.tabs__content__header.js-tabs-tab {
 }
 
 
+.grid.pictos {
+
+  .item {
+    overflow: hidden;
+    min-height: 220px;
+  }
+
+  .item-content {
+    padding: 0em 1.5em 0em 1.5em;
+
+      hr {
+        border-color: #333;
+        border-style: solid;
+        border-width: 1px;
+      }
+
+      h2 {
+        padding: 0;
+        margin: 0;
+      }
+
+      p {
+        padding: .5em 1.5em 0 8em;
+      }
+  }
+
+  .item-content.white {
+      p, h2, hr {
+        color:$white;
+        border-color:$white;
+      }
+  }
+
+  .item.school {
+    background: url("/bundles/tfkfarte/images/icon/skoleskyss.svg") no-repeat 0% 0% #fff;
+  }
+
+  .item.guarantee {
+    background: url("/bundles/tfkfarte/images/icon/reisegaranti.svg") no-repeat 0% 0% #fff;
+  }
+
+  .item.truetime {
+    background: url("/bundles/tfkfarte/images/icon/sanntid-feil.svg") no-repeat 0% 0% #fff;
+  }
+
+}
 
 
