@@ -1,0 +1,37 @@
+footer {
+
+    a {
+        text-decoration: none;
+    }
+
+}
+
+
+.highlight--dark .side-menu__item a:after {
+    background-image: none;
+}
+
+
+.highlight--dark .side-menu__item {
+  border-bottom-color: transparent;
+}
+
+
+.page-footer__box {
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  border: none;
+  padding: 0;
+}
+
+
+@media (min-width: 64em) {
+
+    .page-footer__block-left, 
+    .page-footer__block-right {
+      float: left;
+      width: 25%;
+    }
+
+}
