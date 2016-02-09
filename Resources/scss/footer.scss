@@ -4,6 +4,21 @@ footer {
         text-decoration: none;
     }
 
+    .side-menu__item a {
+        padding: 0.25em 0em;
+    }
+}
+
+.page-footer ul {
+  margin-top: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.page-footer .side-menu {
+  margin-top: 1.375em;
+  margin-bottom: initial;
+  border: none;
 }
 
 
@@ -25,13 +40,3 @@ footer {
   padding: 0;
 }
 
-
-@media (min-width: 64em) {
-
-    .page-footer__block-left, 
-    .page-footer__block-right {
-      float: left;
-      width: 25%;
-    }
-
-}
