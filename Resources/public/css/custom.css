@@ -1452,35 +1452,88 @@ li.menu__submenu-item:hover a {
   background-color: #6ac4ae;
   color: #fff; }
 
-/* line 3, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
-footer a {
-  text-decoration: none; }
+/* line 1, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+footer {
+  margin-bottom: 3em; }
+  /* line 4, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+  footer a {
+    text-decoration: none; }
+  /* line 9, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+  footer .side-menu__item a {
+    padding: 0.25em 0em; }
+  /* line 14, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+  footer .row {
+    overflow: auto;
+    padding-top: 1em; }
+  /* line 21, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+  footer ul li {
+    padding: .75em 0 0 2.75em; }
+  /* line 24, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+  footer ul li:first-child {
+    padding-top: .025em; }
+  /* line 30, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+  footer .column-3 ul,
+  footer .column-4 ul {
+    font-family: "Open sans", sans-serif;
+    font-weight: 100;
+    font-size: .875em; }
+  /* line 38, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+  footer .column-4 {
+    width: 21.0526315789%;
+    float: left;
+    margin-right: 5.2631578947%; }
+    /* line 41, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+    footer .column-4:last-child {
+      width: 21.0526315789%;
+      float: right;
+      margin-right: 0; }
+  /* line 46, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+  footer .column-4:not(:first-child) {
+    margin-top: 1.375em; }
+  /* line 51, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+  footer .column-3 {
+    width: 28.5714285714%;
+    float: left;
+    margin-right: 7.1428571429%; }
+    /* line 53, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+    footer .column-3 > p {
+      font-weight: 900; }
+    /* line 58, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+    footer .column-3:last-child {
+      width: 28.5714285714%;
+      float: right;
+      margin-right: 0; }
+    /* line 62, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+    footer .column-3 li:before {
+      content: "";
+      width: 22px;
+      height: 22px;
+      background: white;
+      position: absolute;
+      padding-right: 0;
+      margin-left: -2.65em; }
 
-/* line 7, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
-footer .side-menu__item a {
-  padding: 0.25em 0em; }
-
-/* line 12, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+/* line 75, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
 .page-footer ul {
   margin-top: 0;
   padding-left: 0;
   list-style: none; }
 
-/* line 18, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+/* line 82, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
 .page-footer .side-menu {
   margin-top: 1.375em;
   margin-bottom: initial;
   border: none; }
 
-/* line 25, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+/* line 90, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
 .highlight--dark .side-menu__item a:after {
   background-image: none; }
 
-/* line 30, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+/* line 95, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
 .highlight--dark .side-menu__item {
   border-bottom-color: transparent; }
 
-/* line 35, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
+/* line 100, /Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/Resources/scss/footer.scss */
 .page-footer__box {
   margin-top: 0;
   margin-right: 0;
