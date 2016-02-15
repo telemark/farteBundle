@@ -9,6 +9,8 @@
     input#date,
     input#time {
         padding-left:36px;
+        background-position: 0 50%;
+        background-size: 24px 24px;
     }
 
     input#from {
@@ -20,11 +22,15 @@
     }
 
     input#date {
-        background-image:url('/bundles/tfkfarte/images/icon/icon-dato.svg');
+        background-position: 4% 50%;
+        background-image: url("/bundles/tfkfarte/images/icon/icon-dato.svg");
+        background-size: 22px 22px;
     }
 
     input#time {
+        background-position: 4% 50%;
         background-image:url('/bundles/tfkfarte/images/icon/icon-tid.svg');
+        background-size: 22px 22px;
     }
 
 
