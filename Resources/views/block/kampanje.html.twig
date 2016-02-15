@@ -1,0 +1,15 @@
+{% if block.customAttributes.source is defined %}
+  <div class="constrained-content">
+    <div class="campaign-content" style="background-color: {{block.customAttributes.bgfarge}}; color: {{block.customAttributes.farge}};">
+      {{ render(
+         controller(
+             "ez_content:viewLocation",
+             {
+                 "locationId": block.customAttributes.source,
+                 "viewType": "line"
+             }
+         )
+      ) }}
+    </div>
+  </div>
+{% endif %}

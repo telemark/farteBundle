@@ -3,29 +3,6 @@
 {% block content %}
 
   {{ ez_render_field( content, "page" ) }}
-<div class="content background-front">
-
-  <div class="constrained-content">
-  {% include 'tfkfarteBundle:frontpage:reiseplanlegger.html.twig' %}
-  </div>
-
-</div>
-
-
-<div class="constrained-content">
-  <div class="campaign-content">
-  {{ render(
-    controller(
-      "ez_content:viewContent",
-        {
-          "contentId": 195,
-          "viewType": "line"
-        }
-    )
-  ) }}
-  </div>
-</div>
-
 
 <div class="constrained-content news">
 

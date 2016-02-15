@@ -5,6 +5,10 @@ system:
                 template: tfkfarteBundle:block:reiseplanlegger.html.twig
                 match:
                     Type: Reiseplanlegger
+            kampanje:
+                template: tfkfarteBundle:block:kampanje.html.twig
+                match:
+                    Type: Kampanje
 
 ezpage:
     layouts:
