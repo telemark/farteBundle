@@ -22,6 +22,7 @@ body:after { content: ''; background-image: url('//pls.webtype.com/v.gif?ct=1405
 
 // Importere stiler
 @import "variables.scss";
+@import "responsiv-tekst.scss";
 @import "header.scss";
 @import "datepicker.scss";
 @import "autocomplete.scss";

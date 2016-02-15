@@ -63,7 +63,7 @@ h1.tabs__content__header.news {
   }
 
   .item-content {
-    padding: 0em 1.5em 0em 1.5em;
+    padding: .975em 1.25em 1em 1.25em;
     font-size: 120%;
 
       hr {
@@ -75,30 +75,33 @@ h1.tabs__content__header.news {
       h2 {
         padding: 0;
         margin: 0;
+        border-bottom:2px solid;
       }
 
       p {
-        padding: .5em 1.5em 0 8em;
+        margin-left:5em;
       }
-  }
 
-  .item-content.white {
+      &.white {
       p, h2, hr {
         color:$white;
         border-color:$white;
       }
   }
+  }
+
+
 
   .item.school {
-    background: url("/bundles/tfkfarte/images/icon/skoleskyss.svg") no-repeat 0% 0% #fff;
+    background: url("/bundles/tfkfarte/images/icon/skoleskyss.svg") no-repeat 0% 0% $gray;
   }
 
   .item.guarantee {
-    background: url("/bundles/tfkfarte/images/icon/reisegaranti.svg") no-repeat 0% 0% #fff;
+    background: url("/bundles/tfkfarte/images/icon/reisegaranti.svg") no-repeat 0% 0% $turkis-mett;
   }
 
   .item.truetime {
-    background: url("/bundles/tfkfarte/images/icon/sanntid-feil.svg") no-repeat 0% 0% #fff;
+    background: url("/bundles/tfkfarte/images/icon/sanntid-feil.svg") no-repeat 0% 0% $key;
   }
 
 }
