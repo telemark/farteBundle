@@ -48,6 +48,15 @@ h1.tabs__content__header.news {
     margin-top: 0em;
     background-size: 1.5em;
     margin-bottom: .1em;
+
+    a {
+      text-decoration: none;
+      color:$black;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
 }
 
 .tabs__content {
@@ -56,6 +65,19 @@ h1.tabs__content__header.news {
 
 
 .grid.pictos {
+
+  @media screen and (max-width: 900px) {
+    .grid__item--4-12 {
+      width:100%;
+      margin: 0;
+      padding: .325em 0;
+      clear: both;
+
+      &:last-child {
+        padding-bottom:2em;
+      }
+    }
+  }
 
   .item {
     overflow: hidden;
@@ -79,7 +101,11 @@ h1.tabs__content__header.news {
       }
 
       p {
-        margin-left:5em;
+        margin-left:6em;
+        @media screen and (max-width: 900px) {
+          margin-left:6.5em;
+          margin-top:1em;
+        }
       }
 
       &.white {

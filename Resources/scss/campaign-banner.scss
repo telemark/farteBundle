@@ -21,8 +21,14 @@
                 line-height: 1.25em;
 
 
-                .object-right { 
-                    margin: -0.3em 0 .75em 1em;
+                .object-right {
+                    @media screen and (min-width: 600px) {
+                        margin: -0.3em 0 .75em 1em;
+                    }
+
+                    @media screen and (max-width: 600px) {
+                        margin: .75em 0em  1em 0;
+                    }
                 }
 
                 p {
