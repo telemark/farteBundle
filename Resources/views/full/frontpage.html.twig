@@ -1,6 +1,8 @@
 {% extends noLayout ? viewbaseLayout : "tfkfarteBundle::pagelayout.html.twig" %}
 
 {% block content %}
+
+  {{ ez_render_field( content, "page" ) }}
 <div class="content background-front">
 
   <div class="constrained-content">
