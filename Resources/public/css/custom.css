@@ -724,7 +724,7 @@ body:after {
   -webkit-transition: all 100ms ease;
   transition: all 100ms ease;
   text-decoration: none;
-  background: #6ac4ae;
+  background: #6AC4AE;
   color: #333; }
 
 .menu__submenu {
@@ -1055,7 +1055,7 @@ li.ui-timepicker-selected .ui-timepicker-duration {
       padding-right: .5em; } }
 
 .background-front {
-  background-color: #6ac4ae;
+  background-color: #6AC4AE;
   padding: 1em 0;
   overflow: hidden; }
 
@@ -1133,7 +1133,7 @@ h1.tabs__content__header.news {
   min-height: 220px; }
 
 .grid.pictos .item-content {
-  padding: 0em 1.5em 0em 1.5em;
+  padding: .975em 1.25em 1em 1.25em;
   font-size: 120%; }
   .grid.pictos .item-content hr {
     border-color: #333;
@@ -1141,22 +1141,22 @@ h1.tabs__content__header.news {
     border-width: 1px; }
   .grid.pictos .item-content h2 {
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    border-bottom: 2px solid; }
   .grid.pictos .item-content p {
-    padding: .5em 1.5em 0 8em; }
-
-.grid.pictos .item-content.white p, .grid.pictos .item-content.white h2, .grid.pictos .item-content.white hr {
-  color: #fff;
-  border-color: #fff; }
+    margin-left: 5em; }
+  .grid.pictos .item-content.white p, .grid.pictos .item-content.white h2, .grid.pictos .item-content.white hr {
+    color: #fff;
+    border-color: #fff; }
 
 .grid.pictos .item.school {
-  background: url("/bundles/tfkfarte/images/icon/skoleskyss.svg") no-repeat 0% 0% #fff; }
+  background: url("/bundles/tfkfarte/images/icon/skoleskyss.svg") no-repeat 0% 0% #DBDCD7; }
 
 .grid.pictos .item.guarantee {
-  background: url("/bundles/tfkfarte/images/icon/reisegaranti.svg") no-repeat 0% 0% #fff; }
+  background: url("/bundles/tfkfarte/images/icon/reisegaranti.svg") no-repeat 0% 0% #01BDA1; }
 
 .grid.pictos .item.truetime {
-  background: url("/bundles/tfkfarte/images/icon/sanntid-feil.svg") no-repeat 0% 0% #fff; }
+  background: url("/bundles/tfkfarte/images/icon/sanntid-feil.svg") no-repeat 0% 0% #000; }
 
 #farte-reiseplanlegger input {
   background-repeat: no-repeat; }
@@ -1200,10 +1200,10 @@ h1.tabs__content__header.news {
   border-top: 8px solid #000; }
 
 li.menu__item:hover .icon--menu-arrow-down.menu__item__dropdown.hide--to-l {
-  border-top: 8px solid #6ac4ae; }
+  border-top: 8px solid #6AC4AE; }
 
 li.menu__submenu-item:hover a {
-  background-color: #6ac4ae;
+  background-color: #6AC4AE;
   color: #fff; }
 
 footer {
@@ -1302,7 +1302,7 @@ h1, h2, h3, h4, h5, h6 {
   .menu__back-level:active,
   .menu__item__dropdown,
   .menu__item-content:hover .menu__item-link {
-    background-color: #6ac4ae; }
+    background-color: #6AC4AE; }
   .menu-trigger:hover,
   .menu-trigger:focus,
   .menu-trigger:active,
