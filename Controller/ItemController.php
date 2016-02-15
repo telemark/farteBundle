@@ -449,6 +449,34 @@ class ItemController extends Controller {
         );
     }
 
+    public function listeblokkInitFolderAction($locationId, $viewType, $layout = false, array $params = array()) {
+        $repository = $this->getRepository();
+        $searchService = $repository->getSearchService();
+
+        $query = new Query();
+
+        $query->criterion = new Criterion\LogicalAnd( array(
+                new Criterion\ParentLocationId($locationId),
+                new Criterion\Visibility( Criterion\Visibility::VISIBLE )
+            ) );
+        $query->sortClauses = array(
+            new SortClause\LocationPriority( Query::SORT_DESC ),
+            new SortClause\DatePublished( Query::SORT_DESC )
+        );
+
+        $query->limit = 3;
+        $result = $searchService->findContent( $query );
+
+        return $this->get( 'ez_content' )->viewLocation(
+            $locationId,
+            $viewType,
+            $layout,
+            array(
+                'result' => $result
+            ) + $params
+        );
+    }
+
     private function getSortOrder($location) {
         // Get sortfield data and sort results based on it. Fall back on Date Published
         // Note: Not all sort-methods have been implemented. Those that have are:

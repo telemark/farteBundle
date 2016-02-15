@@ -1,0 +1,17 @@
+<div class="constrained-content">
+    <div class="grid grid--12">
+
+        {% for item in valid_items %}
+          {{ render(
+                 controller(
+                     "ez_content:viewLocation",
+                     {
+                         "locationId": item.locationId,
+                         "viewType": "listebokser_item"
+                     }
+                )
+            ) }}
+
+        {% endfor %}
+    </div>
+</div>

@@ -9,6 +9,32 @@ system:
                 template: tfkfarteBundle:block:kampanje.html.twig
                 match:
                     Type: Kampanje
+            listebokser:
+                template: tfkfarteBundle:block:listebokser.html.twig
+                match:
+                    Type: Listebokser
+            fargebokser:
+                template: tfkfarteBundle:block:fargebokser.html.twig
+                match:
+                    Type: Fargebokser
+        location_view:
+            listebokser_item:
+                folder:
+                    controller: tfkfarteBundle:Item:listeblokkInitFolder
+                    template: tfkfarteBundle:block:listebokser_folder.html.twig
+                    match:
+                        Identifier\ContentType: "folder"
+            fargebokser_item:
+                folder:
+                    template: tfkfarteBundle:block:fargebokser_folder.html.twig
+                    match:
+                        Identifier\ContentType: "folder"
+        content_view:
+            listebokser_item_list:
+                article:
+                    template: tfkfarteBundle:block:listebokser_article.html.twig
+                    match:
+                        Identifier\ContentType: "article"
 
 ezpage:
     layouts:
