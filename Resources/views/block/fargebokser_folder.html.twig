@@ -1,0 +1,8 @@
+<div class="grid__item grid__item--4-12 media item item--horizontal">
+  <div class="item item--vertical {{content.getFieldValue('colorbox_class')}} grid__item--12">
+    <div class="item-content{% if content.getFieldValue('colorbox_white').bool == '1' %} white{% endif %}">
+      <h2>{{content.getFieldValue('name')}}</h2>
+      <p>{{content.getFieldValue('colorbox_text')}}</p>
+    </div>
+  </div>
+</div>

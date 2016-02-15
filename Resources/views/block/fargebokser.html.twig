@@ -1,0 +1,17 @@
+<div class="constrained-content news">
+    <div class="grid pictos grid--12">
+
+        {% for item in valid_items %}
+          {{ render(
+                 controller(
+                     "ez_content:viewLocation",
+                     {
+                         "locationId": item.locationId,
+                         "viewType": "fargebokser_item"
+                     }
+                )
+            ) }}
+
+        {% endfor %}
+    </div>
+</div>
