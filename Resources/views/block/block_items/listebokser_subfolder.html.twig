@@ -1,0 +1,12 @@
+<div class="line item__content">
+    <div class="item__intro">
+        <p><a href="{{path( 'ez_urlalias', {'contentId': content.contentInfo.id} )}}">{{ ez_render_field( content, 'name' ) }}</a></p>
+        {% if showIngress|default(false) %}
+        	{% if not ez_is_field_empty( content, 'short_intro' ) %}
+		        {{ ez_render_field( content, 'short_intro' ) }}
+		      {% else %}
+		        {{ ez_render_field( content, 'short_description' ) }}
+		      {% endif %}
+		    {% endif %}
+    </div>
+ </div>
