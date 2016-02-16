@@ -21,20 +21,24 @@ system:
             listebokser_item:
                 folder:
                     controller: tfkfarteBundle:Item:listeblokkInitFolder
-                    template: tfkfarteBundle:block:listebokser_folder.html.twig
+                    template: tfkfarteBundle:block:block_items/listebokser_folder.html.twig
                     match:
                         Identifier\ContentType: "folder"
             fargebokser_item:
                 folder:
-                    template: tfkfarteBundle:block:fargebokser_folder.html.twig
+                    template: tfkfarteBundle:block:block_items/fargebokser_folder.html.twig
                     match:
                         Identifier\ContentType: "folder"
         content_view:
             listebokser_item_list:
                 article:
-                    template: tfkfarteBundle:block:listebokser_article.html.twig
+                    template: tfkfarteBundle:block:block_items/listebokser_article.html.twig
                     match:
                         Identifier\ContentType: "article"
+                folder:
+                    template: tfkfarteBundle:block:block_items/listebokser_subfolder.html.twig
+                    match:
+                        Identifier\ContentType: "folder"
 
 ezpage:
     layouts:

@@ -36,5 +36,9 @@
           )
       ) }}
     {% endfor %}
+
+    {% if content.getFieldValue('listbox_showmore').bool == '1' %}
+      <div class="object-right"><a href="{{path(location)}}">Vis mer</a></div>
+    {% endif %}
   </div>
 </div>
