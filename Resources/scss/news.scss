@@ -11,6 +11,10 @@
     
     .item {
         position: initial;
+        
+        .object-right {
+            margin-left: .5em;
+        }
 
         .item__header a {
             text-decoration: none;
@@ -30,6 +34,11 @@
                 // border-bottom: 1px solid lightgrey;
                 // padding: .5em;
                 margin: 0;
+
+                p > a,
+                a {
+                  font-size: 1.1em;
+                }
             }
 
         }
@@ -66,31 +75,43 @@ h1.tabs__content__header.news {
 
 .grid.pictos {
 
+  .grid__item--4-12 {
+    border: 2px solid transparent;
+  }
+  .grid__item--4-12:hover {
+    border-color: black;
+  }
+
+  a {
+    color: $black;
+  }
+
+  .white {
+    p > a {
+      color: white;
+      font-size: .825em;
+      font-weight: 900;
+      border-bottom: 2px solid white;
+        &:hover {
+          border-color: $yellow;
+        }
+    }
+  }
+
   a {
     text-decoration: none;
     color: initial;
   }
 
-  @media screen and (max-width: 900px) {
-    .grid__item--4-12 {
-      width:100%;
-      margin: 0;
-      padding: .325em 0;
-      clear: both;
-
-      &:last-child {
-        padding-bottom:2em;
-      }
-    }
-  }
-
   .item {
     overflow: hidden;
     min-height: 220px;
+    padding-top:0;
+    padding-bottom:0;
   }
 
   .item-content {
-    padding: .975em 1.25em 1em 1.25em;
+    padding: 1.275em 1.25em 1.5em 1.25em;
     font-size: 120%;
 
       hr {
@@ -106,9 +127,9 @@ h1.tabs__content__header.news {
       }
 
       p {
-        margin-left:6em;
+        margin-left:6.75em;
         @media screen and (max-width: 900px) {
-          margin-left:6.5em;
+          margin-left:7.5em;
           margin-top:1em;
         }
       }
@@ -133,6 +154,20 @@ h1.tabs__content__header.news {
 
   .item.truetime {
     background: url("/bundles/tfkfarte/images/icon/sanntid-feil.svg") no-repeat 0% 0% $key;
+  }
+
+
+  @media screen and (max-width: 900px) {
+    .grid__item--4-12 {
+      width:100%;
+      margin: 0;
+      margin-bottom: .5em;
+      clear: both;
+
+      &:last-child {
+        margin-bottom:2em;
+      }
+    }
   }
 
 }

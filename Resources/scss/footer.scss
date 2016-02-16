@@ -4,6 +4,10 @@ footer {
 
     a {
         text-decoration: none;
+
+        &:hover {
+            border-bottom:1px solid white;
+        }
     }
 
     .side-menu__item a {
@@ -12,10 +16,16 @@ footer {
 
     .row {
         overflow: auto;
-        padding-top: 1em;
+        padding: 1em;
+
+        > p {
+            font-weight: 900;
+        }
     }
 
     ul {
+        margin-bottom: .325em;
+
         li {
             padding: .25em 0 0 1.75em;
         }
@@ -106,11 +116,7 @@ footer {
     .column-3 {
 
         &:last-child {
-            margin-bottom:2em;
-        }
-
-        > p {
-            font-weight: 900;
+            margin-bottom:1em;
         }
 
         li:before {

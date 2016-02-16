@@ -1064,10 +1064,11 @@ li.ui-timepicker-selected .ui-timepicker-duration {
   font-size: 2.5em;
   padding: 0em 1em 0px 1.25em;
   background-color: #FFD520;
-  line-height: 1.25em; }
+  line-height: 1.25em;
+  min-height: 246px; }
   .campaign-content .item {
-    padding-top: 1.5em;
-    padding-bottom: 1.60em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     overflow: visible; }
     .campaign-content .item .item__content {
       overflow: visible; }
@@ -1075,17 +1076,14 @@ li.ui-timepicker-selected .ui-timepicker-duration {
         padding-bottom: 0em;
         margin: 0;
         line-height: 1.25em; }
-        @media screen and (min-width: 600px) {
-          .campaign-content .item .item__content .item__intro .object-right {
-            margin: -0.3em 0 .75em 1em; } }
-        @media screen and (max-width: 600px) {
-          .campaign-content .item .item__content .item__intro .object-right {
-            margin: .75em 0em  1em 0; } }
+        .campaign-content .item .item__content .item__intro img {
+          border-radius: 110px;
+          margin-top: -1.75em;
+          width: 180px;
+          display: block; }
         .campaign-content .item .item__content .item__intro p {
           margin-bottom: 0;
           margin: 0; }
-        .campaign-content .item .item__content .item__intro .class-image {
-          margin-top: -.3em; }
 
 @media screen and (max-width: 1000px) and (min-width: 800px) {
   .campaign-content .item {
@@ -1107,6 +1105,8 @@ li.ui-timepicker-selected .ui-timepicker-duration {
 
 .grid__item .item {
   position: initial; }
+  .grid__item .item .object-right {
+    margin-left: .5em; }
   .grid__item .item .item__header a {
     text-decoration: none;
     margin: .5em 0 -.25em 0px;
@@ -1117,6 +1117,9 @@ li.ui-timepicker-selected .ui-timepicker-duration {
     border-bottom: none;
     padding: 0 .5em;
     margin: 0; }
+    .grid__item .item .line.item__content .item__intro p > a,
+    .grid__item .item .line.item__content .item__intro a {
+      font-size: 1.1em; }
 
 h1.tabs__content__header.news {
   background: url("/bundles/tfkfarte/images/icon/farte_mini_mini.png") no-repeat 4% 48% #fff;
@@ -1137,25 +1140,35 @@ h1.tabs__content__header.news {
 .tabs__content {
   border: none; }
 
+.grid.pictos .grid__item--4-12 {
+  border: 2px solid transparent; }
+
+.grid.pictos .grid__item--4-12:hover {
+  border-color: black; }
+
+.grid.pictos a {
+  color: #333; }
+
+.grid.pictos .white p > a {
+  color: white;
+  font-size: .825em;
+  font-weight: 900;
+  border-bottom: 2px solid white; }
+  .grid.pictos .white p > a:hover {
+    border-color: #FFD520; }
+
 .grid.pictos a {
   text-decoration: none;
   color: initial; }
 
-@media screen and (max-width: 900px) {
-  .grid.pictos .grid__item--4-12 {
-    width: 100%;
-    margin: 0;
-    padding: .325em 0;
-    clear: both; }
-    .grid.pictos .grid__item--4-12:last-child {
-      padding-bottom: 2em; } }
-
 .grid.pictos .item {
   overflow: hidden;
-  min-height: 220px; }
+  min-height: 220px;
+  padding-top: 0;
+  padding-bottom: 0; }
 
 .grid.pictos .item-content {
-  padding: .975em 1.25em 1em 1.25em;
+  padding: 1.275em 1.25em 1.5em 1.25em;
   font-size: 120%; }
   .grid.pictos .item-content hr {
     border-color: #333;
@@ -1166,10 +1179,10 @@ h1.tabs__content__header.news {
     margin: 0;
     border-bottom: 2px solid; }
   .grid.pictos .item-content p {
-    margin-left: 6em; }
+    margin-left: 6.75em; }
     @media screen and (max-width: 900px) {
       .grid.pictos .item-content p {
-        margin-left: 6.5em;
+        margin-left: 7.5em;
         margin-top: 1em; } }
   .grid.pictos .item-content.white p, .grid.pictos .item-content.white h2, .grid.pictos .item-content.white hr {
     color: #fff;
@@ -1183,6 +1196,15 @@ h1.tabs__content__header.news {
 
 .grid.pictos .item.truetime {
   background: url("/bundles/tfkfarte/images/icon/sanntid-feil.svg") no-repeat 0% 0% #000; }
+
+@media screen and (max-width: 900px) {
+  .grid.pictos .grid__item--4-12 {
+    width: 100%;
+    margin: 0;
+    margin-bottom: .5em;
+    clear: both; }
+    .grid.pictos .grid__item--4-12:last-child {
+      margin-bottom: 2em; } }
 
 #farte-reiseplanlegger input {
   background-repeat: no-repeat; }
@@ -1236,15 +1258,21 @@ footer {
   margin-bottom: 3em; }
   footer a {
     text-decoration: none; }
+    footer a:hover {
+      border-bottom: 1px solid white; }
   footer .side-menu__item a {
     padding: 0.25em 0em; }
   footer .row {
     overflow: auto;
-    padding-top: 1em; }
-  footer ul li {
-    padding: .25em 0 0 1.75em; }
-  footer ul li:first-child {
-    padding-top: .025em; }
+    padding: 1em; }
+    footer .row > p {
+      font-weight: 900; }
+  footer ul {
+    margin-bottom: .325em; }
+    footer ul li {
+      padding: .25em 0 0 1.75em; }
+    footer ul li:first-child {
+      padding-top: .025em; }
   footer .column-3 ul,
   footer .column-4 ul {
     font-family: "Open sans", sans-serif;
@@ -1295,10 +1323,7 @@ footer .column-4:not(:first-child) {
       display: block; } }
 
 footer .column-3:last-child {
-  margin-bottom: 2em; }
-
-footer .column-3 > p {
-  font-weight: 900; }
+  margin-bottom: 1em; }
 
 footer .column-3 li:before {
   content: "";
@@ -1347,6 +1372,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .object-left {
   margin: 0; }
+
+.fat {
+  font-weight: 900; }
+
+.grid__item.media.item {
+  padding: 0;
+  padding-top: .75em; }
+
+.pictos .grid__item.media.item {
+  padding: 0; }
 
 @media (max-width: 63.9375em) {
   .menu-trigger,
@@ -1404,8 +1439,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 2.75em;
     top: .29em;
     margin-top: 0; }
-  .news .item:first-child {
-    padding-top: 1.25em; }
   .news .item {
     padding-bottom: 0em;
     padding-top: .7em; }
@@ -1418,7 +1451,8 @@ h1, h2, h3, h4, h5, h6 {
   .campaign-content {
     font-size: 1.75em;
     padding: 1em;
-    text-align: center; }
+    text-align: center;
+    padding-top: 2.5em; }
     .campaign-content .item {
       padding: 0;
       padding-top: 0; }
@@ -1429,7 +1463,8 @@ h1, h2, h3, h4, h5, h6 {
           margin: 0;
           line-height: 1.125em; }
           .campaign-content .item .item__content .item__intro .class-image {
-            margin-top: 0em; }
+            margin-top: 0em;
+            margin-bottom: 1em; }
       .campaign-content .item .full-head img {
         margin: 0 auto;
         width: 146px;
