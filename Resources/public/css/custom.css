@@ -944,8 +944,10 @@ li.ui-timepicker-selected .ui-timepicker-duration {
       border-bottom-right-radius: 0;
       margin-bottom: -2px;
       margin-left: -1px;
-      margin-right: 0.35em;
-      padding: .5em .5em; }
+      margin-right: .35em;
+      padding: 0.5em .75em;
+      font-size: 1.125em;
+      text-decoration: none; }
     .travel-tabs form button#realtime.active {
       z-index: 100;
       position: relative;
@@ -971,7 +973,8 @@ li.ui-timepicker-selected .ui-timepicker-duration {
       padding: 1em; }
   #farte-reiseplanlegger label {
     font-family: "Telefon", sans-serif;
-    display: block; }
+    display: block;
+    font-size: 1.125em; }
   #farte-reiseplanlegger input[type="text"], #farte-reiseplanlegger input {
     background-color: #f3f4f5;
     font-size: 1.125em;
@@ -1070,6 +1073,8 @@ li.ui-timepicker-selected .ui-timepicker-duration {
     padding-top: 2em;
     padding-bottom: 2em;
     overflow: visible; }
+    .campaign-content .item .object-right {
+      margin: .4em 0 1em 1em; }
     .campaign-content .item .item__content {
       overflow: visible; }
       .campaign-content .item .item__content .item__intro {
@@ -1273,8 +1278,11 @@ footer {
       padding: .25em 0 0 1.75em; }
     footer ul li:first-child {
       padding-top: .025em; }
-  footer .column-3 ul,
-  footer .column-4 ul {
+  footer h3 {
+    font-weight: 600;
+    margin-bottom: .25em;
+    margin-top: .75em; }
+  footer .column-3 ul {
     font-family: "Open sans", sans-serif;
     font-size: .875em;
     font-weight: 400; }
@@ -1297,31 +1305,6 @@ footer {
     border: none;
     padding: 0; }
 
-footer .column-4:not(:first-child) {
-  margin-top: 1.375em; }
-
-@media screen and (min-width: 600px) {
-  footer .column-4 {
-    width: 21.0526315789%;
-    float: left;
-    margin-right: 5.2631578947%; }
-    footer .column-4:last-child {
-      width: 21.0526315789%;
-      float: right;
-      margin-right: 0; } }
-
-@media screen and (max-width: 600px) {
-  footer .column-4 {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-    text-align: center; }
-    footer .column-4:first-child img {
-      height: 89px;
-      margin: 0 auto;
-      display: block; } }
-
 footer .column-3:last-child {
   margin-bottom: 1em; }
 
@@ -1337,22 +1320,22 @@ footer .column-3 li:before {
 
 @media screen and (min-width: 600px) {
   footer .column-3 {
-    width: 28.5714285714%;
+    width: 31.8181818182%;
     float: left;
-    margin-right: 7.1428571429%; }
+    margin-right: 2.2727272727%; }
     footer .column-3:last-child {
-      width: 28.5714285714%;
+      width: 31.8181818182%;
       float: right;
-      margin-right: 0; } }
+      margin-right: 0;
+      padding-left: .5em;
+      box-sizing: border-box; } }
 
 @media screen and (max-width: 600px) {
   footer .column-3 {
     width: 100%;
     float: left;
     margin-left: 0;
-    margin-right: 0; }
-    footer .column-3:not(:first-child) > p {
-      margin-top: 1em; } }
+    margin-right: 0; } }
 
 .icon {
   display: inline-block;
