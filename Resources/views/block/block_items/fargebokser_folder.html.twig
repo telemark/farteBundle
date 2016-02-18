@@ -1,6 +1,10 @@
 <div class="grid__item grid__item--4-12 media item item--horizontal">
 	{% if content.getFieldValue('colorbox_link').bool == '1' %}
-		<a href="{{path(location)}}">
+    {% if content.getFieldValue('is_redirect_folder').bool == '1' and not ez_is_field_empty( content, 'redirect_url' ) %}
+      <a href="{{content.getFieldValue('redirect_url')}}">
+    {% else %}
+		  <a href="{{path(location)}}">
+    {% endif %}
 	{% endif %}
   <div class="item item--vertical {{content.getFieldValue('colorbox_class')}} grid__item--12">
     <div class="item-content{% if content.getFieldValue('colorbox_white').bool == '1' %} white{% endif %}">
