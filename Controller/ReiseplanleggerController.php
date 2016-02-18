@@ -17,7 +17,7 @@ class ReiseplanleggerController extends Controller
 
         $searchString = $val;
         $response = array();
-        $travelmagic_url = "http://reiseplanlegger.farte.no";
+        $travelmagic_url = "https://reiseplanlegger.farte.no";
         $cnt = 10;
         $values = array();
 
@@ -70,7 +70,7 @@ class ReiseplanleggerController extends Controller
         $date = $request->request->get('date');
         $time = $request->request->get('time');
 
-        $iframeUrl = 'http://reiseplanlegger.farte.no/scripts/TravelMagic/TravelMagicWE.dll/svar?'
+        $iframeUrl = 'https://reiseplanlegger.farte.no/scripts/TravelMagic/TravelMagicWE.dll/svar?'
                     . 'from=' . urlencode($from)
                     . "&to=" . urlencode($to)
                     . "&date=" . urlencode($date)
@@ -92,7 +92,7 @@ class ReiseplanleggerController extends Controller
         $content = $this->getRepository()->getContentService()->loadContent(173);
         $location = $this->getRepository()->getLocationService()->loadLocation(173);
 
-        $iframeUrl = 'http://reiseplanlegger.farte.no/scripts/TravelMagic/TravelMagicWE.dll/?dep1=1&now=1';
+        $iframeUrl = 'https://reiseplanlegger.farte.no/scripts/TravelMagic/TravelMagicWE.dll/?dep1=1&now=1';
 
       return $this->render (
           "tfkfarteBundle:full:reiseplanlegger_sanntid.html.twig",
