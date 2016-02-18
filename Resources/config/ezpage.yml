@@ -46,9 +46,9 @@ system:
 
 ezpage:
     layouts:
-        Forside:
+        Forsiden:
             name: Forside layout
             template: "tfkfarteBundle:zone:forsidelayout.html.twig"
 
     enabledLayouts:
-        - Forside
+        - Forsiden
