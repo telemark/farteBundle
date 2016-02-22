@@ -5,16 +5,15 @@
     font-size: 2.5em;
     padding: 0em 1em 0px 1.25em;
     background-color:$yellow;
-    line-height: 1.25em;
     min-height: 246px;
 
     .item { 
-        padding-top: 2em;
-        padding-bottom: 2em;
+        padding-top: 1.75em;
+        padding-bottom: 1.75em;
         overflow: visible;
 
         .object-right {
-            margin: .4em 0 1em 1em;
+            margin: .64em 0px 1em 1em;
         }
 
         .item__content {
@@ -23,7 +22,7 @@
             .item__intro {
                 padding-bottom: 0em;
                 margin:0;
-                line-height: 1.25em;
+                line-height: 1.5em;
 
                 img {
                     border-radius: 110px;

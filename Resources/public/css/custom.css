@@ -984,7 +984,7 @@ li.ui-timepicker-selected .ui-timepicker-duration {
     max-width: 100%;
     border-radius: 5px;
     margin-top: 0.25em;
-    font-family: "Open Sans";
+    font-family: 'Open Sans', sans-serif;
     color: #333; }
   @media screen and (min-width: 1101px) {
     #farte-reiseplanlegger .grid.grid--12 {
@@ -1067,20 +1067,19 @@ li.ui-timepicker-selected .ui-timepicker-duration {
   font-size: 2.5em;
   padding: 0em 1em 0px 1.25em;
   background-color: #FFD520;
-  line-height: 1.25em;
   min-height: 246px; }
   .campaign-content .item {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 1.75em;
+    padding-bottom: 1.75em;
     overflow: visible; }
     .campaign-content .item .object-right {
-      margin: .4em 0 1em 1em; }
+      margin: .64em 0px 1em 1em; }
     .campaign-content .item .item__content {
       overflow: visible; }
       .campaign-content .item .item__content .item__intro {
         padding-bottom: 0em;
         margin: 0;
-        line-height: 1.25em; }
+        line-height: 1.5em; }
         .campaign-content .item .item__content .item__intro img {
           border-radius: 110px;
           margin-top: -1.75em;
