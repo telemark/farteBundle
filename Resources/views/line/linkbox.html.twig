@@ -45,7 +45,7 @@
 
   {% endif %}
 
-	<div class="news item__content">
+	<div class="item__content">
 		{% if not ez_is_field_empty( content, 'show_title' ) %}
         	<a href={{ this_block_url }} target={{ this_block_target }}>
         		<h2 class="item__header">{{ ez_render_field( content, 'title' ) }}</h2>

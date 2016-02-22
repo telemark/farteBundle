@@ -24,6 +24,10 @@ system:
                     template: tfkfarteBundle:block:block_items/listebokser_folder.html.twig
                     match:
                         Identifier\ContentType: "folder"
+                infobox:
+                    template: tfkfarteBundle:block:block_items/listebokser_infobox.html.twig
+                    match:
+                        Identifier\ContentType: "infobox"
             fargebokser_item:
                 folder:
                     template: tfkfarteBundle:block:block_items/fargebokser_folder.html.twig
@@ -42,9 +46,9 @@ system:
 
 ezpage:
     layouts:
-        Forside:
+        Forsiden:
             name: Forside layout
             template: "tfkfarteBundle:zone:forsidelayout.html.twig"
 
     enabledLayouts:
-        - Forside
+        - Forsiden
