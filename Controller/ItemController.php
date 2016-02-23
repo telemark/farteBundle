@@ -451,6 +451,7 @@ class ItemController extends Controller {
 
     public function listeblokkInitFolderAction($locationId, $viewType, $layout = false, array $params = array()) {
         $repository = $this->getRepository();
+        $location = $repository->getLocationService()->loadLocation($locationId);
         $searchService = $repository->getSearchService();
 
         $query = new Query();
@@ -459,10 +460,7 @@ class ItemController extends Controller {
                 new Criterion\ParentLocationId($locationId),
                 new Criterion\Visibility( Criterion\Visibility::VISIBLE )
             ) );
-        $query->sortClauses = array(
-            new SortClause\LocationPriority( Query::SORT_DESC ),
-            new SortClause\DatePublished( Query::SORT_DESC )
-        );
+        $query->sortClauses = $this->getSortOrder($location);
 
         $query->limit = 3;
         $result = $searchService->findContent( $query );
