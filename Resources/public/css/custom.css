@@ -1061,10 +1061,7 @@ li.ui-timepicker-selected .ui-timepicker-duration {
   background-color: #6AC4AE;
   padding: 1em 0;
   overflow: hidden; }
-.constrained-content {
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
+
 .campaign-content {
   font-family: "Telefon", sans-serif;
   font-size: 2.5em;
@@ -1109,6 +1106,9 @@ li.ui-timepicker-selected .ui-timepicker-duration {
 
 .news.grid__item--12 {
   background-color: #fff; }
+
+.grid__item:nth-child(-0n+3) .hide-on-news {
+  display: none; }
 
 .grid__item .item {
   position: initial; }
@@ -1170,7 +1170,7 @@ h1.tabs__content__header.news {
 
 .grid.pictos .item {
   overflow: hidden;
-  min-height: 255px;
+  min-height: 220px;
   padding-top: 0;
   padding-bottom: 0; }
 

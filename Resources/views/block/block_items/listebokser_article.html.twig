@@ -1,6 +1,6 @@
 <div class="line item__content">
     <div class="item__intro">
-        <p><a href="{{path( 'ez_urlalias', {'contentId': content.contentInfo.id} )}}">{{ ez_render_field( content, 'title' ) }} ({{ content.contentInfo.modificationDate|date("d.m.Y") }})</a></p>
+        <p><a href="{{path( 'ez_urlalias', {'contentId': content.contentInfo.id} )}}">{{ ez_render_field( content, 'title' ) }} <span class="hide-on-news">({{ content.contentInfo.modificationDate|date("d.m.Y") }})</span></a></p>
         {% if showIngress|default(false) %}
         	{% if not ez_is_field_empty( content, 'short_intro' ) %}
 		        {{ ez_render_field( content, 'short_intro' ) }}

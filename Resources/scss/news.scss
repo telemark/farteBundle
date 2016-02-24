@@ -6,6 +6,11 @@
     background-color: $white;
 }
 
+.grid__item:nth-child(-0n+3) {
+  .hide-on-news {
+    display: none;
+  }
+}
 
 .grid__item {
     
