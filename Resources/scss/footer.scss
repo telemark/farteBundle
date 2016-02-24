@@ -39,7 +39,7 @@ footer {
     }
 
 
-    .column-3 ul {
+    .column-4 ul {
         font-family: "Open sans", sans-serif;
         font-size: .875em;
         font-weight: 400;
@@ -85,7 +85,7 @@ footer {
 
 footer {
 
-    .column-3 {
+    .column-4 {
 
         &:last-child {
             margin-bottom:1em;
@@ -104,10 +104,10 @@ footer {
 
 
         @media screen and (min-width:600px) {
-            @include span(3 of 9);
+            @include span(3 of 12);
 
             &:last-child {
-                @include span(3 of 9 last);
+                @include span(3 of 12 last);
                 padding-left: .5em;
                 box-sizing: border-box;
             }

@@ -6,11 +6,9 @@
     background-color: $white;
 }
 
-.grid__item:nth-child(-0n+3) {
   .hide-on-news {
     display: none;
   }
-}
 
 .grid__item {
     
@@ -110,7 +108,7 @@ h1.tabs__content__header.news {
 
   .item {
     overflow: hidden;
-    min-height: 220px;
+    min-height: 255px;
     padding-top:0;
     padding-bottom:0;
   }
