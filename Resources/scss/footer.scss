@@ -103,7 +103,37 @@ footer {
         }
 
 
+        li.buss:before {
+            content: "";
+            width: 32px;
+            height: 18px;
+            background-image: url("/bundles/tfkfarte/images/icon/kontakt-buss.svg");
+            position: absolute;
+            margin-top: 4px;
+            padding-right: 0;
+            margin-left: -2.75em;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+
+        li.ferge:before {
+            content: "";
+            width: 32px;
+            height: 18px;
+            background-image: url("/bundles/tfkfarte/images/icon/kontakt-ferge.svg");
+            position: absolute;
+            margin-top: 2px;
+            padding-right: 0;
+            margin-left: -2.75em;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+
         @media screen and (min-width:600px) {
+
+
             @include span(3 of 12);
 
             &:last-child {
@@ -115,7 +145,14 @@ footer {
         
         @media screen and(max-width:600px) {
             @include span(9 of 9);
+
+            .buss,
+            .ferge {
+                margin-left:1em;
+            }
+
         }
+
     }
 
 }

@@ -23,6 +23,10 @@ Farte.no er eid av Telemark fylkeskommune, ved avdeling for areal og transport. 
 <link rel="Shortcut icon" href="{{ asset( "bundles/tfkfarte/images/favicon.ico" ) }}" type="image/x-icon"/>
 <link rel="icon" type="image/x-icon" href="{{ asset( "bundles/tfkfarte/images/favicon.ico" ) }}" />
 
+
+<!-- Google-font -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
 {# adding canonical url for all defined content #}
 {% if content is defined and content.contentInfo.mainLocationId %}
     <link rel="canonical" href="{{ path( 'ez_urlalias', {'locationId': content.contentInfo.mainLocationId} ) }}" />
