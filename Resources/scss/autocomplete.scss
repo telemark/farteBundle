@@ -2,6 +2,7 @@
 #farte-reiseplanlegger .autocomplete {
     display: block;
     position: fixed;
+    z-index: 999;
     width: 47.1%;
     background-color: $white;
 }
