@@ -35,11 +35,14 @@ time, mark, audio, video {
     outline:0;
     font-size:100%;
     vertical-align:baseline;
-    background:$white;
 }
 
 body {
     line-height:1;
+}
+
+body, html {
+    background: white;
 }
 
 article,aside,details,figcaption,figure,
