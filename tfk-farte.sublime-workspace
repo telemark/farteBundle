@@ -1,0 +1,592 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"ord",
+				"ordinary_tittel"
+			],
+			[
+				"de",
+				"default"
+			],
+			[
+				"on",
+				"onsdag"
+			],
+			[
+				"the_",
+				"the_sub_field"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Resources/scss/autocomplete.scss",
+			"settings":
+			{
+				"buffer_size": 2336,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Resources/public/css/custom.css",
+			"settings":
+			{
+				"buffer_size": 36569,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 174.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 529.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/sten/Synk/Telemark FK – Farte",
+		"/Users/sten/Synk/Telemark FK – Farte/Råfiler",
+		"/Users/sten/Synk/Telemark FK – Farte/Resources",
+		"/Users/sten/Synk/Telemark FK – Farte/Resources/public",
+		"/Users/sten/Synk/Telemark FK – Farte/Resources/public/css"
+	],
+	"file_history":
+	[
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/scss/modules/_buttons.scss",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/sftp-config.json",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/scss/main.scss",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/scss/modules/_main-content.scss",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/scss/modules/_masthead.scss",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/scss/modules/_fonts.scss",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/scss/modules/_icon.scss",
+		"/Users/sten/Downloads/icomoon (2)/style.css",
+		"/Users/sten/Downloads/icomoon (1)/style.css",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/functions.php",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/scss/base/_base.scss",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/scss/modules/vps/_form-phonebook.scss",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/img/sprite/svg/personsingle.svg",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/img/sprite/svg/persongroup.svg",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/templates/content-soker.php",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/templates/content-forside.php",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/assets/scripts/scripts.js",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/scss/settings/_color.scss",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/template-phonebook.php",
+		"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/scss/modules/_arbeidssoker.scss",
+		"/Users/sten/Synk/Mjøsanker/.gitignore",
+		"/Users/sten/Library/Application Support/Sublime Text 3/Packages/User/SFTP.sublime-settings",
+		"/Users/sten/Dropbox/dev/vp_mjosanker/wp-content/themes/mjosanker/scss/modules/_constrained.scss",
+		"/Users/sten/Dropbox/dev/vp_mjosanker/wp-content/themes/mjosanker/scss/modules/vps/_ansatt__info.scss",
+		"/Users/sten/Desktop/dropbox_tmp/Telemark FK – Farte/config.rb",
+		"/Users/sten/Dropbox/dev/vp_mjosanker/wp-content/themes/mjosanker/scss/main.scss",
+		"/private/var/folders/6y/97zvf5cn3b35sxsk_3j03h8h0000gn/T/fz3temp-1/admin-ajax.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/assets/scripts/main.js",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/base/_base.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/templates/content-search.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/templates/header.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/templates/headeralt.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/template-newnav.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/functions.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/assets/css/oldIE.css",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/assets/css/main.css",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_footer.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_header.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/templates/sidebar.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/templates/footer.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/js/main.js",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_news.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/templates/comments.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_general.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/base.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/templates/content-single.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_sidebar.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/settings/_color.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/templates/entry-meta.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/templates/content-home.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_form-phonebook.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_blog.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_frontend.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/plugins/appointments/appointments.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_respons.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_ticker.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/template-phonebook.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/external/materialize/components/_form.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/templates/content-page.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/page.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/templates/page-header.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_constrained.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/templates/head.php",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/main.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/js/jquery.easing.1.3.js",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_navbar.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/lib/assets.php",
+		"/Users/sten/Downloads/materialize-src 4/js/forms.js",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/components/_variables.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/oldIE.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/components/_color.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_btn.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/components/_navbar.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/base/_input-text.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/base/_textarea.scss",
+		"/Users/sten/Downloads/materialize-src 2/sass/materialize.scss",
+		"/Users/sten/Downloads/materialize-src 2/README.md",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/components/_buttons.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/components/_cards.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_form.scss",
+		"/Users/sten/Downloads/materialize-src/sass/materialize.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_prefixer.scss",
+		"/Users/sten/Downloads/materialize-src/sass/components/_prefixer.scss",
+		"/Users/sten/Downloads/materialize-src/sass/components/_color.scss",
+		"/Users/sten/Downloads/materialize-src/sass/components/_variables.scss",
+		"/Users/sten/Downloads/materialize-src/sass/components/_mixins.scss",
+		"/Users/sten/Downloads/materialize-src/sass/components/_materialbox.scss",
+		"/Users/sten/Downloads/materialize-src/sass/components/_global.scss",
+		"/Users/sten/Downloads/materialize-src/sass/components/_form.scss",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_materialize.scss",
+		"/Users/sten/Downloads/materialize/css/materialize.css",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/src/css/oldIE.css",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/src/css/main.css",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/gulp/tasks/sass.js",
+		"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules/_image.scss",
+		"/Users/sten/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/sten/dev/Sync/Jasport/JaSport dev/jasport-dev.sublime-project",
+		"/Users/sten/Desktop/themes copy/sftp-config.json"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/scss/modules",
+			"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/scss",
+			"/Users/sten/Synk/Mjøsanker/wp-content/themes/mjosanker/scss/modules",
+			"/Users/sten/Dropbox/dev/vp_mjosanker/wp-content/themes/mjosanker/scss/modules",
+			"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen",
+			"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules",
+			"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/",
+			"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/",
+			"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/",
+			"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen",
+			"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules",
+			"<current file>",
+			"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss/modules",
+			"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content",
+			"/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss",
+			"<current file>,/Users/sten/dev/Vangen & Plotz/Oslo Børs VPS/wp-content/themes/vepseboersen/scss",
+			"<current file>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"999",
+			"samarbeidspartner",
+			"icon.samarbeidspartner",
+			"icon.samarbeids",
+			"35.25",
+			"knapperad",
+			"knappe",
+			"transparent",
+			"2px solid transparent",
+			"body.arbeidssoker",
+			"turk",
+			"turq",
+			"5",
+			"results",
+			"font-size: .875em;",
+			"ansatt",
+			"margin-left",
+			"om",
+			"tick",
+			"<div class=\"right\">",
+			"tick",
+			"byline",
+			"innlogget",
+			"must-log-in",
+			"innlogget",
+			"html",
+			"article h2",
+			"empty",
+			"003366",
+			"ab-item",
+			"003366",
+			"32",
+			"#003366",
+			"#000033",
+			"000033",
+			"select",
+			"before",
+			"comment",
+			"uppercase",
+			"}\n",
+			"reply",
+			"Leave",
+			"Leave a reply",
+			"Publiser",
+			"Kommentar",
+			"entry",
+			"footer",
+			"btn",
+			"select",
+			"display",
+			"select",
+			"display: none;",
+			"border",
+			"components/",
+			"ze/",
+			"$button-height",
+			"$orange",
+			"$blue",
+			"blue",
+			"$blue",
+			"blue",
+			"box-siz",
+			"form",
+			"$primary-color",
+			"overlay",
+			"pt"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"DF9A1A",
+			"6699cc",
+			"#6699cc",
+			"#003366",
+			"003366",
+			"$color-orange",
+			"blue-primary",
+			"$blue-primary",
+			"$lightblue"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Resources/scss/autocomplete.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2336,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								348,
+								348
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Resources/public/css/custom.css",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 36569,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18457,
+								18457
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 13359.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 110.0
+	},
+	"pinned_build_system": "",
+	"project": "tfk-farte.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 248.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

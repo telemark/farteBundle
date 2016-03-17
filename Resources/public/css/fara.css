@@ -1,0 +1,222 @@
+body:after {
+  content: '';
+  background-image: url("//pls.webtype.com/v.gif?ct=140543,140543,140543,140543,140542,140542,140542,140542&r=50150&p=47997&h=pMoMUM9LP0%2bO9t8t%2fbX%2bnA%3d%3d"); }
+
+@font-face {
+  font-family: "Telefon";
+  src: url("//cloud.webtype.com/webtype/ff2/2/066731ed-4a67-4240-9b6c-ea827d1b6477?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd70d48a6bdaafa14edde229a39f740ddb35f74acff3fb56e39d87ef10634859b94c596d32a9aafde61b1144ff183ec04e95682c8fae133e5d2b7a8a2a5044e");
+  src: url("//cloud.webtype.com/webtype/ff2/2/066731ed-4a67-4240-9b6c-ea827d1b6477?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd70d48a6bdaafa14edde229a39f740ddb35f74acff3fb56e39d87ef10634859b94c596d32a9aafde61b1144ff183ec04e95682c8fae133e5d2b7a8a2a5044e#iefix") format("embedded-opentype"), url("//cloud.webtype.com/webtype/ff2/1/67255ea1-109b-428a-a695-a71ceab7a8f8?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5cd70b49a2bfacae2316a9d31249a18974d040705e98c83ba1f912e06d72b15629de946192a830b66c57968013b944b4d1dac6e127fa7b13bd6be6b8260bcb4b") format("truetype"), url("//cloud.webtype.com/webtype/ff2/3/1c5ae91c-40e5-4c24-8ee4-322d91609f98?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5ed70c1da5ebfcf277b9821f343d478188b4c4f244fa64fd0a01a4c9fc2ae27cfd8a9c28c382b5152c373acea2c98268ddcfce2c735bea2d646c026b7bd96350") format("woff"), url("//cloud.webtype.com/webtype/ff2/4/18881d3c-cc3e-4175-9adc-d1c53a7488ce?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad59d70c46a8b2a8afbc64122858beae8ba1b965cae288529e72bfa416d1f04868513d7530f1829cb175a0cd75e7d4fb5d1b0534e996910329d844b553eb4cd4f3#web") format("svg");
+  font-style: normal;
+  font-weight: normal; }
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/*1a*/
+.btn-primary-webshop {
+  color: #333;
+  background-color: #FFD520;
+  border-color: #FFD520; }
+
+/*1b*/
+.btn-primary-webshop:hover,
+.btn-primary-webshop:focus,
+.btn-primary-webshop:active,
+.btn-primary-webshop.active,
+.open .dropdown-toggle.btn-primary-webshop {
+  color: #333;
+  background-color: #ffd007;
+  border-color: #ffd007; }
+
+/*1c*/
+.btn-primary-webshop.disabled,
+.btn-primary-webshop[disabled],
+fieldset[disabled] .btn-primary-webshop,
+.btn-primary-webshop.disabled:hover,
+.btn-primarywebshop[disabled]:hover,
+fieldset[disabled] .btn-primary-webshop:hover,
+.btn-primarywebshop.disabled:focus,
+.btn-primary-webshop[disabled]:focus,
+fieldset[disabled]
+.btn-primary-webshop:focus,
+.btn-primary-webshop.disabled:active,
+.btn-primarywebshop[disabled]:active,
+fieldset[disabled] .btn-primary-webshop:active,
+.btnprimary-webshop.disabled.active,
+.btn-primary-webshop[disabled].active,
+fieldset[disabled] .btn-primary-webshop.active {
+  background-color: #DBDCD7;
+  border-color: #DBDCD7; }
+
+/*2a*/
+.btn-secondary-webshop {
+  color: #333;
+  background-color: #6AC4AE;
+  border-color: #6AC4AE; }
+
+/*2b*/
+.btn-secondary-webshop:hover,
+.btn-secondary-webshop:focus,
+.btn-secondarywebshop:active,
+.btn-secondary-webshop.active,
+.open .dropdown-toggle.btn-secondarywebshop {
+  color: #333;
+  background-color: #99E0CF;
+  border-color: #99E0CF; }
+
+/*2c*/
+.btn-secondary-webshop.disabled,
+.btn-secondary-webshop[disabled],
+fieldset[disabled] .btn-secondary-webshop,
+.btn-secondary-webshop.disabled:hover,
+.btn-secondarywebshop[disabled]:hover,
+fieldset[disabled] .btn-secondary-webshop:hover,
+.btnsecondary-webshop.disabled:focus,
+.btn-secondary-webshop[disabled]:focus,
+fieldset[disabled] .btn-secondary-webshop:focus,
+.btn-secondarywebshop.disabled:active,
+.btn-secondary-webshop[disabled]:active,
+fieldset[disabled]
+.btn-secondary-webshop:active,
+.btn-secondary-webshop.disabled.active,
+.btnsecondary-webshop[disabled].active,
+fieldset[disabled] .btn-secondary-webshop.active {
+  background-color: #DBDCD7;
+  border-color: #DBDCD7; }
+
+/*3a*/
+.btn-subsidiary {
+  color: #333;
+  background-color: #6AC4AE;
+  border-color: #6AC4AE; }
+
+/*3b*/
+.btn-subsidiary:hover,
+.btn-subsidiary:focus,
+.btn-subsidiary:active,
+.btnsubsidiary.active,
+.open .dropdown-toggle.btn-subsidiary {
+  color: #333;
+  background-color: #99E0CF;
+  border-color: #99E0CF; }
+
+/*4*/
+.panel-default-webshop {
+  border-color: #f3f4f5; }
+
+/*5*/
+.webshop-label-primary {
+  color: #333; }
+
+/*6*/
+.webshop-label-secondary {
+  color: #333; }
+
+/*7*/
+.webshop-label-subsidiary {
+  color: #DBDCD7; }
+
+/*8*/
+.bootstrap-label-webshop {
+  border-color: #f3f4f5;
+  background-color: #f3f4f5;
+  color: #DBDCD7; }
+
+/*9*/
+.select-choices-stop-type-color {
+  color: #6AC4AE; }
+
+/*10*/
+.ui-select-bootstrap .ui-select-choices-row.active > a {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  background-color: #6AC4AE; }
+
+/*11*/
+.panel-default .panel-shopping-cart-header-webshop {
+  background-color: #6AC4AE;
+  color: #fff; }
+
+/*12*/
+.shopping-cart-row-horizontal-splitter {
+  border-color: #f3f4f5; }
+/*# sourceMappingURL=fara.css.map */
