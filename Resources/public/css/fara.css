@@ -26,11 +26,19 @@ time, mark, audio, video {
   border: 0;
   outline: 0;
   font-size: 100%;
-  vertical-align: baseline;
-  background: #fff; }
+  vertical-align: baseline; }
+
+button span {
+  background-color: transparent; }
+
+.col-sm-2 .page-header {
+  margin-top: 20px !important; }
 
 body {
   line-height: 1; }
+
+body, html {
+  background: white; }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -93,8 +101,8 @@ input, select {
 /*1a*/
 .btn-primary-webshop {
   color: #333;
-  background-color: #FFD520;
-  border-color: #FFD520; }
+  background-color: #6AC4AE;
+  border-color: #6AC4AE; }
 
 /*1b*/
 .btn-primary-webshop:hover,

@@ -115,7 +115,6 @@ h1.tabs__content__header.news {
 
   .item-content {
     padding: 1.275em 1.25em 1.5em 1.25em;
-    font-size: 120%;
 
       hr {
         border-color: #333;
@@ -130,10 +129,11 @@ h1.tabs__content__header.news {
       }
 
       p {
-        margin-left:6.75em;
+        margin-left:39%;
         @media screen and (max-width: 900px) {
-          margin-left:7.5em;
-          margin-top:1em;
+          margin-left:8em;
+          margin-top:2em;
+          font-size: 120%;
         }
       }
 
@@ -170,6 +170,8 @@ h1.tabs__content__header.news {
       &:last-child {
         margin-bottom:2em;
       }
+
+
     }
   }
 

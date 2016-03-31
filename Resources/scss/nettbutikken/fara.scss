@@ -37,6 +37,20 @@ time, mark, audio, video {
     vertical-align:baseline;
 }
 
+button {
+
+    span {
+        background-color:transparent;
+    }
+
+}
+
+.col-sm-2 .page-header {
+    margin-top: 20px!important;
+}
+
+
+
 body {
     line-height:1;
 }
@@ -122,8 +136,8 @@ input, select {
 /*1a*/
 .btn-primary-webshop {
     color: $black;
-    background-color: $yellow;
-    border-color: $yellow;
+    background-color: $turkis;
+    border-color: $turkis;
 }
 
 
