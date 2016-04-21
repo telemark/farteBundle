@@ -227,4 +227,23 @@ fieldset[disabled] .btn-secondary-webshop.active {
 /*12*/
 .shopping-cart-row-horizontal-splitter {
   border-color: #f3f4f5; }
+
+.container {
+  width: 100%;
+  padding: 0px;
+  padding-right: 15px;
+  background: white; }
+
+@media (min-width: 992px) {
+  .container {
+    width: 100%;
+    padding: 0px;
+    padding-right: 15px;
+    background: white; } }
+
+.webshop-background-color {
+  background-color: white; }
+
+.navbar-default {
+  border-color: #fff; }
 /*# sourceMappingURL=fara.css.map */
