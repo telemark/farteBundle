@@ -26,19 +26,11 @@ time, mark, audio, video {
   border: 0;
   outline: 0;
   font-size: 100%;
-  vertical-align: baseline; }
-
-button span {
-  background-color: transparent; }
-
-.col-sm-2 .page-header {
-  margin-top: 20px !important; }
+  vertical-align: baseline;
+  background: #fff; }
 
 body {
   line-height: 1; }
-
-body, html {
-  background: white; }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -101,8 +93,8 @@ input, select {
 /*1a*/
 .btn-primary-webshop {
   color: #333;
-  background-color: #6AC4AE;
-  border-color: #6AC4AE; }
+  background-color: #FFD520;
+  border-color: #FFD520; }
 
 /*1b*/
 .btn-primary-webshop:hover,
@@ -227,23 +219,4 @@ fieldset[disabled] .btn-secondary-webshop.active {
 /*12*/
 .shopping-cart-row-horizontal-splitter {
   border-color: #f3f4f5; }
-
-.container {
-  width: 100%;
-  padding: 0px;
-  padding-right: 15px;
-  background: white; }
-
-@media (min-width: 992px) {
-  .container {
-    width: 100%;
-    padding: 0px;
-    padding-right: 15px;
-    background: white; } }
-
-.webshop-background-color {
-  background-color: white; }
-
-.navbar-default {
-  border-color: #fff; }
 /*# sourceMappingURL=fara.css.map */
