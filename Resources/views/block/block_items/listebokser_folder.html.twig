@@ -4,7 +4,7 @@
     <h1 class="tabs__content__header news"><a href="{{path(location)}}">{{content.getFieldValue('name')}}</a></h1>
 
     {# Hvis Aktuelt #}
-    {% if content.contentInfo.id == 146 %}
+
       {% for item in result.searchHits[0:1] %}
         {% set imageId = ez_field_value( item.valueObject, 'image' ) %}
           {# Hvis toppsak har ingressbilde #}
@@ -61,43 +61,6 @@
             )
         ) }}
       {% endfor %}
-    {% else %}
-      {% set imageId = ez_field_value( content, 'image' ) %}
-      {% if imageId is defined and imageId.destinationContentId is not empty %}
-
-        {{ render(
-          controller(
-              "ez_content:viewContent",
-                  {
-                      "contentId": imageId.destinationContentId,
-                      "viewType": "custom",
-                      "params": { "img_render_size": "responsive_06" }
-                  }
-          )
-        ) }}
-
-      {% endif %}
-
-      {% set showIngress = false %}
-      {% if result.totalCount == 1 %}
-        {% set showIngress = true %}
-      {% endif %}
-
-      {% for item in result.searchHits %}
-        {{ render(
-             controller(
-                 "ez_content:viewContent",
-                 {
-                     "contentId": item.valueObject.contentInfo.id,
-                     "viewType": "listebokser_item_list",
-                     "params": { "showIngress" : showIngress }
-                 }
-            )
-        ) }}
-      {% endfor %}
-
-    {% endif %}
-
     {% if content.getFieldValue('listbox_showmore').bool == '1' %}
       <div class="object-right"><a href="{{path(location)}}">Vis mer</a></div>
     {% endif %}
