@@ -1,0 +1,26 @@
+.menu__item-link:hover, 
+.menu__item-link:focus, 
+.menu__item-link:active {
+    background-color:initial;
+    color:$white;
+}
+
+.icon--menu-arrow-down.menu__item__dropdown.hide--to-l {
+    background-image: none;
+    width: 0; 
+    height: 0; 
+    border-left:  8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top:   8px solid #000;
+}
+
+
+li.menu__item:hover .icon--menu-arrow-down.menu__item__dropdown.hide--to-l {
+    border-top: 8px solid $turkis;
+}
+
+
+li.menu__submenu-item:hover a{
+    background-color:$turkis;
+    color:$white;
+}

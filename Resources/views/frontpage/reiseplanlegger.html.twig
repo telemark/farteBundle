@@ -1,0 +1,133 @@
+<div class="grid grid--6">
+<div class="grid__item grid__item--2-6">
+<form class="object-left" action="{{path('tfk_farte_reiseplanlegger')}}" method="post">
+      <button class="btn realtime" title="Trykk her for å kjøre søk" tabindex="10" name="travel" id="realtime" type="submit"><span>Reiseplanlegger</span></button>
+</form>
+
+<form class="object-left" action="{{path('tfk_farte_sanntid')}}" method="post">
+      <button class="btn realtime" title="Trykk her for å kjøre søk" tabindex="10" name="realtime" id="travel" type="submit"><span>Sanntid</span></button>
+</form>
+</div>
+</div>
+<div id="farte-reiseplanlegger">
+<form id="searchForm" action="{{path('tfk_farte_reiseplanlegger')}}" method="post">
+<div class="grid grid--12">
+     <div class="grid__item grid__item--3-12">
+      <label for="from">Jeg reiser fra</label>
+      <input type="text" id="from" name="from" autocomplete="off" size="30"
+        title="Fra og til kan være en gateadresse, en holdeplass eller et sted. For adresser må et gyldig husnummer fylles ut. Mens du skriver vil listen under oppdateres med de mulige oppføringene som passer til det du har skrevet." />
+      <div id="from_choices" class="autocomplete"></div>
+    </div>
+
+     <div class="grid__item grid__item--3-12">
+      <label for="to">Jeg reiser til</label>
+      <input type="text" id="to" name="to" autocomplete="off" size="30"
+        title="Fra og til kan være en gateadresse, en holdeplass eller et sted. For adresser må et gyldig husnummer fylles ut. Mens du skriver vil listen under oppdateres med de mulige oppføringene som passer til det du har skrevet." />
+      <div id="to_choices" class="autocomplete"></div>
+    </div>
+
+     <div class="grid__item grid__item--3-12">
+      <label for="date">Dato</label>
+      <input id="date" name="date" type="text" size="10"
+        title="Dato- og tidsfeltet angir når du ønsker å søke etter reiseforslag. Disse feltene settes automatisk til dagens dato og klokkeslett. Kalenderen kan brukes til å oppdatere datofeltet, ellers kan man og endre dato/tid manuelt." />
+    </div>
+
+    <div class="grid__item grid__item--3-12">
+      <label for="time">Tid</label>
+      <input id="time" name="time" type="text" size="5"
+        title="Dato- og tidsfeltet angir når du ønsker å søke etter reiseforslag. Disse feltene settes automatisk til dagens dato og klokkeslett. Kalenderen kan brukes til å oppdatere datofeltet, ellers kan man og endre dato/tid manuelt." />
+    </div>
+  </div>
+
+  <div class="grid grid--12">
+       <div class="grid__item grid__item--12-12">
+         <button class="btn btn--primary travelplannner object-right" title="Trykk her for å kjøre søk" tabindex="10" name="submit" id="submit" type="submit"><span>Søk</span></button>
+  </div>
+  </div>
+</form>
+</div>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+  $(function() {
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    if (hour < 10) { hour = "0" + hour; }
+    if (minute < 10) { minute = "0" + minute; }
+    var timeString = hour + ':' + minute;
+    $('#time').val(timeString);
+  });
+
+  $(function() {
+    $( '#date' ).datepicker({
+      dateFormat: "dd.mm.yy",
+      defaultDate: +7,
+      firstDay: 1,
+      nextText: "Neste",
+      prevText: "Forrige"
+    }).datepicker("setDate", new Date());
+  });
+
+
+  $('#from').bind('input', function() {
+      var val = $(this).val();
+      if (val) {
+        $('#from').autocomplete({
+          source: function (request, response) {
+            $.getJSON("{{path('tfk_farte_holdeplasser')}}" + val, function (data) {
+
+              response( $.map( data, function( item ) {
+
+                  return {
+                    label:item.title,
+                    value: item.title,
+                    item: item
+                  }
+              }))
+            });
+          },
+          select: function( event, ui ) {
+            //window.location.href = ui.item.url;
+          },
+          appendTo: '#from_choices',
+          autoFocus: false
+        });
+
+      }
+  })
+
+  $('#to').bind('input', function() {
+      var val = $(this).val();
+      if (val) {
+        $('#to').autocomplete({
+          source: function (request, response) {
+            $.getJSON("{{path('tfk_farte_holdeplasser')}}" + val, function (data) {
+
+              response( $.map( data, function( item ) {
+
+                  return {
+                    label:item.title,
+                    value: item.title,
+                    item: item
+                  }
+              }))
+            });
+          },
+          select: function( event, ui ) {
+            //window.location.href = ui.item.url;
+          },
+          appendTo: '#to_choices',
+          autoFocus: false
+        });
+
+      }
+  })
+
+
+})
+
+</script>

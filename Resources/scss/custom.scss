@@ -1,0 +1,247 @@
+
+
+// Susy 
+@import "susy";
+
+// Font: Open sans 
+
+
+// Font: Telefon 
+body:after { content: ''; background-image: url('//pls.webtype.com/v.gif?ct=140543,140543,140543,140543,140542,140542,140542,140542&r=50150&p=47997&h=pMoMUM9LP0%2bO9t8t%2fbX%2bnA%3d%3d'); }
+    @font-face {
+     font-family: "Telefon";
+     src: url("//cloud.webtype.com/webtype/ff2/2/066731ed-4a67-4240-9b6c-ea827d1b6477?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd70d48a6bdaafa14edde229a39f740ddb35f74acff3fb56e39d87ef10634859b94c596d32a9aafde61b1144ff183ec04e95682c8fae133e5d2b7a8a2a5044e");
+     src:  url("//cloud.webtype.com/webtype/ff2/2/066731ed-4a67-4240-9b6c-ea827d1b6477?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd70d48a6bdaafa14edde229a39f740ddb35f74acff3fb56e39d87ef10634859b94c596d32a9aafde61b1144ff183ec04e95682c8fae133e5d2b7a8a2a5044e#iefix")  format("embedded-opentype"),
+    	url("//cloud.webtype.com/webtype/ff2/1/67255ea1-109b-428a-a695-a71ceab7a8f8?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5cd70b49a2bfacae2316a9d31249a18974d040705e98c83ba1f912e06d72b15629de946192a830b66c57968013b944b4d1dac6e127fa7b13bd6be6b8260bcb4b") format("truetype"),
+    	url("//cloud.webtype.com/webtype/ff2/3/1c5ae91c-40e5-4c24-8ee4-322d91609f98?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5ed70c1da5ebfcf277b9821f343d478188b4c4f244fa64fd0a01a4c9fc2ae27cfd8a9c28c382b5152c373acea2c98268ddcfce2c735bea2d646c026b7bd96350") format("woff"),
+    	url("//cloud.webtype.com/webtype/ff2/4/18881d3c-cc3e-4175-9adc-d1c53a7488ce?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad59d70c46a8b2a8afbc64122858beae8ba1b965cae288529e72bfa416d1f04868513d7530f1829cb175a0cd75e7d4fb5d1b0534e996910329d844b553eb4cd4f3#web") format("svg");
+     font-style: normal;
+     font-weight: normal;
+    }
+
+// Ikonfont Metro
+@import "icomoon.scss";
+
+// Importere stiler
+@import "variables.scss";
+@import "responsiv-tekst.scss";
+@import "header.scss";
+@import "datepicker.scss";
+@import "autocomplete.scss";
+@import "reiseplanlegger.scss";
+@import "campaign-banner.scss";
+@import "news.scss";
+@import "input.scss";
+@import "menu.scss";
+@import "footer.scss";
+@import "icons.scss";
+
+// Typografi og generelle stiler
+body, html, input {
+		font-family: $open-sans;
+        font-weight: 400;
+		color:$black;
+        -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+		font-family: $telefon;
+}
+
+.object-left {
+		margin: 0;
+}
+
+.fat {
+    font-weight: 900;
+}
+
+.grid__item.media.item {
+    padding: 0;
+    padding-top: .75em;
+}
+
+
+.pictos .grid__item.media.item {
+    padding: 0;
+}
+
+
+
+@media (max-width: 63.9375em) {
+
+
+		// Meny 
+
+    .menu-trigger, 
+    .menu-search-trigger,
+    .menu__back-level:hover, 
+    .menu__back-level:focus, 
+    .menu__back-level:active,
+    .menu__item__dropdown,
+    .menu__item-content:hover .menu__item-link {
+        background-color: $turkis;
+    }
+    
+    .menu-trigger:hover,
+    .menu-trigger:focus,
+    .menu-trigger:active, 
+    .menu-search-trigger:hover, 
+    .menu-search-trigger:focus, 
+    .menu-search-trigger:active {
+        background-color: $l-turkis;
+    }
+
+    .menu__item__dropdown {
+        box-shadow: inset 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .menu__item-link {
+        box-shadow: inset 0 -1px rgba(255, 255, 255, 0.1);
+    }
+
+    .menu, 
+    .menu a, 
+    .page-header {
+        color: $white;
+    }
+
+    .menu__submenu {
+        width: 400px;
+    }
+
+    .menu__level {
+        background: $black;
+    }
+
+    .ui-autocomplete {
+        width: 100%!important;
+        left: 0!important
+    }
+
+    .constrained-content {
+      margin-bottom: 1em;
+      margin-top:1em;
+
+      .item {
+          .item {
+              padding:0;
+          }
+      }
+      
+    }
+
+
+
+
+    .menu, 
+    .menu a,
+    .page-header .menu a {
+        color:$white;
+    }
+
+    .menu__level--scroll {
+        overflow-x: visible;
+    }
+
+
+
+}
+
+@media screen and (max-width: 37.5em) {
+	.item--vertical .item__imglink {
+	    margin-top: 3px;
+	}
+
+    .page-header__logo img {
+        height: 2.25em;
+    }
+
+    #ui-datepicker-div {
+        margin-left: -1.19em;
+        z-index: 200!important;
+    }
+
+    .menu-trigger, .menu-search-trigger {
+        width: 2.75em;
+        height: 2.75em;
+        top: .29em;
+        margin-top: 0;
+    }
+
+    
+    .news .item {
+        padding-bottom: 0em;
+        padding-top: .7em;
+    }
+
+    .item__content {
+        padding: .75em .5em 0em 1em;
+    }
+
+    .item__content.news {
+        border-bottom: 1px solid;
+
+        &:last-child {
+            border:none;
+        }
+    }
+
+
+        .campaign-content {
+            font-size: 1.75em;
+            padding: 1em;
+            text-align: center;
+            padding-top: 1em;
+
+
+            .item {
+                padding: 0;
+                padding-top:0;
+
+                .item__content {
+                    padding-left: 0;
+
+                    .item__intro {
+                        padding-bottom: 0;
+                        margin: 0;
+                        line-height: 1.125em;
+
+                        .class-image {
+                            margin-top: 0em;
+                            margin-bottom: 1em;
+                        }
+                    }
+                }
+
+                .full-head img {
+                    margin: 0 auto;
+                    width: 146px;
+                    display: block;
+                }
+
+            }
+        }
+
+
+    .item--vertical .item__imglink {
+        margin-top: .875em;
+      }
+
+    .item__content, .news.item__content {
+        padding: 0;
+    	}
+
+    h1.news.js-tabs-tab {
+        margin-bottom: -.950em;
+    	}
+
+
+}
+
+
+@media screen and (max-width:368px) {
+    #farte-reiseplanlegger button#submit {
+        margin-top: .5em!important;
+    }
+}

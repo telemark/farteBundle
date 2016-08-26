@@ -1,0 +1,68 @@
+<div class="grid__item grid__item--4-12 media item item--horizontal">
+  <div class="item item--vertical grid__item--12">
+
+    <h1 class="tabs__content__header news"><a href="{{path(location)}}">{{content.getFieldValue('name')}}</a></h1>
+
+    {# Hvis Aktuelt #}
+
+      {% for item in result.searchHits[0:1] %}
+        {% set imageId = ez_field_value( item.valueObject, 'image' ) %}
+          {# Hvis toppsak har ingressbilde #}
+        {% if imageId is defined and imageId.destinationContentId is not empty %}
+          {{ render(
+            controller(
+                "ez_content:viewContent",
+                    {
+                        "contentId": imageId.destinationContentId,
+                        "viewType": "custom",
+                        "params": { "img_render_size": "responsive_06" }
+                    }
+            )
+          ) }}
+        {% else %}
+          {% set imageId = ez_field_value( content, 'image' ) %}
+          {% if imageId is defined and imageId.destinationContentId is not empty %}
+
+            {{ render(
+              controller(
+                  "ez_content:viewContent",
+                      {
+                          "contentId": imageId.destinationContentId,
+                          "viewType": "custom",
+                          "params": { "img_render_size": "responsive_06" }
+                      }
+              )
+            ) }}
+
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% for item in result.searchHits[0:1] %}
+        {{ render(
+             controller(
+                 "ez_content:viewContent",
+                 {
+                     "contentId": item.valueObject.contentInfo.id,
+                     "viewType": "listebokser_item_list",
+                     "params": { "showIngress" : true }
+                 }
+            )
+        ) }}
+      {% endfor %}
+      {% for item in result.searchHits[1:] %}
+        {{ render(
+             controller(
+                 "ez_content:viewContent",
+                 {
+                     "contentId": item.valueObject.contentInfo.id,
+                     "viewType": "listebokser_item_list",
+                     "params": { "showIngress" : false }
+                 }
+            )
+        ) }}
+      {% endfor %}
+    {% if content.getFieldValue('listbox_showmore').bool == '1' %}
+      <div class="object-right"><a href="{{path(location)}}">Vis mer</a></div>
+    {% endif %}
+  </div>
+</div>

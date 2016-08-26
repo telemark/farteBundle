@@ -1,0 +1,214 @@
+<div class="col12" id="ht-ruteplanlegger">
+	<div class="ht_knapp">
+		<p><a class="desktop-only" href="/Reiseplanlegger2">Reiseplanlegger</a> <a class="desktop-only" href="/Sanntid">Sanntid</a><a class="mobile-only" target="_new" href="http://reiseplanlegger.vkt.no/scripts/TravelMagic/TravelMagicWE.dll/?direction=1&now=1&lang=no&context=wap.xhtml">Mobil reiseplanlegger</a></p>
+	</div>
+</div>
+{# <button id="showhide-reiseplanlegger">Reiseplanlegger</button>
+  <form id="ht-planlegger">
+    <div class="ht-stasjon-til-og-fra">
+	    <div class="stasjon-fra">
+	    	<input id="stasjon-fra" class="ht-planleggerboks" type="text" placeholder="Fra" autocomplete="off" tabindex="1">
+	    </div>
+	    <button class="turnover"><i class="icon-exchange"></i></button>
+	    <div class="stasjon-til">
+	    	<input id="stasjon-til" class="ht-planleggerboks" type="text" placeholder="Til" autocomplete="off" tabindex="2">
+	    </div>
+    </div>
+    <ul class="stasjon til"></ul>
+    <div class="ht-dag-og-tid">
+		<select tabindex="3" id="ht-planleggerboks-dato">
+			<option value="{{ "now"|date("dmY") }}">I dag</option>
+			<option value="{{ "now"|date_modify("+1 day")|date("dmY") }}">I morgen</option>
+			{% for i in 2..14 %}
+			<option value="{{ "now"|date_modify("+" ~ i ~ "day")|date("dmY") }}">{{ "now"|date_modify("+" ~ i ~ "day")|date("d.m.Y") }}</option>
+			{% endfor %}
+		</select>
+		<input id="ht-planleggerboks-tid" tabindex="4" type="text" value="{{ "now"|date("H:i") }}">
+    </div>
+    <input type="radio" checked="" name="arrival" id="depart" class="arrival">
+    <label class="ht-radio" for="depart"> Avgang</label>
+    <input type="radio" name="arrival" id="arrive" class="arrival">
+    <label class="ht-radio" for="arrive"> Ankomst</label>
+
+  	<button tabindex="5" class="show-searchresult"><i class="icon-search icon-large"></i></button>
+
+  	<div class="show-advanced">
+	  	<a href="#" >
+	  		Flere valg <i class="icon-chevron-down"></i>
+	  	</a>
+		<div id="advanced">
+		Transport:
+		<input type="radio" checked="" name="transport" id="only_bus" class="transport">
+		<label class="ht-radio" for="only_bus">Buss</label>
+		<input type="radio" name="transport" id="bus_and_train" class="transport">
+		<label class="ht-radio" for="bus_and_train">Buss + Tog</label>
+		</div>
+ 	</div>
+</form>
+</div>
+<script type="text/javascript">
+
+//Higlighting
+$.ui.autocomplete.prototype._renderItem = function (ul, item) {
+    item.label = item.label.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + $.ui.autocomplete.escapeRegex(this.term) + ")(?![^<>]*>)(?![^&;]+;)", "gi"), "<strong>$1</strong>");
+    return $("<li class='type" + item.type + "'></li>")
+            .data("item.autocomplete", item)
+            .append("<a>" + item.label + "</a>")
+            .appendTo(ul);
+};
+
+
+	$(document).ready(function(){
+
+
+
+		$('.ht-planleggerboks').keydown(function (event) {
+			var element = $(this);
+			var id = element.attr('id');
+			$('.'+id+'-streetnr').remove();
+
+			if ( event.keyCode == 8 ) {
+				element.attr("data-stationid", "");
+			}
+
+				$(element).autocomplete({
+    				source: function (request, response) {
+        				$.getJSON('/ruter/api/search/' + element.val(), function (data) {
+
+							response( $.map( data, function( item ) {
+
+                					return {
+                						label: item.Name + ' (' + item.District + ')',
+                						value: item.Name + ' (' + item.District + ')',
+                						ID: item.ID,
+                						type: item.Type,
+                						item: item
+            						}
+    						}))
+    					});
+    				},
+    				select: function( event, ui ) {
+    					element.attr("data-stationid", ui.item.ID);
+    					//$('.show-searchresult').focus();
+    					if (ui.item.type == '3'){
+    						var houses = '<div class="' + element.attr('id') + '-streetnr streetnr"><label>Velg husnummer:<select>';
+    						$.each(ui.item.item.Houses, function(key, house) {
+    							houses += '<option x="' + house.X +'" y="' + house.Y + '">' + house.Name + '</option>';
+    						});
+    						houses += '</select></label></div>';
+    						$('.'+id).append(houses);
+    					}
+    					$(element).keydown(function (event) {
+    						if (event.keyCode == 13) {
+								$('.show-searchresult').focus();
+							}
+    					})
+					},
+    				minLength: 2,
+    				autoFocus: true,
+    				delay: 300
+				});
+
+			element.bind('focus', function() {
+				element.autocomplete("search");
+			});
+		});
+
+		$('#ht-planleggerboks-tid').timepicker({
+			'scrollDefaultNow': true,
+			'timeFormat': 'H:i',
+			'step': 15,
+			'fourceRoundTime': true
+
+		});
+
+		$('button.turnover').bind('click', function(event) {
+			event.preventDefault();
+			var from_place = $('#stasjon-fra').val();
+			var from_id = $('#stasjon-fra').attr('data-stationid');
+			var to_place = $('#stasjon-til').val();
+			var to_id = $('#stasjon-til').attr('data-stationid');
+
+			if (from_id != null) {
+				$('#stasjon-til').val(from_place).attr("data-stationid", from_id);
+			} else {
+				$('#stasjon-til').val(from_place).removeAttr('data-stationid');
+			}
+			if (to_id != null) {
+				$('#stasjon-fra').val(to_place).attr("data-stationid", to_id);
+			} else {
+				$('#stasjon-fra').val(to_place).removeAttr('data-stationid');
+			}
+		});
+
+		$('.show-advanced').bind('click', function() {
+			$('#advanced').slideToggle(400);
+		});
+
+		$('#ht-planleggerboks-dato').dropkick({
+  			change: function (value, label) {
+    			console.log('You picked: ' + label + ':' + value);
+	  		}
+		});
+
+		$('input:text').keydown(function(){ $('.advarsel').remove(); });
+
+		$('.show-searchresult').click(function(e){
+			e.preventDefault();
+
+			var validated = 1;
+			$('input:text').removeClass("not-validated");
+			$('.advarsel').remove();
+
+			if (!$('#stasjon-fra').attr("data-stationid")){
+				$('#stasjon-fra').addClass("not-validated");
+				$('#stasjon-fra').after('<div class="advarsel fra">Vennligst velg stasjon fra listen</div>');
+				validated = 0;
+			}
+
+			if (!$('#stasjon-til').attr("data-stationid")){
+				$('#stasjon-til').addClass("not-validated");
+				$('#stasjon-til').after('<div class="advarsel til">Vennligst velg stasjon fra listen</div>');
+				validated = 0;
+			}
+
+			if ($('#ht-planleggerboks-tid').val().length != 5){
+				$('#ht-planleggerboks-tid').addClass("not-validated");
+				$('#ht-planleggerboks-tid').after('<div class="advarsel tid">Format på tid er tt:mm</div>');
+				validated = 0;
+			}
+
+			var datearray = $('#ht-planleggerboks-dato').val().split("-");
+			var date = $('.ht-dag-og-tid').find('.dk_option_current a').attr('data-dk-dropdown-value') + $('#ht-planleggerboks-tid').val().replace(":", "");
+
+			var transport = $('.transport:checked').attr('id');
+			if (transport == 'only_bus') {transport = 'Bus'; } else { transport = "Bus,Train"; }
+			var arrival = $('.arrival:checked').attr('id');
+			if (arrival == 'depart') { arrival = 'True'; } else { arrival = 'False'; }
+
+				if ( $('.stasjon-fra-streetnr').length != 0 ) {
+					var from_coor = $('.stasjon-fra-streetnr option:selected').attr('x') + $('.stasjon-fra-streetnr option:selected').attr('y');
+					var from_nr = $('.stasjon-fra-streetnr option:selected').text();
+				} else {
+					var from_coor = 0;
+					var from_nr = 0;
+				}
+
+				if ( $('.stasjon-til-streetnr').length != 0 ) {
+					var to_coor = $('.stasjon-til-streetnr option:selected').attr('x') + $('.stasjon-til-streetnr option:selected').attr('y');
+					var to_nr = $('.stasjon-til-streetnr option:selected').text();
+				} else {
+					var to_coor = 0;
+					var to_nr = 0;
+				}
+			if(validated == 1) {
+
+				top.location.href = location.protocol + "//" + location.host + "/ruter/api/searchresult/" + encodeURIComponent($('#stasjon-fra').val()) + "/" + $('#stasjon-fra').attr("data-stationid") + "/" + encodeURIComponent($('#stasjon-til').val()) + "/" + $('#stasjon-til').attr("data-stationid") + "/" + date + "/" + transport + "/" + arrival + "/" + from_nr + "/" + from_coor + "/" + to_nr + "/" + to_coor;
+			}
+		});
+
+
+	});
+
+</script>
+#}

@@ -1,0 +1,222 @@
+.ui-autocomplete-loading {
+  background: url("/bundles/tfkfarte/images/ajax-loader.gif") no-repeat 95% center #fff; }
+
+#ui-datepicker-div {
+  background-color: #fff;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 2px 3px 0 rgba(51, 51, 51, 0.2);
+  color: #333;
+  margin-left: -85px;
+  max-width: 280px;
+  width: 100%;
+  display: none;
+  font-family: "Telefon", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif; }
+
+#ui-datepicker-div .ui-datepicker-header {
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 1px 0 0 #fff;
+  display: inline-block;
+  width: 100%; }
+
+#ui-datepicker-div .ui-datepicker-header a.ui-datepicker-prev {
+  color: #333;
+  float: left;
+  padding: 2%;
+  text-align: center;
+  width: 20%; }
+
+#ui-datepicker-div .ui-datepicker-header a.ui-datepicker-next {
+  color: #333;
+  float: right;
+  padding: 2%;
+  text-align: center;
+  width: 20%; }
+
+#ui-datepicker-div .ui-datepicker-header .ui-datepicker-title {
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+  box-shadow: -1px 0 0 0 #333 inset, 1px 0 0 0 #333 inset;
+  float: left;
+  font-weight: 500;
+  padding: 2%;
+  text-align: center;
+  width: 60%;
+  background-color: #ededed; }
+
+#ui-datepicker-div a:hover {
+  background-color: #ffd520;
+  border: medium none;
+  cursor: pointer; }
+
+#ui-datepicker-div .ui-datepicker-calendar thead {
+  border-bottom: 1px solid #333;
+  box-shadow: 0 1px 0 0 #333;
+  height: 30px; }
+
+#ui-datepicker-div .ui-datepicker-calendar thead tr {
+  float: left;
+  width: 100%; }
+
+#ui-datepicker-div .ui-datepicker-calendar thead tr th {
+  width: 40px; }
+
+#ui-datepicker-div .ui-datepicker-calendar thead tr th:last-child {
+  color: red; }
+
+#ui-datepicker-div .ui-datepicker-calendar tbody {
+  background-color: #fff; }
+
+#ui-datepicker-div .ui-datepicker-calendar tbody tr {
+  float: left;
+  width: 100%; }
+
+#ui-datepicker-div .ui-datepicker-calendar tbody tr td {
+  border-bottom: 1px solid #999;
+  border-right: none;
+  box-shadow: none;
+  display: table-cell;
+  float: none;
+  height: 30px;
+  vertical-align: middle;
+  width: 40px; }
+
+#ui-datepicker-div .ui-datepicker-calendar tbody tr td a {
+  color: #333;
+  display: block;
+  height: 100%;
+  padding: 9%;
+  text-align: center;
+  width: 100%; }
+
+#ui-datepicker-div .ui-datepicker-calendar tbody tr td:last-child {
+  border-right: medium none; }
+
+body:after {
+  content: '';
+  background-image: url("//pls.webtype.com/v.gif?ct=140543,140543,140543,140543,140542,140542,140542,140542&r=50150&p=47997&h=pMoMUM9LP0%2bO9t8t%2fbX%2bnA%3d%3d"); }
+
+@font-face {
+  font-family: "Telefon";
+  src: url("//cloud.webtype.com/webtype/ff2/2/066731ed-4a67-4240-9b6c-ea827d1b6477?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd70d48a6bdaafa14edde229a39f740ddb35f74acff3fb56e39d87ef10634859b94c596d32a9aafde61b1144ff183ec04e95682c8fae133e5d2b7a8a2a5044e");
+  src: url("//cloud.webtype.com/webtype/ff2/2/066731ed-4a67-4240-9b6c-ea827d1b6477?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5fd70d48a6bdaafa14edde229a39f740ddb35f74acff3fb56e39d87ef10634859b94c596d32a9aafde61b1144ff183ec04e95682c8fae133e5d2b7a8a2a5044e#iefix") format("embedded-opentype"), url("//cloud.webtype.com/webtype/ff2/1/67255ea1-109b-428a-a695-a71ceab7a8f8?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5cd70b49a2bfacae2316a9d31249a18974d040705e98c83ba1f912e06d72b15629de946192a830b66c57968013b944b4d1dac6e127fa7b13bd6be6b8260bcb4b") format("truetype"), url("//cloud.webtype.com/webtype/ff2/3/1c5ae91c-40e5-4c24-8ee4-322d91609f98?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad5ed70c1da5ebfcf277b9821f343d478188b4c4f244fa64fd0a01a4c9fc2ae27cfd8a9c28c382b5152c373acea2c98268ddcfce2c735bea2d646c026b7bd96350") format("woff"), url("//cloud.webtype.com/webtype/ff2/4/18881d3c-cc3e-4175-9adc-d1c53a7488ce?ec_token=8f7c4c4997246fd7fa920075ce943b56dbfe91f607b7f50ac60389783b67a3c4fe591d8c5b82c3ad59d70c46a8b2a8afbc64122858beae8ba1b965cae288529e72bfa416d1f04868513d7530f1829cb175a0cd75e7d4fb5d1b0534e996910329d844b553eb4cd4f3#web") format("svg");
+  font-style: normal;
+  font-weight: normal; }
+
+body, html, input {
+  font-family: "Open Sans", sans-serif;
+  color: #333; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Telefon", sans-serif; }
+
+.page-header__logo {
+  margin: .5em 0;
+  margin-top: .75em; }
+
+.menu {
+  background: #333; }
+
+.menu__item-link {
+  color: #fff;
+  -webkit-transition: background .2s;
+  transition: background .2s;
+  text-decoration: none; }
+
+.menu__item-link:hover,
+.menu__item-link:focus,
+.menu__item-link:active
+.page-header {
+  -webkit-transition: all 100ms ease;
+  transition: all 100ms ease;
+  text-decoration: none;
+  background: #6ac4ae;
+  color: #333; }
+
+.menu__submenu {
+  background-color: #333; }
+
+#farte-reiseplanlegger {
+  position: relative;
+  z-index: 10;
+  padding: 0.75em 1.25em 1.275em 2em;
+  box-shadow: 1px 0px 2px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  background: #fff; }
+  #farte-reiseplanlegger label {
+    font-family: "Telefon", sans-serif; }
+  #farte-reiseplanlegger input[type="text"], #farte-reiseplanlegger input {
+    background-color: #f3f4f5;
+    font-size: 1.375em;
+    border: none;
+    padding: 1em 0.25em;
+    box-sizing: border-box;
+    max-width: 100%;
+    border-radius: 3px;
+    margin-top: 0.25em; }
+  #farte-reiseplanlegger label[for="date"],
+  #farte-reiseplanlegger label[for="time"] {
+    display: block; }
+  #farte-reiseplanlegger .grid.grid--12 {
+    padding: .5em; }
+  #farte-reiseplanlegger .grid__item {
+    box-sizing: border-box; }
+  #farte-reiseplanlegger .grid.grid--12 {
+    padding: .5em; }
+  #farte-reiseplanlegger .grid__item--4-12 {
+    width: 32.2033898305%;
+    float: left;
+    margin-right: 1.6949152542%;
+    margin-left: 0; }
+  #farte-reiseplanlegger .grid__item--2-12 {
+    width: 13.9830508475%;
+    float: left;
+    margin-right: 1.6949152542%;
+    margin-left: 0; }
+  #farte-reiseplanlegger .grid__item--1-12 {
+    width: 6.7796610169%;
+    float: left;
+    margin-right: 1.6949152542%; }
+    #farte-reiseplanlegger .grid__item--1-12:last-child {
+      margin: 0; }
+  #farte-reiseplanlegger .grid__item.search--btn .object-right {
+    margin: 0; }
+  #farte-reiseplanlegger button#submit {
+    height: 47px;
+    width: 100%;
+    margin-top: 1.85em !important; }
+
+.grid__item.travel-tabs {
+  margin-left: 3em; }
+  .grid__item.travel-tabs button.btn {
+    border-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: -2px;
+    margin-left: -1px;
+    margin-right: 0.35em;
+    padding: .5em .5em; }
+  .grid__item.travel-tabs button#realtime.active {
+    z-index: 100;
+    position: relative;
+    background: white; }
+
+.background-front {
+  background-color: #6ac4ae; }
+
+.object-left {
+  margin: 0; }
+
+.campaign-content {
+  font-family: "Telefon", sans-serif;
+  font-size: 2.5em;
+  padding: 0 1.5em;
+  background-color: #FFD520;
+  border-radius: 3px; }
+  .campaign-content .item {
+    padding-bottom: 0; }
+    .campaign-content .item .item__content .item__intro {
+      padding-bottom: 0em; }
+      .campaign-content .item .item__content .item__intro .class-image {
+        margin-top: -.3em; }

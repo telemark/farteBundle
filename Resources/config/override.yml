@@ -6,6 +6,11 @@ system:
           - { path: %kernel.root_dir%/../src/tfk/telemarkBundle/Resources/tags/youtube.xsl, priority: 10 }
           - { path: %kernel.root_dir%/../src/tfk/telemarkBundle/Resources/tags/quote.xsl, priority: 10 }
     location_view:
+      list:
+        article:
+          template: tfkfarteBundle:list:article.html.twig
+          match:
+            Identifier\ContentType: [article]
       full:
         frontpage:
           template: tfkfarteBundle:full:frontpage.html.twig
@@ -48,6 +53,10 @@ system:
           template: tfktelemarkBundle:full:image_gallery.html.twig
           match:
             Identifier\ContentType: [image_gallery]
+        linkbox:
+          template: tfkfarteBundle:full:linkbox.html.twig
+          match:
+            Identifier\ContentType: [linkbox]
       embed-inline:
         slide:
           template: tfktelemarkBundle:embed-inline:slide.html.twig
@@ -55,11 +64,11 @@ system:
             Identifier\ContentType: [slide]
       line:
         article:
-          template: tfktelemarkBundle:line:article.html.twig
+          template: tfkfarteBundle:line:article.html.twig
           match:
             Identifier\ContentType: [article]
         folder:
-          template: tfktelemarkBundle:line:folder.html.twig
+          template: tfkfarteBundle:line:folder.html.twig
           match:
             Identifier\ContentType: [folder]
         personprofil:
@@ -67,7 +76,7 @@ system:
           match:
             Identifier\ContentType: [personprofil]
         linkbox:
-          template: tfktelemarkBundle:line:linkbox.html.twig
+          template: tfkfarteBundle:line:linkbox.html.twig
           match:
             Identifier\ContentType: [linkbox]
         infobox:
@@ -129,6 +138,10 @@ system:
           template: tfktelemarkBundle:boxline:event.html.twig
           match:
             Identifier\ContentType: [event]
+        linkbox:
+          template: tfkfarteBundle:boxline:linkbox.html.twig
+          match:
+            Identifier\ContentType: [linkbox]
     content_view:
       custom:
         image:
@@ -188,15 +201,15 @@ system:
           match:
             Identifier\ContentType: [tabboks]
         article:
-          template: tfktelemarkBundle:line:article.html.twig
+          template: tfkfarteBundle:line:article.html.twig
           match:
             Identifier\ContentType: [article]
         folder:
-          template: tfktelemarkBundle:line:folder.html.twig
+          template: tfkfarteBundle:line:folder.html.twig
           match:
             Identifier\ContentType: [folder]
         linkbox:
-          template: tfktelemarkBundle:line:linkbox.html.twig
+          template: tfkfarteBundle:line:linkbox.html.twig
           match:
             Identifier\ContentType: [linkbox]
         did_u_know_container:
@@ -205,15 +218,15 @@ system:
             Identifier\ContentType: [did_u_know_container]
       ezfind_line:
         article:
-          template: tfktelemarkBundle:ezfind_line:article.html.twig
+          template: tfkfarteBundle:ezfind_line:article.html.twig
           match:
             Identifier\ContentType: [article]
         folder:
-          template: tfktelemarkBundle:ezfind_line:folder.html.twig
+          template: tfkfarteBundle:ezfind_line:folder.html.twig
           match:
             Identifier\ContentType: [folder]
         personprofil:
-          template: tfktelemarkBundle:ezfind_line:personprofil.html.twig
+          template: tfkfarteBundle:ezfind_line:personprofil.html.twig
           match:
             Identifier\ContentType: [personprofil]
         file:

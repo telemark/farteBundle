@@ -6,22 +6,27 @@
     {% set title = ez_content_name( content ) %}
 {% endif %}
 
-<title>{{ title|default( 'Telemark fylkeskommune' ) }}</title>
+<title>{{ title|default( 'Farte' ) }}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="author" content="{% if content.fields.author is defined %}{{ ez_field_value(content,'author') }}{% else%}Telemark fykeskommune{% endif %}"/>
-<meta name="copyright" content="Telemark fylkeskommune"/>
+<meta name="author" content="{% if content.fields.author is defined %}{{ ez_field_value(content,'author') }}{% else%}Farte{% endif %}"/>
+<meta name="copyright" content="Telemark fylkeskommune - Farte"/>
 <meta name="description" content="{% if content.fields.meta_description is defined %}{{ ez_field_value(content,'meta_description') }}{% else%}
-Telemark fylkeskommune er en offentlig arbeidsplass med cirka 1600 ansatte. Sammen med staten og kommunene utgjør vi ett av forvaltningsnivåene i det offentlige Norge.
+Farte.no er eid av Telemark fylkeskommune, ved avdeling for areal og transport.  Farte.no er en informasjonskanal for kollektivtransporttilbudet som Telemark fylkeskommune har ansvaret for.
 {% endif %}"/>
-<meta name="keywords" content="{% if content.fields.meta_keywords is defined %}{{ ez_field_value(content,'meta_keywords') }}{% else%}Fylkeskommune, Telemark, ledige, rjukan ,Notodden, Offentlig {% endif %}"/>
+<meta name="keywords" content="{% if content.fields.meta_keywords is defined %}{{ ez_field_value(content,'meta_keywords') }}{% else%}Telemark, Reise, Buss, Transport, Reiseplanlegger, Rutetabeller, Fylkeskommune, Telemark, ledige, rjukan ,Notodden, Offentlig {% endif %}"/>
 <meta name="MSSmartTagsPreventParsing" content="TRUE"/>
 <meta name="generator" content="eZ Platform"/>
 
-<link rel="Home" href="{{ path( ezpublish.rootLocation ) }}" title="{{ 'Telemark Fylkeskommune'|trans }}"/>
+<link rel="Home" href="{{ path( ezpublish.rootLocation ) }}" title="{{ 'Farte'|trans }}"/>
 <link rel="Index" href="{{ path( ezpublish.rootLocation ) }}" title="{{ 'Hjem'|trans }}"/>
 <link rel="Home" href="{{ path( ezpublish.rootLocation ) }}" title="{{ 'Hjem'|trans }}"/>
-<link rel="Shortcut icon" href="{{ asset( "bundles/tfktelemark/images/icons/favicon.ico" ) }}" type="image/x-icon"/>
-<link rel="icon" type="image/x-icon" href="{{ asset( "bundles/tfktelemark/images/icons/favicon.ico" ) }}" />
+<link rel="Shortcut icon" href="{{ asset( "bundles/tfkfarte/images/favicon.ico" ) }}" type="image/x-icon"/>
+<link rel="icon" type="image/x-icon" href="{{ asset( "bundles/tfkfarte/images/favicon.ico" ) }}" />
+
+<link href="//cloud.webtype.com/css/29f4b454-5ddc-454a-b1dc-ce911c228cd8.css" rel="stylesheet" type="text/css" />
+
+<!-- Google-font -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
 {# adding canonical url for all defined content #}
 {% if content is defined and content.contentInfo.mainLocationId %}

@@ -1,0 +1,180 @@
+// Nyhetssaker 
+.item__content.news {
+    background-color: $white;
+}
+.news.grid__item--12 {
+    background-color: $white;
+}
+
+  .hide-on-news {
+    display: none;
+  }
+
+.grid__item {
+    
+    .item {
+        position: initial;
+        
+        .object-right {
+            margin-left: .5em;
+        }
+
+        .item__header a {
+            text-decoration: none;
+            margin: .5em 0 -.25em 0px;
+            display: block;
+        }
+
+        img {
+          margin-bottom:-4px;
+        }
+
+        .line.item__content {
+
+            .item__intro {
+                border-bottom: none;
+                padding: 0 .5em;
+                // border-bottom: 1px solid lightgrey;
+                // padding: .5em;
+                margin: 0;
+
+                p > a,
+                a {
+                  font-size: 1.1em;
+                }
+            }
+
+        }
+    }
+
+}
+
+
+h1.tabs__content__header.news {
+    background: url("/bundles/tfkfarte/images/icon/farte_mini_mini.png") no-repeat 4% 48% #fff;
+    padding-left: 2.5em;
+    border: 0;
+    font-size: 1.67em;
+    margin-bottom: -1.375em;
+    padding-bottom: .5em;
+    margin-top: 0em;
+    background-size: 1.5em;
+    margin-bottom: .1em;
+
+    a {
+      text-decoration: none;
+      color:$black;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+}
+
+.tabs__content {
+    border: none;
+}
+
+
+.grid.pictos {
+
+  .grid__item--4-12 {
+    border: 2px solid transparent;
+  }
+  .grid__item--4-12:hover {
+    border-color: black;
+  }
+
+  a {
+    color: $black;
+  }
+
+  .white {
+    p > a {
+      color: white;
+      font-size: .825em;
+      font-weight: 900;
+      border-bottom: 2px solid white;
+        &:hover {
+          border-color: $yellow;
+        }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: initial;
+  }
+
+  .item {
+    overflow: hidden;
+    min-height: 255px;
+    padding-top:0;
+    padding-bottom:0;
+  }
+
+  .item-content {
+    padding: 1.275em 1.25em 1.5em 1.25em;
+
+      hr {
+        border-color: #333;
+        border-style: solid;
+        border-width: 1px;
+      }
+
+      h2 {
+        padding: 0;
+        margin: 0;
+        border-bottom:2px solid;
+      }
+
+      p {
+        margin-left:39%;
+        @media screen and (max-width: 900px) {
+          margin-left:8em;
+          margin-top:2em;
+          font-size: 120%;
+        }
+      }
+
+      &.white {
+      p, h2, hr {
+        color:$white;
+        border-color:$white;
+      }
+  }
+  }
+
+
+
+  .item.school {
+    background: url("/bundles/tfkfarte/images/icon/skoleskyss.svg") no-repeat 0% 0% $gray;
+  }
+
+  .item.guarantee {
+    background: url("/bundles/tfkfarte/images/icon/reisegaranti.svg") no-repeat 0% 0% $turkis-mett;
+  }
+
+  .item.truetime {
+    background: url("/bundles/tfkfarte/images/icon/sanntid-feil.svg") no-repeat 0% 0% $key;
+  }
+
+
+  @media screen and (max-width: 900px) {
+    .grid__item--4-12 {
+      width:100%;
+      margin: 0;
+      margin-bottom: .5em;
+      clear: both;
+
+      &:last-child {
+        margin-bottom:2em;
+      }
+
+
+    }
+  }
+
+}
+
+

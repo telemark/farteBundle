@@ -1,0 +1,69 @@
+{#
+    linkbox - line view
+#}
+
+{% set this_size = params.element_size|default('large') %}
+{% set imageId = ez_field_value( content, 'image' ) %}
+
+{% if not ez_is_field_empty( content, 'internal_resource' ) %}
+	{% set externalResourceId = ez_field_value( content, 'internal_resource' ) %}
+	{% set this_block_url = url( 'ez_urlalias', {'contentId': externalResourceId} ) %}
+{% else %}
+	{% set this_block_url = ez_field_value( content, 'url' ) %}
+{% endif %}
+
+{% if not ez_is_field_empty( content, 'open_in_new_window' ) %}
+	{% set this_block_target = '_blank' %}
+{% else %}
+	{% set this_block_target = '_self' %}
+{% endif %}
+
+{% if this_size is sameas('large') %}
+  <div class="item item--vertical grid__item--12-12">
+{% elseif this_size is sameas('xlarge')%}
+  <div class="item item--vertical grid__item--12-12">
+{% elseif this_size is sameas('medium')%}
+  <div class="item item--vertical grid__item--3-6">
+{% else %}
+  <div class="item item--vertical grid__item--4-12">
+{% endif %}
+
+  {% if imageId is defined and imageId.destinationContentId is not empty %}
+
+  <a href={{ this_block_url }} target={{ this_block_target }} class="item__imglink imglink">
+         {{ render(
+            controller(
+                "ez_content:viewContent",
+                  {
+                      "contentId": imageId.destinationContentId,
+                      "viewType": "custom",
+                      "params": { "img_render_size": "responsive_04" }
+                  }
+            )
+        ) }}
+    </a>
+
+  {% endif %}
+
+	<div class="item__content">
+		{% if not ez_is_field_empty( content, 'show_title' ) %}
+        	<a href={{ this_block_url }} target={{ this_block_target }}>
+        		<h2 class="item__header">{{ ez_render_field( content, 'title' ) }}</h2>
+        	</a>
+        {% endif %}
+
+        {% if not ez_is_field_empty( content, 'description' ) %}
+        <div class="item__intro">
+                {{ ez_render_field( content, 'description' ) }}
+        </div>
+         {% endif %}
+
+         {% if not ez_is_field_empty( content, 'show_url_text' ) %}
+         	{% if not ez_is_field_empty( content, 'url' ) %}
+
+              <a href={{ this_block_url }} target={{ this_block_target }}>{{ content.fields.url['nor-NO'].text }}</a>
+
+            {% endif %}
+         {% endif %}
+    </div>
+</div>

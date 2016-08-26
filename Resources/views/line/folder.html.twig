@@ -1,0 +1,5 @@
+{% if not ez_is_field_empty( content, 'is_landingpage' ) %}
+  {% include "tfkfarteBundle:full:folder_landingpage.html.twig" %}
+{% else %}
+  {% include "tfkfarteBundle:full:folder_normal.html.twig" %}
+{% endif %}

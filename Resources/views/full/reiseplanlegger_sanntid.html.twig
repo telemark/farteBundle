@@ -1,0 +1,33 @@
+{% extends "tfkfarteBundle::pagelayout.html.twig" %}
+
+{% block content %}
+<div class="constrained-content">
+<div class="content" id="undersider">
+
+<script type="text/javascript">
+        /* Demo av Reiseplanlegger i IFrame, fungerer i nettlesere som støtter postMessage API (Testet i IE8+, Chrome, FF, Safari, Opera)*/
+        (function (win) {
+            function setFrameHeight(evt) {
+                var iframe = document.getElementById('travelmagic'),
+                    height = parseInt(evt.data, 10);
+                if (iframe) {
+                    iframe.setAttribute('height', height);
+                }
+            }
+            if (win.addEventListener) {
+                win.addEventListener("message", setFrameHeight, false);
+            }
+            else {
+                win.attachEvent("onmessage", setFrameHeight);
+            }
+        })(window);
+    </script>
+
+<div class="fullwidth">
+    <h1 id="overskrift-side">Reiseplanlegger</h1>
+    <iframe style="overflow:visible;" width="100%" height="1200" src="{{iframeUrl}}" name="travelmagic" id="travelmagic" scrolling="no" frameborder="0" />
+
+</div>
+</div>
+</div>
+{% endblock %}
