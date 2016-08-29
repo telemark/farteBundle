@@ -1,7 +1,7 @@
 {% extends noLayout ? viewbaseLayout : "tfkfarteBundle::pagelayout.html.twig" %}
 
 {% block facebookMeta %}
-    {% include 'tfktelemarkBundle:meta:article_meta.html.twig' %}
+    {% include 'tfkfarteBundle:meta:article_meta.html.twig' %}
 {% endblock %}
 
 {% block content %}
@@ -57,13 +57,13 @@
         {{ ez_render_field( content, 'body' ) }}
     {% endif %}
 
-    {{ render( controller("tfktelemarkBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['tabboks'] , 'viewType': 'line' }} )) }}
-    {{ render( controller("tfktelemarkBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['image_gallery'] , 'viewType': 'line' }} )) }}
+    {{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['tabboks'] , 'viewType': 'line' }} )) }}
+    {{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['image_gallery'] , 'viewType': 'line' }} )) }}
 
 </article>
 
   	 <aside class="main__right">
-  	{{ render( controller("tfktelemarkBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['infobox'] , 'viewType': 'line' }} )) }}
+  	{{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['infobox'] , 'viewType': 'line' }} )) }}
 	</aside>
 	 <nav role="navigation" class="main__left">
 
@@ -84,7 +84,7 @@
         
             {{ render(
                 controller(
-                    "tfktelemarkBundle:Menu:leftMenu",
+                    "tfkfarteBundle:Menu:leftMenu",
                     {'locationId': location.id, 'currentLocationId': locId}
                 )
             ) }}

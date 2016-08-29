@@ -1,0 +1,5 @@
+{#
+    Related image - custom view
+#}
+
+<img src={{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, img_render_size ).uri, absolute=true ) }} alt="{% if content.fields.image['nor-NO'].alternativeText is defined %}{{ content.fields.image['nor-NO'].alternativeText }}{% endif %}"/>

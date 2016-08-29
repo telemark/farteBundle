@@ -91,17 +91,17 @@
                 {% endif %}
 
                 <div class="grid grid--12">
-                  {{ render( controller("tfktelemarkBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['linkbox'] , 'viewType': 'line', 'element_size': linksize }} )) }}
+                  {{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['linkbox'] , 'viewType': 'line', 'element_size': linksize }} )) }}
                 </div>
-                  {{ render( controller("tfktelemarkBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['tabboks'] , 'viewType': 'line', 'tabboks_size': 'medium'}} )) }}
+                  {{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['tabboks'] , 'viewType': 'line', 'tabboks_size': 'medium'}} )) }}
                 <div class="grid grid--12">
-                  {{ render( controller("tfktelemarkBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['article'] , 'viewType': 'line' }} )) }}
-                </div>
-                <div class="grid grid--12">
-                  {{ render( controller("tfktelemarkBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['personprofil'] , 'viewType': 'line' }} )) }}
+                  {{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['article'] , 'viewType': 'line' }} )) }}
                 </div>
                 <div class="grid grid--12">
-                  {{ render( controller("tfktelemarkBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['file'] , 'viewType': 'line' }} )) }}
+                  {{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['personprofil'] , 'viewType': 'line' }} )) }}
+                </div>
+                <div class="grid grid--12">
+                  {{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['file'] , 'viewType': 'line' }} )) }}
                 </div>
               {% endif %}
             {% endif %}
@@ -109,7 +109,7 @@
       </div>
    {% if content.getFieldValue('show_fullscreen').bool == false %}
    <aside class="main__right">
-    {{ render( controller("tfktelemarkBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['infobox'] , 'viewType': 'line' }} )) }}
+    {{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['infobox'] , 'viewType': 'line' }} )) }}
   </aside>
 {% endif %}
    <nav role="navigation" class="main__left">
@@ -130,7 +130,7 @@
         {% endif %}
             {{ render(
                 controller(
-                    "tfktelemarkBundle:Menu:leftMenu",
+                    "tfkfarteBundle:Menu:leftMenu",
                     {'locationId': location.id, 'currentLocationId': locId}
                 )
             ) }}

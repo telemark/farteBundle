@@ -1,0 +1,28 @@
+<nav role="navigation" class="pagination">
+  
+{#
+  {{ pagerfanta( items, 'twitter_bootstrap_translated', {'routeName': location} ) }}
+#}          
+
+  <a href="#" class="pagination__prev">Forrige</a>
+  <a href="#" class="pagination__next">Neste</a>
+  <ul class="pagination__list">
+    <li class="pagination__list__item">
+      <a href="#" class="pagination__list__link pagination__list__link--active">1</a>
+    </li>
+    <li class="pagination__list__item">
+      <a href="#" class="pagination__list__link">2</a>
+    </li>
+    <li class="pagination__list__item">
+      <a href="#" class="pagination__list__link">3</a>
+    </li>
+    <li class="pagination__list__item">
+      <a href="#" class="pagination__list__link">4</a>
+    </li>
+    <li class="pagination__list__item">
+      <a href="#" class="pagination__list__link">5</a>
+    </li>
+  </ul>
+  <div class="pagination__list pagination__list--small"><span class="pagination__count">3/5</span></div>
+
+</nav>

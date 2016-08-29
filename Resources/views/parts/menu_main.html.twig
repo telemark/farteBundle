@@ -1,0 +1,9 @@
+<ul class="menu__submenu menu__level">
+        {% for location in list %}
+            {% if location.hidden == false %}
+                <li class="menu__submenu-item">
+                    <a href="{{ path(location) }}" class="menu__item-link">{{location.contentInfo.name}}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+</ul>

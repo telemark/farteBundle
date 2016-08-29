@@ -1,0 +1,36 @@
+{% if ez_is_field_empty( content, 'hide_title' ) %}
+  <h2>{{ ez_render_field( content, 'title' ) }}</h2>
+{% endif %}
+
+{% if not ez_is_field_empty( content, 'description' ) %}
+  {{ ez_render_field( content, 'description' ) }}
+{% endif %}
+
+{% if content.getFieldValue('related_object').destinationContentId and content.getFieldValue('children_limit').value > 0 %}
+
+	{{ render( controller("tfkfarteBundle:Item:infoboxRelated", {'locationId': location.id } )) }}
+
+	{#% if content.getFieldValue('show_last') %}
+		{{ render( controller("tfkfarteBundle:Item:infoboxRelated", 
+		{'locationId': location.id,  
+		'params' : 
+			{ 'class' : ['article', 'file'], 
+			'sortBy' : 'published',
+			'class_identifier' : false,
+			'locationId' : location.parentLocationId
+		}} )) }}
+
+	{% else %}
+		{{ render( controller("tfkfarteBundle:Item:infoboxRelated", 
+		{'locationId': location.id,  
+		'params' : 
+			{ 'class' : ['article', 'file'], 
+			'sortBy' : 'published',
+			'class_identifier' : false,
+			'locationId' : location.parentLocationId
+		}} )) }}
+
+	{% endif %#}
+
+{% endif %}
+
