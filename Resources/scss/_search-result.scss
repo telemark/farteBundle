@@ -1,0 +1,159 @@
+
+.search-result--item {
+  @extend %clearfix;
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid $gray-link;
+
+  img {
+    display: block;
+    margin-bottom: .5em;
+
+    @include susy-breakpoint($large, $susy-large) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include susy-breakpoint($medium, $susy-large) {
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+  }
+
+  > .article {
+    @extend %clearfix;
+
+    @include susy-breakpoint($large, $susy-large) {
+      margin: 0 -#{gutter()};
+
+      @include nested(8) {
+        .search-result--col-left {
+          @include span(2);
+          margin-left: 1.4%;
+        }
+
+        .search-result--col-right { @include span(6 last); }
+      }
+    }
+  }
+}
+
+.search-result--col-left {
+
+  // @include susy-breakpoint($medium, $susy-large) {
+  //   @include span(12);
+  // }
+}
+
+.search-result--col-right {
+
+  a {
+    font-weight: bold;
+  }
+}
+
+.search-result--text {
+  font-size: .9em;
+  line-height: 1.3;
+  margin-top: .3em;
+}
+
+.search-result--large-icon {
+  background-color: $light-gray;
+  display: block;
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  color: #999;
+  text-align: center;
+
+  @include susy-breakpoint($large, $susy-large) {
+    margin: 0;
+  }
+}
+
+.search_pagination {
+  text-align: center;
+
+  a {
+    border: 0;
+    text-decoration: none;
+
+    &.pagination-left {
+      float: left;
+    }
+
+    &.pagination-right {
+      float: right;
+    }
+  }
+}
+
+.search-sorting {
+  font-size: .9em;
+  padding-bottom: 2.5em;
+
+  @include susy-breakpoint($medium, $susy-large) {
+    margin-bottom: 1em;
+    border-bottom: 1px solid;
+  }
+
+  @include susy-breakpoint($large, $susy-large) {
+    margin-bottom: 1.5em;
+    padding-bottom: 0;
+  }
+
+  > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include susy-breakpoint($large, $susy-large) {
+      text-align: right;
+    }
+
+    > li {
+      display: block;
+
+      &:first-child {
+        @extend .header-title;
+        margin-bottom: .5em;
+
+        @include susy-breakpoint($medium, $susy-large) {
+          margin-top: 1em;
+        }
+
+        @include susy-breakpoint($small $large, $large) {
+          border-bottom: 1px solid;
+        }
+
+        @include susy-breakpoint($large, $susy-large) {
+          border: 0;
+          display: inline-block;
+          font-weight: bold;
+          margin-bottom: 0;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      @include susy-breakpoint($large, $susy-large) {
+        display: inline-block;
+
+        &::before {
+          content: "|";
+          display: inline-block;
+          margin: 0 .2em;
+        }
+      }
+    }
+  }
+}
+
+.section__employee-searchResults {
+
+  > .employee {
+    margin-top: 1em;
+  }
+}
