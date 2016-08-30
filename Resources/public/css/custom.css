@@ -968,7 +968,6 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   position: fixed;
   z-index: 999;
-  width: 47.1%;
   background-color: #fff; }
 
 #farte-reiseplanlegger .autocomplete .ui-autocomplete li {
@@ -976,17 +975,15 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none; }
 
 .ui-autocomplete {
-  top: 0;
-  left: 0;
   cursor: default;
   background-color: #fff;
   box-shadow: none;
   max-height: 500px;
-  overflow: none;
   text-align: left;
   z-index: 99999;
-  width: 90%;
-  padding: .25em; }
+  padding: .25em;
+  margin-bottom: 0;
+  padding-bottom: 0; }
 
 .ui-autocomplete li:focus,
 .ui-autocomplete li:hover {
