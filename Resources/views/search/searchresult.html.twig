@@ -1,0 +1,156 @@
+{% extends "tfkfarteBundle::pagelayout.html.twig" %}
+
+{% block content %}
+
+    <div class="content">
+        <div class="constrained-content">
+
+                <div class="folder-view">
+                    <h2>Søket etter «{% if searchString is defined %}{{ searchString }}{% endif %}» gav {% if contentCount is defined %} {{ contentCount }} treff{% endif %}</h2>
+                </div>
+
+                <div class="margin-minus">
+
+                    <div class="sidebar-left">
+                        <ul id="facet-list" class="sidebar--list-searchresult">
+                            {% if activeFacetsArray is defined or activeDateFilters is defined %}
+                                {% if activeFacetsArray is defined %}
+                                    {% for item in activeFacetsArray %}
+                                        <li>
+                                            <a href="{{ item.url }}">{{ item.text }} x</a>
+                                        </li>                        
+                                    {% endfor %}
+                                {% endif %}
+
+                                {% if activeDateFilters is defined %}
+                                    {% for item in activeDateFilters %}
+                                        <li>
+                                            <a href="{{ item.url }}">{{ item.text }} x</a>
+                                        </li>                        
+                                    {% endfor %}
+                                {% endif %}
+                            {% endif %}
+                        </ul>
+
+                        {% if activeFacetsArray is defined or activeDateFilters is defined %}
+                            {% if activeFacetsArray|length > 1 or ( activeDateFilters|length > 0 and activeFacetsArray|length > 0 ) %}
+                                <li><a href="{{ search_uri }}">Nullstill fasettering</a></li>
+                            {% endif %}
+                        {% endif %}
+
+
+                        <ul id="facet-list" class="sidebar--list-searchresult">
+                            {% if availableFacetsArray is defined %}
+                                {% for group in availableFacetsArray %}
+                                    <li>
+                                        <span class="label facet-count header-title">{{ group.heading }}</span>
+                                        <ul>
+                                            {% for item in group.fieldSet %}
+                                                <li>
+                                                    <a href="{{ item.url }}">{{ item.text }}</a> ({{ item.count }})
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
+                                {% endfor %}
+                            {% endif %}
+                            {% if availableDateFilters is defined and availableDateFilters|length > 0 and contentCount > 0 %}
+                                <li>
+                                    <span class="label facet-count header-title">Publisert</span>
+                                    <ul>
+                                        {% for dateFilterItem in availableDateFilters %}
+                                            <li>
+                                                <a href="{{ dateFilterItem.url }}">{{ dateFilterItem.text }}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+
+                    {% if contentCount is defined and contentCount == 0 %}
+                    
+                        {{ searchString }} ga ingen treff...
+                    
+                    {% else %}
+
+
+                    
+
+                        {% if contentResult is defined %}
+                            <div class="main-content folder-view">
+
+                                {% if sorting is defined %}
+                                    <div class="search-sorting clearfix" >
+                                        <ul>
+                                            <li>Sorter visning på:</li>
+                                            <li>
+                                                {% if sort != 'alpha' %}
+                                                    <a href="{{ sorting.alpha }}">Alfabetisk</a>
+                                                {% else %}
+                                                    Alfabetisk
+                                                {% endif %}
+                                            </li>
+                                            <li>
+                                                {% if sort != 'score' %}
+                                                    <a href="{{ sorting.score }}">Relevans</a>
+                                                {% else %}
+                                                    Relevans
+                                                {% endif %}
+                                            </li>
+                                            <li>
+                                                {% if sort != 'newest' %}
+                                                    <a href="{{ sorting.newest }}">Sist lagt til</a>
+                                                {% else %}
+                                                    Sist lagt til
+                                                {% endif %}
+                                            </li>
+                                            <li>
+                                                {% if sort != 'oldest' %}
+                                                    <a href="{{ sorting.oldest }}">Først lagt til</a>
+                                                {% else %}
+                                                    Først lagt til
+                                                {% endif %}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                {% endif %}
+
+                                {% for item in contentResult %}
+                                    <div class="search_results search-result--item">
+                                          {{ render( controller( 'ez_content:viewLocation', {'locationId': item.NodeID, 'viewType': 'search_line', 'params': { 'search_item': item }} ) ) }}
+                                    </div>
+                                    {#
+                                    <div>
+                                        <div>
+                                            <a href="{{ item.LocalAttributeValueList.global_url_alias }}">{{ item.name }}</a> ({{ item.NodeID }} / {{ item.ContentObjectID }})
+                                        </div>
+                                        <div>
+                                            {{ item.LocalAttributeValueList.highlight|raw }}
+                                        </div>
+                                        <div>
+                                            {{ item.LocalAttributeValueList.score_percent }} {{ item.CurrentLanguage }}
+                                        </div>
+                                    </div>
+                                    #}
+                                {% endfor %}
+
+                                    <div class="search_pagination">
+                                        {% if prevPageUrl != '' %}<a class="pagination-left" href="{{ prevPageUrl }}">Forrige</a>{% endif %} Side {{ contentPage }} av {{ contentPages }} {% if nextPageUrl != '' %}<a class="pagination-right" href="{{ nextPageUrl }}">Neste</a>{% endif %}
+                                    </div>
+                                {% else %}
+                                    <p>Tom søkestring</p>
+                                {% endif %}
+
+                            </div>
+
+
+                    {% endif %}
+
+                </div>
+
+        </div>
+    </div>
+
+{% endblock %}

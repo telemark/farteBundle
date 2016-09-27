@@ -75,7 +75,7 @@ class ItemController extends Controller {
             return new Response();
         }
         return $this->render(
-            'tfktelemarkBundle::breadcrumb.html.twig'
+            'tfkfarteBundle::breadcrumb.html.twig'
         );
     }
 	public function messagesAction($locationId, $params = array()) {
@@ -115,7 +115,7 @@ class ItemController extends Controller {
         }
 
         return $this->render(
-            'tfktelemarkBundle:parts:child_loop.html.twig',
+            'tfkfarteBundle:parts:child_loop.html.twig',
             array(
                 'items' => $items,
                 'location' => $location,
@@ -124,6 +124,106 @@ class ItemController extends Controller {
                 'params' => $params
             ), $response );
     }
+        public function childrenAction($locationId, $params = array()) {
+        // children
+        // Setting HTTP cache for the response to be public and with a TTL of 1 day.
+        $response = new Response;
+
+        $response->setPublic();
+        $response->setSharedMaxAge( 86400 );
+        // Menu will expire when top location cache expires.
+        $response->headers->set( 'X-Location-Id', $locationId );
+        // Menu might vary depending on user permissions, so make the cache vary on the user hash.
+        $response->setVary( 'X-User-Hash' );
+
+        $location  = $this->getRepository()->getLocationService()->loadLocation( $locationId );
+        $content = $this->getRepository()->getContentService()->loadContentByContentInfo( $location->getContentInfo() );
+
+        $searchService = $this->getRepository()->getSearchService();
+        $query = new Query();
+        $query->criterion = new Criterion\LogicalAnd( array(
+                new Criterion\ContentTypeIdentifier($params['class']),
+                new Criterion\ParentLocationId($locationId),
+                new Criterion\Visibility( Criterion\Visibility::VISIBLE )
+            ) );
+
+        $query->sortClauses = $this->getSortOrder($location);
+
+        $query->limit = 50;
+
+        $items = array();
+        $result = $searchService->findContent( $query );
+        if ($result->totalCount > 0) {
+            foreach ($result->searchHits as $item) {
+                $itemLoc  = $this->getRepository()->getLocationService()->loadLocation( $item->valueObject->contentInfo->mainLocationId );
+                if (!$itemLoc->invisible)
+                    $items[] = $item->valueObject;
+            }
+        }
+
+        return $this->render(
+            'tfkfarteBundle:parts:child_loop.html.twig',
+            array(
+                'items' => $items,
+                'location' => $location,
+                'content' => $content,
+                'viewType' => $params['viewType'],
+                'params' => $params
+            ), $response );
+    }
+
+    public function childrenItemsAction($locationId, $params = array()) {
+        // children
+        // Setting HTTP cache for the response to be public and with a TTL of 1 day.
+        $response = new Response;
+
+        $response->setPublic();
+        $response->setSharedMaxAge( 86400 );
+        // Menu will expire when top location cache expires.
+        $response->headers->set( 'X-Location-Id', $locationId );
+        // Menu might vary depending on user permissions, so make the cache vary on the user hash.
+        $response->setVary( 'X-User-Hash' );
+
+        $location  = $this->getRepository()->getLocationService()->loadLocation( $locationId );
+        $content = $this->getRepository()->getContentService()->loadContentByContentInfo( $location->getContentInfo() );
+
+        $searchService = $this->getRepository()->getSearchService();
+
+        $query = new LocationQuery();
+        $query->criterion = new Criterion\LogicalAnd( array(
+                new Criterion\ContentTypeIdentifier($params['class']),
+                new Criterion\ParentLocationId($locationId),
+                new Criterion\Visibility( Criterion\Visibility::VISIBLE )
+        ) );
+
+        $sorting = new SortLocationHelper();
+        $sortingClause = $sorting->getSortClauseFromLocation( $location );
+        $query->sortClauses = array($sortingClause);
+
+        $query->limit = 50;
+
+        $items = array();
+        $result = $searchService->findLocations( $query );
+        if ($result->totalCount > 0) {
+            foreach ($result->searchHits as $item) {
+                $items[] = $item->valueObject;
+            }
+        }
+
+        return $this->render(
+            'tfkfarteBundle:parts:child_items_loop.html.twig',
+            array(
+                'items' => $items,
+                'location' => $location,
+                'content' => $content,
+                'viewType' => $params['viewType'],
+                'params' => $params
+            ), $response );
+    }
+
+
+
+
     public function randomChildAction($locationId, $params = array()) {
         // children
         // Setting HTTP cache for the response to be public and with a TTL of 1 day.
@@ -164,7 +264,7 @@ class ItemController extends Controller {
         $random_items = array($items[array_rand($items)]);
 
         return $this->render(
-            'tfktelemarkBundle:parts:child_loop.html.twig',
+            'tfkfarteBundle:parts:child_loop.html.twig',
             array(
                 'items' => $random_items,
                 'location' => $location,
@@ -196,7 +296,7 @@ class ItemController extends Controller {
 
 
         }
-        return $this->render('tfktelemarkBundle:parts:menu_main.html.twig', array( 'list' => $locationList, 'sublist' => $subLocationList) );
+        return $this->render('tfkfarteBundle:parts:menu_main.html.twig', array( 'list' => $locationList, 'sublist' => $subLocationList) );
     }
 
 	public function leftMenuAction($locationId) {
@@ -218,7 +318,7 @@ class ItemController extends Controller {
                     }
                 }
         }
-        return $this->render('tfktelemarkBundle:parts:menu_left.html.twig', array( 'list' => $locationList, 'sublist' => $subLocationList) );
+        return $this->render('tfkfarteBundle:parts:menu_left.html.twig', array( 'list' => $locationList, 'sublist' => $subLocationList) );
     }
 
     public function arkivAction($locationId)
@@ -268,7 +368,7 @@ class ItemController extends Controller {
         $items->setCurrentPage( $this->getRequest()->get( 'page', 1 ) );
 
         return $this->render(
-            'tfktelemarkBundle:full:folder_arkiv.html.twig',
+            'tfkfarteBundle:full:folder_arkiv.html.twig',
             array(
                 'items' => $items,
                 'location' => $location,
@@ -377,7 +477,7 @@ class ItemController extends Controller {
         }
 
         return $this->render(
-            'tfktelemarkBundle:parts:infobox_related.html.twig',
+            'tfkfarteBundle:parts:infobox_related.html.twig',
             array(
                 'items' => $items,
                 'show_intro' => $show_intro

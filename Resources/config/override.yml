@@ -3,8 +3,8 @@ system:
     fieldtypes:
       ezxml:
         custom_tags:
-          - { path: %kernel.root_dir%/../src/tfk/telemarkBundle/Resources/tags/youtube.xsl, priority: 10 }
-          - { path: %kernel.root_dir%/../src/tfk/telemarkBundle/Resources/tags/quote.xsl, priority: 10 }
+          - { path: %kernel.root_dir%/../src/tfk/farteBundle/Resources/tags/youtube.xsl, priority: 10 }
+          - { path: %kernel.root_dir%/../src/tfk/farteBundle/Resources/tags/quote.xsl, priority: 10 }
     location_view:
       list:
         article:
@@ -17,40 +17,28 @@ system:
           match:
            Identifier\ContentType: [landing_page]
         folder:
-          controller: tfktelemarkBundle:Item:folderInit
+          controller: tfkfarteBundle:Item:folderInit
           template: tfkfarteBundle:full:folder.html.twig
           match:
             Identifier\ContentType: [folder]
         hidden_folder:
-          template: tfktelemarkBundle:full:hidden_folder.html.twig
+          template: tfkfarteBundle:full:hidden_folder.html.twig
           match:
             Identifier\ContentType: [hidden_folder]
         article:
           template: tfkfarteBundle:full:article.html.twig
           match:
            Identifier\ContentType: [article]
-        event_calendar:
-          template: tfktelemarkBundle:full:event_calendar.html.twig
-          match:
-           Identifier\ContentType: [event_calendar]
-        event:
-          template: tfktelemarkBundle:full:event.html.twig
-          match:
-           Identifier\ContentType: [event]
-        survey:
-          template: tfktelemarkBundle:full:survey.html.twig
-          match:
-           Identifier\ContentType: [survey]
         file:
-          template: tfktelemarkBundle:full:file.html.twig
+          template: tfkfarteBundle:full:file.html.twig
           match:
            Identifier\ContentType: [file]
         infobox:
-          template: tfktelemarkBundle:full:infobox.html.twig
+          template: tfkfarteBundle:full:infobox.html.twig
           match:
             Identifier\ContentType: [infobox]
         image_gallery:
-          template: tfktelemarkBundle:full:image_gallery.html.twig
+          template: tfkfarteBundle:full:image_gallery.html.twig
           match:
             Identifier\ContentType: [image_gallery]
         linkbox:
@@ -59,7 +47,7 @@ system:
             Identifier\ContentType: [linkbox]
       embed-inline:
         slide:
-          template: tfktelemarkBundle:embed-inline:slide.html.twig
+          template: tfkfarteBundle:embed-inline:slide.html.twig
           match:
             Identifier\ContentType: [slide]
       line:
@@ -71,20 +59,16 @@ system:
           template: tfkfarteBundle:line:folder.html.twig
           match:
             Identifier\ContentType: [folder]
-        personprofil:
-          template: tfktelemarkBundle:line:personprofil.html.twig
-          match:
-            Identifier\ContentType: [personprofil]
         linkbox:
           template: tfkfarteBundle:line:linkbox.html.twig
           match:
             Identifier\ContentType: [linkbox]
         infobox:
-          template: tfktelemarkBundle:line:infobox.html.twig
+          template: tfkfarteBundle:line:infobox.html.twig
           match:
             Identifier\ContentType: [infobox]
         image_gallery_slide:
-          template: tfktelemarkBundle:line:image_gallery_slide.html.twig
+          template: tfkfarteBundle:line:image_gallery_slide.html.twig
           match:
             Identifier\ContentType: [image_gallery_slide]
         tabboks:
@@ -96,15 +80,15 @@ system:
           match:
             Identifier\ContentType: [tabboks_tab]
         slide_container:
-          template: tfktelemarkBundle:line:slide_container.html.twig
+          template: tfkfarteBundle:line:slide_container.html.twig
           match:
             Identifier\ContentType: [slide_container]
         slide:
-          template: tfktelemarkBundle:line:slide.html.twig
+          template: tfkfarteBundle:line:slide.html.twig
           match:
             Identifier\ContentType: [slide]
         did_u_know_line:
-          template: tfktelemarkBundle:line:did_u_know_line.html.twig
+          template: tfkfarteBundle:line:did_u_know_line.html.twig
           match:
             Identifier\ContentType: [did_u_know_line]
         file:
@@ -113,87 +97,96 @@ system:
            Identifier\ContentType: [file]
       ezfind_line:
         article:
-          template: tfktelemarkBundle:ezfind_line:article.html.twig
+          template: tfkfarteBundle:ezfind_line:article.html.twig
           match:
             Identifier\ContentType: [article]
         folder:
-          template: tfktelemarkBundle:ezfind_line:folder.html.twig
+          template: tfkfarteBundle:ezfind_line:folder.html.twig
           match:
             Identifier\ContentType: [folder]
         personprofil:
-          template: tfktelemarkBundle:ezfind_line:personprofil.html.twig
+          template: tfkfarteBundle:ezfind_line:personprofil.html.twig
           match:
             Identifier\ContentType: [personprofil]
       custom:
         image:
-          template: tfktelemarkBundle:custom:image.html.twig
+          template: tfkfarteBundle:custom:image.html.twig
           match:
             Identifier\ContentType: [image]
       boxline:
         article:
-          template: tfktelemarkBundle:boxline:article.html.twig
+          template: tfkfarteBundle:boxline:article.html.twig
           match:
             Identifier\ContentType: [article]
         event:
-          template: tfktelemarkBundle:boxline:event.html.twig
+          template: tfkfarteBundle:boxline:event.html.twig
           match:
             Identifier\ContentType: [event]
         linkbox:
           template: tfkfarteBundle:boxline:linkbox.html.twig
           match:
             Identifier\ContentType: [linkbox]
+      search_line:
+        article:
+          template: tfkfarteBundle:line/search:article.html.twig
+          match:
+            Identifier\ContentType: [article]
+        folder:
+          template: tfkfarteBundle:line/search:folder.html.twig
+          match:
+            Identifier\ContentType: [folder]
     content_view:
       custom:
         image:
-          template: tfktelemarkBundle:custom:image.html.twig
+          template: tfkfarteBundle:custom:image.html.twig
           match:
             Identifier\ContentType: [image]
       responsive:
         image:
-          template: tfktelemarkBundle:responsive:image.html.twig
+          template: tfkfarteBundle:responsive:image.html.twig
           match:
             Identifier\ContentType: [image]
       meta:
         image:
-          template: tfktelemarkBundle:meta:image.html.twig
+          template: tfkfarteBundle:meta:image.html.twig
           match:
             Identifier\ContentType: [image]
       embed-inline:
         slide:
-          template: tfktelemarkBundle:embed-inline:slide.html.twig
+          template: tfkfarteBundle:embed-inline:slide.html.twig
           match:
             Identifier\ContentType: [slide]
         image:
-          template: tfktelemarkBundle:embed-inline:image.html.twig
+          template: tfkfarteBundle:embed-inline:image.html.twig
           match:
             Identifier\ContentType: [image]
         slide_container:
-          template: tfktelemarkBundle:embed-inline:slide_container.html.twig
+          template: tfkfarteBundle:embed-inline:slide_container.html.twig
           match:
             Identifier\ContentType: [slide_container]
         image_gallery:
-          template: tfktelemarkBundle:line:image_gallery.html.twig
+          template: tfkfarteBundle:line:image_gallery.html.twig
           match:
             Identifier\ContentType: [image_gallery]
         article:
-          template: tfktelemarkBundle:line:article.html.twig
+          template: tfkfarteBundle:line:article.html.twig
           match:
             Identifier\ContentType: [article]
         folder:
-          template: tfktelemarkBundle:line:folder.html.twig
+          template: tfkfarteBundle:line:folder.html.twig
           match:
             Identifier\ContentType: [folder]
         linkbox:
-          template: tfktelemarkBundle:line:linkbox.html.twig
+          template: tfkfarteBundle:line:linkbox.html.twig
           match:
             Identifier\ContentType: [linkbox]
         tabboks:
-          template: tfktelemarkBundle:line:tabboks.html.twig
+          template: tfkfarteBundle:line:tabboks.html.twig
           match:
             Identifier\ContentType: [tabboks]
       line:
         kampanjecontainer:
-          template: tfktelemarkBundle:line:slide_container.html.twig
+          template: tfkfarteBundle:line:slide_container.html.twig
           match:
             Identifier\ContentType: [kampanjecontainer]
         tabboks:
@@ -213,7 +206,7 @@ system:
           match:
             Identifier\ContentType: [linkbox]
         did_u_know_container:
-          template: tfktelemarkBundle:line:did_u_know_container.html.twig
+          template: tfkfarteBundle:line:did_u_know_container.html.twig
           match:
             Identifier\ContentType: [did_u_know_container]
       ezfind_line:

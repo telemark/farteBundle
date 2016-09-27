@@ -31,7 +31,7 @@
 				<!-- Top menu area: END -->
 			{% block breadcrumb %}
 				{% if currentLocation is defined %}
-					{{ render( controller( 'tfktelemarkBundle:Item:viewBreadcrumb', { 'locationId': currentLocation.id } ) ) }}
+					{{ render( controller( 'tfkfarteBundle:Item:viewBreadcrumb', { 'locationId': currentLocation.id } ) ) }}
 				{% endif %}
 			{% endblock %}
 

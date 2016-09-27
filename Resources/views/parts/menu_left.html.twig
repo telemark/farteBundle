@@ -1,0 +1,15 @@
+<ul class="menu__submenu menu__level">
+  {% for location in list %}
+    {% if location.hidden == false %}
+      {% set this_url = path(location) %}
+      {% set this_target = "_self" %}
+      {% if location.content.fields.is_redirect_folder is not empty %}
+      	{% set this_url =  location.content.fields.redirect_url %}
+      	{% set this_target = "_blank" %}
+      {% endif %}
+      <li class="menu__submenu-item">
+        <a href="{{ this_url }}" target="{{ this_target }}" class="menu__item-link">{{location.contentInfo.name}}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

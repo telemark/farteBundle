@@ -1,8 +1,6 @@
-<form role="search"  action="/search" method="post" {{ form_enctype(form) }} class="well form-search">
-	<!-- form errors -->
-	{{ form_widget(form.term) }}
-	{{ form_rest(form) }}
+<form role="search" action="/search" method="get" class="well form-search">
+    <input id="basicsearch_term" name="SearchText" required="required" value="" type="search">
     <label for="basicsearch_term" class="visuallyhidden">Søk</label>
     <label for="page-header__search__field" class="visuallyhidden">Søk</label>
-	<input id="page-header__search__field" class="btn btn-primary clear search__btn icon--search " type="submit" value="{{ 'Søk'|trans }}"/>
+    <input id="page-header__search__field" class="btn btn-primary clear search__btn icon--search " value="Søk" type="submit">
 </form>

@@ -1,0 +1,33 @@
+
+.sidebar-left {
+  @extend %clearfix;
+  ul {
+    font-size: .9em;
+  }
+}
+
+.sidebar-right {
+  @extend %clearfix;
+  margin-top: 3em;
+  font-size: .85em;
+
+  @include susy-breakpoint($large, $susy-large) {
+    margin-top: 0;
+  }
+
+  h3 {
+    font-size: inherit;
+  }
+  
+  > .sidebar-info {
+    
+    &:first-child > h3 {
+      margin-top: 0;
+    }
+
+    .attribute-pdf > a {
+      white-space: pre-line;
+      word-wrap: break-word;
+    }
+  }
+}

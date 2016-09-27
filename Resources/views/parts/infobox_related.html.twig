@@ -1,0 +1,17 @@
+
+<ul class="calendar-list">
+{% for item in items %}
+        {{
+            render_esi(
+                controller(
+                    "ez_content:viewLocation",
+                            {
+                                "locationId": item.contentInfo.mainLocationId,
+                                "viewType": 'boxline',
+                                'params': { 'show_intro': show_intro }
+                            }
+                )
+            )
+        }}
+{% endfor %}
+</ul>

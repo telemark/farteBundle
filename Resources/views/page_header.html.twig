@@ -14,7 +14,7 @@
                 </nav>
                 <div class="page-header__search">
                 {% block searchbox %}
-                  {{ render( controller("tfktelemarkBundle:Search:searchBox" )) }}
+                 {% include 'tfkfarteBundle::page_header_searchbox.html.twig' %}
                 {% endblock %}
                 </div>
                 <div class="font-adjust__message js-font-adjust-message">For å endre tekststørrelsen, hold inne <kbd>Ctrl</kbd> (Windows/Linux) eller <kbd>Cmd</kbd> (Mac) og trykk på <kbd>+</kbd> for å forstørre eller <kbd>-</kbd> for å forminske.</div>
@@ -34,14 +34,14 @@
                     <div class="menu__item-content-wrapper">
                       <div class="menu__item-content menu__item--submenu"><a href="#" class="menu__item-link menu__item-link--submenu">Rutetabeller</a><span class="icon--menu-arrow-down menu__item__dropdown hide--to-l"></span><span class="icon--menu-arrow-right menu__item__dropdown hide--from-l js-menu-dropdown"></span>
                       </div>
-                         {{ render( controller("tfktelemarkBundle:Item:mainMenu", {'locationId': '124' } )) }}
+                         {{ render( controller("tfkfarteBundle:Item:mainMenu", {'locationId': '124' } )) }}
                     </div>
                   </li>
                   <li class="menu__item">
                     <div class="menu__item-content-wrapper">
                       <div class="menu__item-content menu__item--submenu"><a href="/Billetter-og-priser" class="menu__item-link menu__item-link--submenu">Billetter og priser</a><span class="icon--menu-arrow-down menu__item__dropdown hide--to-l"></span><span class="icon--menu-arrow-right menu__item__dropdown hide--from-l js-menu-dropdown"></span>
                       </div>
-                         {{ render( controller("tfktelemarkBundle:Item:mainMenu", {'locationId': '135' } )) }}
+                         {{ render( controller("tfkfarteBundle:Item:mainMenu", {'locationId': '135' } )) }}
                     </div>
                   </li>
                   <li class="menu__item">
@@ -66,7 +66,7 @@
                     <div class="menu__item-content-wrapper">
                       <div class="menu__item-content menu__item--submenu"><a href="/Kontakt" class="menu__item-link menu__item-link--submenu">Kontakt</a><span class="icon--menu-arrow-down menu__item__dropdown hide--to-l"></span><span class="icon--menu-arrow-right menu__item__dropdown hide--from-l js-menu-dropdown"></span>
                       </div>
-                         {{ render( controller("tfktelemarkBundle:Item:mainMenu", {'locationId': '143' } )) }}
+                         {{ render( controller("tfkfarteBundle:Item:mainMenu", {'locationId': '143' } )) }}
                     </div>
                   </li>
                  <li class="menu__item">

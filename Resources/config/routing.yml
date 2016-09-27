@@ -13,3 +13,12 @@ tfk_farte_holdeplasser:
 tfk_farte_holdeplasser_val:
     pattern:  /reiseplanlegger/holdeplasser/{val}
     defaults: { _controller: tfkfarteBundle:Reiseplanlegger:holdeplasser}
+#netgen_search_example:
+#    path: /search/{context}
+#    defaults:  { _controller: NetgenSearchAndFilterBundle:Search:searchRoute, context: null }
+#    requirements:
+#        locationId:  \s
+tfk_farte_search:
+    path:   /search
+    defaults: { _controller: tfkfarteBundle:Search:search }
+    methods: [GET]

@@ -1,0 +1,21 @@
+
+.section--buttons-row {
+  margin-bottom: 1em;
+
+  a {
+    margin-bottom: 0.2em;
+    border-color: #ddd;
+
+    &:visited {
+      border-color: #ddd;
+    }
+
+    &::before {
+      color: $brandcolor;
+    }
+
+    @include susy-breakpoint($large, $susy-large) {
+      
+    }
+  }
+}
