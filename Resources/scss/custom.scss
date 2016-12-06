@@ -59,7 +59,6 @@ $susy-large: (
 @import "input.scss";
 @import "menu.scss";
 @import "footer.scss";
-@import "icons.scss";
 
 // Søkestiler
 @import "grid.scss";
@@ -68,3 +67,6 @@ $susy-large: (
 @import "_section--buttons-row.scss";
 @import "_sidebar--list-searchresult.scss";
 @import "_sidebars.scss";
+
+
+@import "_icons.scss";
