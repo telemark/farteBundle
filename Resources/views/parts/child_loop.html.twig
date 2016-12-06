@@ -1,0 +1,14 @@
+{% for item in items %}
+        {{
+            render(
+                controller(
+                    "ez_content:viewLocation",
+                            {
+                                "locationId": item.contentInfo.mainLocationId,
+                                "viewType": viewType,
+                                'params': { 'params': params }
+                            }
+                )
+            )
+        }}
+{% endfor %}

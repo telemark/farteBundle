@@ -1,0 +1,41 @@
+<div class="article">
+    <div class="search-result--col-left">
+        {% if not ez_is_field_empty( content, 'image') %}
+            {% set imageId = ez_field_value( content, 'image' ) %}
+            {{ render(
+                controller( 
+                    "ez_content:viewContent", 
+                    {
+                        "contentId": imageId.destinationContentId,
+                        "viewType": "relation",
+                        "params": { 
+                            "image_type": "search_result"
+                        }
+                    }
+                )
+            ) }}
+        {% else %}
+            <figure class="ezimage-field">
+                <img src="{{ asset('bundles/tfkfarte/images/bildetmangler.jpg') }}" alt="Bilde ikke tilgjengelig" />
+            </figure>
+        {% endif %}
+    </div>
+    <div class="search-result--col-right">
+        <div>
+            <a href="{{ path( "ez_urlalias", {"locationId": location.id } ) }}">{{ ez_render_field(content, 'title' ) }}</a>
+            {# <a href="{{ search_item.LocalAttributeValueList.global_url_alias }}">{{ ez_field_value( content, 'title', search_item.CurrentLanguage ) }}</a> #}
+        </div>
+        <div class="search-result--text">
+            {% if search_item.LocalAttributeValueList.highlight is defined%}
+                <div>
+                    {{ search_item.LocalAttributeValueList.highlight|raw }}
+                </div>
+            {% endif %}
+            {% if search_item.LocalAttributeValueList.score_percent is defined%}
+                <div class="search-result--score">
+                    Relevans: {{ search_item.LocalAttributeValueList.score_percent }}%
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

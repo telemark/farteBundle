@@ -1,0 +1,162 @@
+.sidebar-left {
+  margin-top: .6em;
+  @include susy-breakpoint($small $large) {
+    border-bottom: 1px solid;
+  }
+
+  @include susy-breakpoint($medium, $susy-large) {
+    @include span(4)
+    margin-left: 0;
+  }
+
+  @include susy-breakpoint($large, $susy-large) {
+    @include span(3);
+    margin-left: 0;
+    margin-bottom: 2em;
+  }
+
+}
+
+.main-content {
+  margin-bottom: 2em;
+
+  @include susy-breakpoint($medium, $susy-large) {
+    @include span(8 last)
+  }
+
+  @include susy-breakpoint($large, $susy-large) {
+    @include span(6)
+  }
+
+  &.folder-view {
+    @include susy-breakpoint($large, $susy-large) {
+      @include span(9 last)
+    }
+  }
+}
+
+.gutter-minus {
+ @include susy-breakpoint($medium, $susy-large) {
+    margin: 0 -#{gutter()};
+  }
+}
+
+.margin-minus {
+  @extend %clearfix;
+}
+
+.col-1 {
+
+  @include susy-breakpoint($medium, $susy-large) {
+    @include span(3);
+  }
+}
+
+.col-2 {
+
+  @include susy-breakpoint($medium, $susy-large) {
+    @include span(12);
+  }
+
+  @include susy-breakpoint($large, $susy-large) {
+    @include span(6);
+  }
+}
+
+.col-3 {
+
+  @include susy-breakpoint($medium, $susy-large) {
+    @include span(9);
+  }
+
+  &.sidebar-is-right {
+    @include susy-breakpoint($medium, $susy-large) {
+      @include span(12);
+    }
+
+    @include susy-breakpoint($large, $susy-large) {
+      @include span(9);
+    }
+  }
+}
+
+.col-4 {
+
+  @include susy-breakpoint($medium, $susy-large) {
+    @include span(12);
+  }
+}
+
+.list-items-2 {
+  @extend %clearfix;
+
+  @include susy-breakpoint($medium, $susy-large) {
+    @extend .gutter-minus;
+  }
+
+  > div {
+    @include susy-breakpoint($medium, $susy-large) {
+      @include gallery(6);
+    }
+  }
+}
+
+.list-items-3 {
+  @extend %clearfix;
+
+  @include susy-breakpoint($medium, $susy-large) {
+    @extend .gutter-minus;
+  }
+
+  > div {
+    @include susy-breakpoint($medium, $susy-large) {
+      @include gallery(6);
+    }
+
+    @include susy-breakpoint($large, $susy-large) {
+      @include gallery(4);
+    }
+  }
+}
+
+.list-items-4 {
+  @extend %clearfix;
+
+  @include susy-breakpoint($medium, $susy-large) {
+    @extend .gutter-minus;
+  }
+
+  > div {
+    @include susy-breakpoint($medium, $susy-large) {
+      @include gallery(6);
+    }
+
+    @include susy-breakpoint($large, $susy-large) {
+      @include gallery(3);
+    }
+  }
+}
+
+.sidebar--list--2 {
+
+  @extend %clearfix;
+
+  @include susy-breakpoint($medium, $susy-large) {
+    @extend .gutter-minus;
+  }
+
+  @include susy-breakpoint($large, $susy-large) {
+    margin: 0;
+  }
+
+  > div {
+    @include susy-breakpoint($medium, $susy-large) {
+      @include span(6);
+    }
+
+    @include susy-breakpoint($large, $susy-large) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{#
+    Related image - responsive view
+#}
+
+
+{#
+    Visningstype for ingressbilder
+#}
+
+{% if image_type is sameas('ingress') %}
+
+    <div class="top-image">
+        <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <source srcset="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_06' ).uri, absolute=true ) }}" media="(min-width: 1024px)">
+                <source srcset="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_12' ).uri, absolute=true ) }}" media="(min-width: 846px)">
+                <source srcset="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_09' ).uri, absolute=true ) }}" media="(min-width: 560px)">
+                <source srcset="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_06' ).uri, absolute=true ) }}" media="(min-width: 360px)">
+                <source srcset="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_04' ).uri, absolute=true ) }}" media="(min-width: 360px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img src="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_06' ).uri, absolute=true ) }}" srcset="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_04' ).uri, absolute=true ) }}" alt="{% if content.fields.image['nor-NO'].alternativeText is defined %}{{ content.fields.image['nor-NO'].alternativeText }}{% endif %}">
+        </picture>
+        <!--img.top-image__img(src="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_06' ).uri, absolute=true ) }}")-->
+        <div class="top-image__text-wrapper">
+            <div class="top-image__text">
+                {% if image_title is defined %}
+                    <div class="top-image__header">
+                        {{ image_title }}
+                    </div>
+                {% endif %}
+                <div class="top-image__body">
+                    {% if image_text is defined %}
+                        {{ image_text }}<br />
+                    {% endif %}
+                    {% if not ez_is_field_empty( content, 'foto_byline' ) %}
+                        <em>Foto: {{ ez_render_field( content, 'foto_byline' ) }}</em>
+                    {% endif %}
+                </div>
+                <a href="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_12' ).uri, absolute=true ) }}" data-title="{{ image_title }}" class="top-image__expand-link js-popup--gallery"><span class="visuallyhidden">Åpne</span></a>
+            </div>
+        </div>
+    </div>
+
+{% endif %}
+
+{#
+    Visningstype for bannerbilder
+#}
+
+{% if image_type is sameas('banner') %}
+
+    <div class="top-image top-image--large">
+        <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <source srcset="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_12' ).uri, absolute=true ) }}" media="(min-width: 886px)">
+                <source srcset="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_09' ).uri, absolute=true ) }}" media="(min-width: 600px)">
+                <source srcset="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_06' ).uri, absolute=true ) }}" media="(min-width: 400px)">
+                <source srcset="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_04' ).uri, absolute=true ) }}">
+            <!--[if IE 9]></video><![endif]-->
+            <img src="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_06' ).uri, absolute=true ) }}" srcset="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_04' ).uri, absolute=true ) }}" alt="{% if content.fields.image['nor-NO'].alternativeText is defined %}{{ content.fields.image['nor-NO'].alternativeText }}{% endif %}" />
+        </picture>
+        <!--img.top-image__img(src="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_12' ).uri, absolute=true ) }}")-->
+        <div class="top-image__text-wrapper">
+            <div class="top-image__text">
+                {% if image_title %}
+                    <h2 class="top-image__header">{{ image_title }}</h2>
+                {% endif %}
+                <div class="top-image__body">
+                    {% if image_text is defined %}
+                        {{ image_text }}<br />
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endif %}
+
+{#
+    Visningstype for slideshow
+#}
+
+{% if image_type is sameas('slide') %}
+    <img sizes="(min-width: 64em) 757px, 100vw" src="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_06' ).uri, absolute=true ) }}" srcset="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_04' ).uri, absolute=true ) }} 360w, {{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_06' ).uri, absolute=true ) }} 578w, {{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_09' ).uri, absolute=true ) }} 846w" alt="{% if image_alt is defined %}{{image_alt}}{% elseif content.fields.image['nor-NO'].alternativeText is defined %}{{ content.fields.image['nor-NO'].alternativeText }}{% endif %}">
+  <!--img.top-image__img(src="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_12' ).uri, absolute=true ) }}")-->
+  <div class="top-image__text-wrapper">
+    <div class="top-image__text">
+      {% if image_title %}
+        <h2 class="top-image__header">{{ image_title }}</h2>
+      {% endif %}
+      <div class="top-image__body">
+        {% if image_text is defined %}
+          {{ image_text }}<br />
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% if image_type is sameas('slider') %}
+    <img sizes="(min-width: 64em) 757px, 100vw" src="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_06' ).uri, absolute=true ) }}" srcset="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_04' ).uri, absolute=true ) }} 360w, {{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_06' ).uri, absolute=true ) }} 578w, {{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_09' ).uri, absolute=true ) }} 846w" alt="{% if content.fields.image['nor-NO'].alternativeText is defined %}{{ content.fields.image['nor-NO'].alternativeText }}{% endif %}">
+  <!--img.top-image__img(src="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_12' ).uri, absolute=true ) }}")-->
+  <div class="top-image__text-wrapper">
+    <div class="top-image__text">
+      {% if image_title %}
+        <h2 class="top-image__header">{{ image_title }}</h2>
+      {% endif %}
+      <div class="top-image__body">
+        {% if image_text is defined %}
+          {{ image_text }}<br />
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{#
+    Visningstype for galleri-slide
+#}
+
+{% if image_type is sameas('gallery_slide') %}
+  {% set data_credit = '' %}
+
+  {% if use_data_credit is same as(1) %}
+    {% if not ez_is_field_empty( content, 'foto_byline' ) %}
+      {% set data_credit = ez_field_value( content, 'foto_byline' ) %}
+    {% endif %}
+  {% endif %}
+
+  <a href="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'responsive_12' ).uri, absolute=true ) }}"
+    data-title="{{ data_title }}"
+    data-caption="{{ data_caption }}"
+    data-credit="{{ data_credit }}"
+    class="js-popup--gallery">
+    <img src="{{ asset( ez_image_alias( content.getField( 'image' ), content.versionInfo, 'kampanje-2-square' ).uri, absolute=true ) }}" alt="Se større versjon av bildet {{ data_title }}" />
+  </a>
+
+{% endif %}

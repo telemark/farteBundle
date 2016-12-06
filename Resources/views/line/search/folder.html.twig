@@ -1,0 +1,26 @@
+<div class="article">
+    <div class="search-result--col-left">
+        <figure class="ezimage-field">
+            <img src="{{ asset('bundles/tfkfarte/images/mappe.jpg') }}" alt="Mappe" />
+        </figure>
+    </div>
+    <div class="search-result--col-right">
+        <div>            
+            <a href="{{ path( "ez_urlalias", {"locationId": location.id } ) }}">{{ ez_render_field(content, 'name' ) }}</a>
+            {# <a href="{{ search_item.LocalAttributeValueList.global_url_alias }}">{{ ez_render_field(content, 'name' ) }}</a> #}
+        </div>
+        <div class="search-result--text">
+            {% if search_item.LocalAttributeValueList.highlight is defined%}
+                <div>
+                    {{ search_item.LocalAttributeValueList.highlight|raw }}
+                </div>
+            {% endif %}
+            {% if search_item.LocalAttributeValueList.score_percent is defined%}
+                <div class="search-result--score">
+                    Relevans: {{ search_item.LocalAttributeValueList.score_percent }}%
+                </div>
+            {% endif %}
+            {#{ ez_render_field(content, 'short_description') }#}
+        </div>
+    </div>
+</div>
