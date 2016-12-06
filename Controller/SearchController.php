@@ -38,7 +38,7 @@ class SearchController extends Controller
         $form = $searchAdapter->getForm();
 
         return $this->render(
-            'tfkfarteBundle::page_header_searchbox.html.twig',
+            'tfktelemarkBundle::page_header_searchbox.html.twig',
             array(
                 'form_template' => $searchAdapter->getFormTemplate(),
                 'form' => $form->createView()
