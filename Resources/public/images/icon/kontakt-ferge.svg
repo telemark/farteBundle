@@ -1,23 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="-2 17 57.9 32" style="enable-background:new -2 17 57.9 32;" xml:space="preserve">
+	 viewBox="0 0 57.9 32" style="enable-background:new 0 0 57.9 32;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
 	.st1{fill:#71C1AC;}
 </style>
-<rect x="11.2" y="27.5" class="st0" width="22.4" height="3.6"/>
+<rect x="-58.8" y="10.5" class="st0" width="22.4" height="3.6"/>
 <g>
 	<g>
 		<g>
-			<path class="st1" d="M-2,48c1.5,0.5,3.2,1,6.1,1c6.7,0,6.7-2.5,13.4-2.5S24.2,49,31,49c6.7,0,6.7-2.5,13.4-2.5
-				c2.5,0,4.1,0.4,5.5,0.8l6-11.2H-2V48z"/>
+			<path class="st1" d="M-72,31c1.5,0.5,3.2,1,6.1,1c6.7,0,6.7-2.5,13.4-2.5S-45.8,32-39,32c6.7,0,6.7-2.5,13.4-2.5
+				c2.5,0,4.1,0.4,5.5,0.8l6-11.2H-72V31z"/>
 		</g>
 	</g>
 	<g>
-		<rect x="19" y="17" class="st1" width="5.1" height="5.1"/>
+		<rect x="-51" class="st1" width="5.1" height="5.1"/>
 	</g>
-	<path class="st1" d="M32.4,24.5H9.2v9.3h32L32.4,24.5z M17.8,30.1h-5.4v-2.1h5.4V30.1z M25.1,30.1h-5.4v-2.1h5.4V30.1z M27.1,30.1
-		v-2.1h5.4v2.2L27.1,30.1L27.1,30.1z"/>
+	<path class="st1" d="M-37.6,7.5h-23.2v9.3h32L-37.6,7.5z M-52.2,13.1h-5.4V11h5.4V13.1z M-44.9,13.1h-5.4V11h5.4V13.1z M-42.9,13.1
+		V11h5.4v2.2L-42.9,13.1L-42.9,13.1z"/>
 </g>
+<rect x="13.2" y="10.5" class="st0" width="22.4" height="3.6"/>
+<g>
+	<g>
+		<g>
+			<path class="st1" d="M0,31c1.5,0.5,3.2,1,6.1,1c6.7,0,6.7-2.5,13.4-2.5S26.2,32,33,32c6.7,0,6.7-2.5,13.4-2.5
+				c2.5,0,4.1,0.4,5.5,0.8l6-11.2H0V31z"/>
+		</g>
+	</g>
+	<g>
+		<rect x="21" class="st1" width="5.1" height="5.1"/>
+	</g>
+	<path class="st1" d="M34.4,7.5H11.2v9.3h32L34.4,7.5z M19.8,13.1h-5.4V11h5.4V13.1z M27.1,13.1h-5.4V11h5.4V13.1z M29.1,13.1V11
+		h5.4v2.2L29.1,13.1L29.1,13.1z"/>
+</g>
+<rect x="2.2" y="-40.3" style="fill:none;" width="46" height="19.3"/>
+<text transform="matrix(1 0 0 1 2.167 -25.3335)" style="font-family:'Telefon'; font-size:20px;">177</text>
 </svg>

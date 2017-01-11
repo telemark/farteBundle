@@ -102,11 +102,17 @@ footer {
             margin-left: -1.75em;
         }
 
+        li.buss,
+        li.ferge,
+        li.ruteopplysning {
+            font-weight: bold;
+        }
+
 
         li.buss:before {
             content: "";
-            width: 32px;
-            height: 18px;
+            width: 40px;
+            height: 33px;
             background-image: url("/bundles/tfkfarte/images/icon/kontakt-buss.svg");
             position: absolute;
             margin-top: 4px;
@@ -119,9 +125,22 @@ footer {
 
         li.ferge:before {
             content: "";
-            width: 32px;
-            height: 18px;
+            width: 40px;
+            height: 33px;
             background-image: url("/bundles/tfkfarte/images/icon/kontakt-ferge.svg");
+            position: absolute;
+            margin-top: 2px;
+            padding-right: 0;
+            margin-left: -2.75em;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        li.ruteopplysningen:before {
+            content: "";
+            width: 40px;
+            height: 33px;
+            background-image: url("/bundles/tfkfarte/images/icon/kontakt-ruteopplysning.svg");
             position: absolute;
             margin-top: 2px;
             padding-right: 0;
@@ -153,6 +172,12 @@ footer {
 
         }
 
+    }
+
+    .column-custom {
+        font-size: 1.275em;
+        line-height: 1.5em;
+        margin-top: -0.25em;
     }
 
 }

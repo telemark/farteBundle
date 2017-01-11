@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="77px" height="63px" viewBox="0 0 77 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="25.2425021" y="0" width="20.4344065" height="12.6212511" rx="3"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20.4344065" height="12.6212511" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(38.521318, 29.763934) rotate(-9.000000) translate(-38.521318, -29.763934) translate(3.021318, 1.263934)">
+            <g id="Group" transform="translate(0.000000, 0.000000)">
+                <rect id="Rectangle" fill="#529787" x="2.27373675e-13" y="7.21214347" width="70.3183988" height="49.2829804" rx="2"></rect>
+                <use id="Rectangle-2" stroke="#54AF9A" mask="url(#mask-2)" stroke-width="10" xlink:href="#path-1"></use>
+                <rect id="Rectangle-Copy" fill="#54AF9A" x="22.2374424" y="7.21214347" width="24.0404782" height="49.2829804"></rect>
+                <rect id="Rectangle-Copy-2" fill="#6EBFAC" x="46.2779206" y="7.21214347" width="24.0404782" height="49.2829804"></rect>
+            </g>
+            <polygon id="Path-2" fill="#FFFFFF" points="2.20683458 26.4069734 5.23722405 18.1187568 17.6254997 18.1187568 17.4557342 56.4330147 8.23642145 56.5321096 8.65499589 26.5155063"></polygon>
+            <polyline id="Path-3" fill="#FFFFFF" points="22.2870667 26.6760451 22.2870667 18.1416753 46.1722618 18.0303587 27.9207021 56.5224614 22.2374424 56.5224614 22.3467173 45.6222712 32.3707883 26.5647285 23.4540098 26.5647285"></polyline>
+            <polyline id="Path-3-Copy" fill="#FFFFFF" points="46.3275449 26.6760451 46.3275449 18.1416753 70.21274 18.0303587 51.9611803 56.5224614 46.2779206 56.5224614 46.3871955 45.6222712 56.4112665 26.5647285 47.4944881 26.5647285"></polyline>
+        </g>
+    </g>
+</svg>
