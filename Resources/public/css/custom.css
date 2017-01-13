@@ -2251,12 +2251,13 @@ footer .column-4 li.ruteopplysningen:before {
   }
   /* line 168, /Users/sten/sites-local/Telemark FK – Farte/Resources/scss/footer.scss */
   footer .column-4 .buss,
-  footer .column-4 .ferge {
+  footer .column-4 .ferge,
+  footer .column-4 .ruteopplysningen {
     margin-left: 1em;
   }
 }
 
-/* line 177, /Users/sten/sites-local/Telemark FK – Farte/Resources/scss/footer.scss */
+/* line 178, /Users/sten/sites-local/Telemark FK – Farte/Resources/scss/footer.scss */
 footer .column-custom {
   font-size: 1.275em;
   line-height: 1.5em;
