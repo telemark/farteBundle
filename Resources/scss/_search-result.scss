@@ -3,7 +3,6 @@
   @extend %clearfix;
   margin-bottom: 1.5em;
   padding-bottom: 1.5em;
-  border-bottom: 1px solid $gray-link;
 
   img {
     display: block;
@@ -23,12 +22,12 @@
     @extend %clearfix;
 
     @include susy-breakpoint($large, $susy-large) {
-      margin: 0 -#{gutter()};
+      margin: 0;
 
       @include nested(8) {
         .search-result--col-left {
           @include span(2);
-          margin-left: 1.4%;
+          margin-left: 0;
         }
 
         .search-result--col-right { @include span(6 last); }

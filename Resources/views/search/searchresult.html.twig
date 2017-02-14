@@ -4,11 +4,18 @@
 
     <div class="content">
         <div class="constrained-content">
-
+                {% if contentCount is defined %}
                 <div class="folder-view">
                     <h2>Søket etter «{% if searchString is defined %}{{ searchString }}{% endif %}» gav {% if contentCount is defined %} {{ contentCount }} treff{% endif %}</h2>
                 </div>
-
+                {% endif %}
+<form role="search" action="/search" method="get" class="well form-search">
+    <input id="basicsearch_term" name="SearchText" required="required" value="{% if searchString is defined %}{{ searchString }}{% endif %}" type="search">
+    <label for="basicsearch_term" class="visuallyhidden">Søk</label>
+    <label class="visuallyhidden">Søk</label>
+    <input class="btn btn-primary clear search__btn icon--search " value="Søk" type="submit">
+     <input type="submit" value="Søk">
+</form>
                 <div class="margin-minus">
 
                     <div class="sidebar-left">
@@ -18,7 +25,7 @@
                                     {% for item in activeFacetsArray %}
                                         <li>
                                             <a href="{{ item.url }}">{{ item.text }} x</a>
-                                        </li>                        
+                                        </li>
                                     {% endfor %}
                                 {% endif %}
 
@@ -26,7 +33,7 @@
                                     {% for item in activeDateFilters %}
                                         <li>
                                             <a href="{{ item.url }}">{{ item.text }} x</a>
-                                        </li>                        
+                                        </li>
                                     {% endfor %}
                                 {% endif %}
                             {% endif %}
@@ -70,13 +77,13 @@
                     </div>
 
                     {% if contentCount is defined and contentCount == 0 %}
-                    
+
                         {{ searchString }} ga ingen treff...
-                    
+
                     {% else %}
 
 
-                    
+
 
                         {% if contentResult is defined %}
                             <div class="main-content folder-view">
