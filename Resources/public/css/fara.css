@@ -228,6 +228,16 @@ fieldset[disabled] .btn-secondary-webshop.active {
 .shopping-cart-row-horizontal-splitter {
   border-color: #f3f4f5; }
 
+button.btn-confirm-webshop {
+  color: #333;
+  background-color: #FFD520;
+  border-color: #FFD520; }
+
+button.btn-confirm-webshop:hover {
+  color: #333;
+  background-color: #FFD520;
+  border-color: #FFD520; }
+
 .container {
   width: 100%;
   padding: 0px;
