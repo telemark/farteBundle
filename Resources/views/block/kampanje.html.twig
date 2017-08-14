@@ -1,4 +1,29 @@
 {% if block.customAttributes.source is defined %}
+
+<div id="Glide" class="glide constrained">
+
+    <div class="glide__wrapper">
+        <ul class="glide__track">
+            <li class="glide__slide">
+              <img src="{{ asset( "bundles/tfkfarte/images/slides/app-buss.png" ) }}" alt="">
+            </li>
+            <li class="glide__slide">
+              <img src="{{ asset( "bundles/tfkfarte/images/slides/app-ferge.png" ) }}" alt="">
+            </li>
+            <li class="glide__slide">
+              <img src="{{ asset( "bundles/tfkfarte/images/slides/nettbutikk.png" ) }}" alt="">
+            </li>
+            <li class="glide__slide">
+              <img src="{{ asset( "bundles/tfkfarte/images/slides/varierende-budskap.png" ) }}" alt="">
+            </li>
+        </ul>
+    </div>
+
+    <div class="glide__bullets"></div>
+
+</div>
+
+
   <div class="constrained-content">
     <div class="campaign-content" style="background-color: {{block.customAttributes.bgfarge}}; color: {{block.customAttributes.farge}};">
       {{ render(

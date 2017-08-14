@@ -11,6 +11,20 @@
 {% endjavascripts %}
 
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="{{ asset( "bundles/tfkfarte/js/vendor/glide.min.js" ) }}"></script>
+
+<script>
+
+$(window).load(function() {
+     // update size of slider (if you already initialized it before)
+    $("#Glide").glide({
+      type: "slider",
+      autoplay: "7000"
+    });
+});
+
+
+</script>
 
 <!-- Google Analytics -->
 <script async="async" defer="defer" src='/js/local-analytics.js'></script>

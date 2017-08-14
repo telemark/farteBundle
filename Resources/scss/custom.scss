@@ -69,8 +69,13 @@ $susy-large: (
 @import "_sidebars.scss";
 
 
+// Ikoner
 @import "_icons.scss";
 
+
+// Slider
+@import "glidejs/_glidecore";
+@import "glidejs/_glidetheme";
 
 
 .constrained-content {
