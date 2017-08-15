@@ -6,7 +6,7 @@ system:
                 match:
                     Type: Slider
             reiseplanlegger:
-                template: tfkfarteBundle:block:slider.html.twig
+                template: tfkfarteBundle:block:reiseplanlegger.html.twig
                 match:
                     Type: Reiseplanlegger
             kampanje:
