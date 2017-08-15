@@ -1,0 +1,38 @@
+{#
+    linkbox - line view
+#}
+{% set this_size = params.element_size|default('large') %}
+{% set imageId = ez_field_value( content, 'image' ) %}
+
+<li class="glide__slide">
+{% if imageId is defined and imageId.destinationContentId is not empty %}
+
+{% if not ez_is_field_empty( content, 'internal_resource' ) %}
+      {% set externalResourceId = ez_field_value( content, 'internal_resource' ) %}
+        <a href={{ url( 'ez_urlalias', {'contentId': externalResourceId} ) }} target="_self" class="item__imglink imglink">
+{% elseif not ez_is_field_empty( content, 'url' ) %}
+        <a href={{ ez_field_value( content, 'url' ) }} target="_new" class="item__imglink imglink">
+{% endif %}
+
+         {{ render(
+            controller(
+                "ez_content:viewContent",
+                  {
+                      "contentId": imageId.destinationContentId,
+                      "viewType": "custom",
+                      "params": { "img_render_size": "responsive_12" }
+                  }
+            )
+        ) }}
+
+  {% endif %}
+   {% if not ez_is_field_empty( content, 'description' ) %}
+        <div class="item__intro">
+                {{ ez_render_field( content, 'description' ) }}
+        </div>
+   {% endif %}
+
+{% if not (ez_is_field_empty( content, 'internal_resource' ) or ez_field_value( content, 'url' ) ) %}
+   </a>
+{% endif %}
+</li>

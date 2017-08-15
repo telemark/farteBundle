@@ -50,6 +50,11 @@ system:
           template: tfkfarteBundle:embed-inline:slide.html.twig
           match:
             Identifier\ContentType: [slide]
+      slide:
+        linkbox:
+          template: tfkfarteBundle:slide:linkbox.html.twig
+          match:
+            Identifier\ContentType: [linkbox]
       line:
         article:
           template: tfkfarteBundle:line:article.html.twig

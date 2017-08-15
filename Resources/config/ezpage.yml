@@ -1,8 +1,12 @@
 system:
     farte:
         block_view:
+            slider:
+                template: tfkfarteBundle:block:slider.html.twig
+                match:
+                    Type: Slider
             reiseplanlegger:
-                template: tfkfarteBundle:block:reiseplanlegger.html.twig
+                template: tfkfarteBundle:block:slider.html.twig
                 match:
                     Type: Reiseplanlegger
             kampanje:
