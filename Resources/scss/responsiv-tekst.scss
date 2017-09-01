@@ -4,7 +4,7 @@
   $multiplier: ($max - $min) / ($end - $start) * 100;
   $adder: ($min * $end - $max * $start) / ($end - $start);
 
-  $formula: calc(#{$multiplier + $source-unit} + #{$adder + 0px});
+  $formula: calc(#{$multiplier + $source-unit} - -#{$adder + 0px});
 
   @if($clip and $clip-at-start){
       @media (max-width: #{$start + 0px}) {
