@@ -36,6 +36,11 @@
           user-select: none;
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
+  &.light {
+    a * {
+      color: white!important;
+    }
+  }
 }
 .glide__slide a {
   -webkit-user-select: none;
