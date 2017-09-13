@@ -4,7 +4,12 @@
 {% set this_size = params.element_size|default('large') %}
 {% set imageId = ez_field_value( content, 'image' ) %}
 
-<li class="glide__slide">
+{% if not ez_is_field_empty( content, 'white' ) %}
+  {% set text_color = 'light' %}
+{% else %}
+  {% set text_color = 'dark' %}
+{% endif %}
+<li class="glide__slide {{ text_color }}">
 {% if imageId is defined and imageId.destinationContentId is not empty %}
 
 {% if not ez_is_field_empty( content, 'internal_resource' ) %}
