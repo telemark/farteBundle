@@ -105,9 +105,19 @@
                 </div>
               {% endif %}
             {% endif %}
-
+      {% if show_pagination %}
+        {% if items.haveToPaginate() %}
+           {{ pagerfanta( items, 'twitter_bootstrap_translated',
+           {'routeName': location,
+           'prev_message': 'Forrige',
+           'next_message': 'Neste',
+         'css_next_class': 'pagination__next',
+         'css_prev_class': 'pagination__prev'
+          } ) }}
+        {% endif %}
+      {% endif %}
       </div>
-   {% if content.getFieldValue('show_fullscreen').bool == false %}
+{% if content.getFieldValue('show_fullscreen').bool == false %}
    <aside class="main__right">
     {{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['infobox'] , 'viewType': 'line' }} )) }}
   </aside>
@@ -136,17 +146,7 @@
             ) }}
               </nav>
 
-      {% if show_pagination %}
-        {% if items.haveToPaginate() %}
-           {{ pagerfanta( items, 'twitter_bootstrap_translated',
-           {'routeName': location,
-           'prev_message': 'Forrige',
-           'next_message': 'Neste',
-         'css_next_class': 'pagination__next',
-         'css_prev_class': 'pagination__prev'
-          } ) }}
-        {% endif %}
-      {% endif %}
+
     </div>
   </div>
 {% endblock %}
