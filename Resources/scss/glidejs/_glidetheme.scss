@@ -105,6 +105,12 @@
 }
 
 
+.glide__slide.dark > a {
+  color: $black!important;
+} 
+.glide__slide.light > a {
+  color: white!important;
+} 
 .glide__slide a {
   position: relative;
 
@@ -114,19 +120,33 @@
     bottom: 0;
     left: 0;
     right: 0;
+    line-height: 1.04em;
     p {
       all: initial;
       font-family: $telefon;
       @include fp(font-size, 18, 62, $clip: true);
       padding-top: calc(5vw - -2px);
       padding-left: calc(5.55vw - -2px);
+      @supports (-ms-ime-align: auto) {
+        padding-top: 3vw;
+      }
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        padding-top: 3vw;
+      }
       line-height: 1.045em;
       display: block;
       letter-spacing: 0px;
-      max-width: 66%;
+      max-width: 83%;
       & + p {
         padding-bottom: 0;
         padding-top: 0;
+        @supports (-ms-ime-align: auto) {
+          line-height: 0;
+        }
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          line-height: 0;
+        }
+
       }
     }
   }

@@ -2225,12 +2225,6 @@ ul.list-clean {
   border: 2px solid white;
   background-color: rgba(255, 255, 255, 0.5); }
 
-.glide__slide.dark > a {
-  color: #333 !important; }
-
-.glide__slide.light > a {
-  color: white !important; }
-
 .glide__slide a {
   position: relative; }
   .glide__slide a .item__intro {
@@ -2238,8 +2232,7 @@ ul.list-clean {
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    line-height: 1.04em; }
+    right: 0; }
     .glide__slide a .item__intro p {
       all: initial;
       font-family: "Telefon", sans-serif;
@@ -2256,21 +2249,9 @@ ul.list-clean {
       @media (min-width: 1200px) {
         .glide__slide a .item__intro p {
           font-size: 62px; } }
-      @supports (-ms-ime-align: auto) {
-        .glide__slide a .item__intro p {
-          padding-top: 3vw; } }
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        .glide__slide a .item__intro p {
-          padding-top: 3vw; } }
       .glide__slide a .item__intro p + p {
         padding-bottom: 0;
         padding-top: 0; }
-        @supports (-ms-ime-align: auto) {
-          .glide__slide a .item__intro p + p {
-            line-height: 0; } }
-        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-          .glide__slide a .item__intro p + p {
-            line-height: 0; } }
 
 .constrained-content .form-search {
   position: relative;
