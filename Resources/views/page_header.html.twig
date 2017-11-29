@@ -45,10 +45,11 @@
                          {{ render( controller("tfkfarteBundle:Item:mainMenu", {'locationId': '135' } )) }}
                     </div>
                   </li>
-                  <li class="menu__item">
+                <li class="menu__item">
                     <div class="menu__item-content-wrapper">
-                      <div class="menu__item-content"><a href="/Verdt-aa-vite" class="menu__item-link">Verdt å vite</a>
+                      <div class="menu__item-content menu__item--submenu"><a href="/Verdt-aa-vite" class="menu__item-link menu__item-link--submenu">Verdt å vite</a><span class="icon--menu-arrow-down menu__item__dropdown hide--to-l"></span><span class="icon--menu-arrow-right menu__item__dropdown hide--from-l js-menu-dropdown"></span>
                       </div>
+                         {{ render( controller("tfkfarteBundle:Item:mainMenu", {'locationId': '862' } )) }}
                     </div>
                   </li>
                    <li class="menu__item">
