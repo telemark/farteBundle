@@ -43,8 +43,9 @@ $susy-large: (
 // Ikonfont Metro
 @import "icomoon.scss";
 
-// Telefon
+// Telefon og Open Sans
 @import "_fonts.scss";
+@import "_typography.scss";
 
 // Importere stiler
 @import "variables.scss";
