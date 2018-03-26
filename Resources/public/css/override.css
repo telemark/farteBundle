@@ -1,0 +1,13 @@
+.landingpage .main {
+    width: 75%;
+    float: left;
+}
+.landingpage .main__right {
+    width: 22.22222%;
+    float: right;
+    margin-left: 1.38889%;
+    margin-right: 1.38889%;
+}
+.infopage .main__center {
+    width: 70%;
+}

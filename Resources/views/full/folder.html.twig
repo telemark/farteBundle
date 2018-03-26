@@ -1,5 +1,7 @@
 {% if not ez_is_field_empty( content, 'is_landingpage' ) %}
   {% include "tfkfarteBundle:full:folder_landingpage.html.twig" %}
+{% elseif not ez_is_field_empty( content, 'infopage' )  %}
+  {% include "tfkfarteBundle:full:folder_infopage.html.twig" %}
 {% else %}
   {% include "tfkfarteBundle:full:folder_normal.html.twig" %}
 {% endif %}

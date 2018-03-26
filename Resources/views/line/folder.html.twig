@@ -1,5 +1,8 @@
-{% if not ez_is_field_empty( content, 'is_landingpage' ) %}
-  {% include "tfkfarteBundle:full:folder_landingpage.html.twig" %}
-{% else %}
-  {% include "tfkfarteBundle:full:folder_normal.html.twig" %}
-{% endif %}
+ <div class="item item--vertical grid__item--6-12">
+            <h1><a href="{{ path(location) }}" class="item__imglink imglink">{{ ez_render_field(content, 'name') }}</a></h1>
+            {% if not ez_is_field_empty( content, 'short_description' ) %}
+              <div class="byline">
+                {{ ez_render_field(content, 'short_description') }}
+              </div>
+            {% endif %}
+</div>
