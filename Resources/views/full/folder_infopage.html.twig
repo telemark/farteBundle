@@ -49,10 +49,14 @@
 <div class="grid grid--12">
 {{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['linkbox'] , 'viewType': 'line' }} )) }}
 </div>
+
     {% if not ez_is_field_empty( content, 'description' ) %}
       {{ ez_render_field(content, 'description') }}
     {% endif %}
 </div>
+   <aside class="main__right">
+    {{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['infobox'] , 'viewType': 'line' }} )) }}
+  </aside>
   <nav role="navigation" class="main__left">
 
         {% if location.path[2] is defined %}
@@ -76,6 +80,7 @@
                 )
             ) }}
 </nav>
+
 </div>
 
 </div>
