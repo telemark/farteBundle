@@ -46,7 +46,7 @@
       </div>
     {% endif %}
 
-<div class="grid grid--12">
+<div class="flex-grid">
 {{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['folder'] , 'viewType': 'line' }} )) }}
 </div>
     {% if not ez_is_field_empty( content, 'description' ) %}

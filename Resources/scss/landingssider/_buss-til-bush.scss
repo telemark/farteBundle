@@ -1,0 +1,295 @@
+// Listing page
+
+.content.landingpage,
+.content.infopage {
+
+  *,
+  * > * {
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 1180px) {
+    padding: 0 1rem;
+  }
+
+
+  // Header, top area
+
+  .constrained-content {
+    margin-top: 0;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  
+  .top-image {
+    margin-bottom: 29px;
+    img {
+      max-height: 420px;
+      object-fit: none;
+      width: 100%;   
+    }
+  }
+
+
+  // Layout tweaks
+
+  .main {
+    margin: 0;
+  }
+
+  .main,
+  .main__right {
+    width: 100%;
+  }
+
+  @media (min-width: 600px) {
+    .main {
+      width: 75%;
+    }
+    .main__right {
+      width: 22.222%;
+    }
+  }
+
+
+  // Trip listing
+
+  .flex-grid {
+
+    // Let's use flexbox for this...
+    display: flex;
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item {
+      // ... override for base styles first ...
+      width: initial;
+      float: initial;
+      clear: initial;
+      margin-left: initial;
+      margin-right: initial;
+      width: initial;
+      float: initial;
+
+      // That should do the trick, now flex:
+      flex-basis: 100%;
+      justify-content: space-between;
+      min-height: 122px;
+      background-color: $yellow;
+      margin-bottom: 20px;
+      padding: 2rem 1rem;
+      @media (min-width: 600px) {
+        flex-basis: 49%;
+        width: 49%;
+      }
+
+      &:hover h1 > a {
+        border-bottom: 2px solid $black;
+      }
+      
+      h1 {
+        display: inline-block;
+        border: none;
+        a {
+          color: $black;
+          text-decoration: none;
+          border-bottom: 2px solid transparent;
+          position: relative;
+          &:hover {
+            border-bottom: 2px solid $black;
+          }
+          // Icon
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0.375rem;
+            left: 0;
+            right: 0;
+            bottom:0;
+
+            background: url('/bundles/tfkfarte/images/icons/arrow-right2.svg') no-repeat;
+            background-size: 28px 24px;
+            width: 28px;
+            height: 24px;
+          }
+
+          span {
+            padding-left: 44px;
+          }
+        }
+      } 
+
+
+    } // Item end
+
+  } //  Flex grid end
+
+}
+
+
+// Single page
+
+.content.landingpage,
+.content.infopage {
+
+  h1 {
+    margin-top: .225em;
+  }
+
+  .object-left {
+      float: left;
+  }
+
+
+  // Layout
+  
+  .landingpage-nav--left,
+  .landingpage-nav--right {
+    width: 20%;
+    margin: 0;
+  }
+
+  .landingpage-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .landingpage-nav--wrap {
+    flex-basis: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: 700px) {
+      order: 1;
+      flex-basis: 100%;
+    }
+  }
+
+  .landingpage-nav--left {
+    flex-basis: 100%;
+  }
+
+  .landingpage-nav--right {
+    flex-basis: 100%;
+    .ezxmltext-field {
+      font-size: 0.875rem;
+    }
+  }
+
+  .landingpage-main {
+    flex-basis: 78%;
+    @media (max-width: 700px) {
+      flex-basis: 100%;
+      order: 0;
+    }
+    // Items
+    .grid {
+      margin: initial;
+      display: flex;
+      flex-wrap: wrap;
+      .item {
+        margin-bottom: 1rem;
+        padding: 0;
+        flex-basis: 100%;
+        background: #FED411;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 550px) {
+          flex-wrap: wrap;
+        }
+        .imglink {
+          margin: 0;
+          flex-basis: 33%;
+          @media (max-width: 550px) {
+            flex-basis: 100%;
+            max-width: 100%;
+          }
+          img {
+            min-height: 100%;
+            object-fit: cover;
+            object-position: left;
+            @media (max-width: 550px) {
+              min-width: 100%;
+            }
+          }
+        }
+        .item__content {
+          flex-basis: 77%;
+          font-size: .875rem;
+          padding: 1.375rem 1.5rem 1.125rem;
+          @media (max-width: 550px) {
+            flex-basis: 100%;
+          }
+          a {
+            position: relative;
+            color: $black;
+            font-family: Telefon;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            &:hover {
+              border-bottom: 2px solid $black;
+            }
+            &:last-child {
+              display: inline-block;
+              margin-top: 1rem;
+              padding-left: 1.25rem;
+              // Icon
+              &:before {
+                content: "";
+                position: absolute;
+                top: 0.1375rem;
+                left: 0;
+                right: 0;
+                bottom:0;
+
+                background: url('/bundles/tfkfarte/images/icons/arrow-right2.svg') no-repeat;
+                background-size: 15px 14px;
+                width: 15px;
+                height: 14px;
+              }
+            }
+          }
+          p {
+            font-size: 0.875rem;
+            margin: 0;
+            line-height: 1.375rem;
+            &:first-child {
+              margin-top: 0.375rem;
+            }
+            &:last-child {
+              margin-top: 0.675rem;
+            }
+          }
+        }
+      }
+      .item__header {
+        font-family: Telefon;
+        font-size: 24px;
+        color: $black;
+        text-align: left;
+      }
+      .item__intro {
+        font-family: OpenSans;
+        font-size: 16px;
+        color: $black;
+        margin-bottom: 0;
+      }
+      
+    }
+
+
+  }
+
+
+
+
+
+
+
+}

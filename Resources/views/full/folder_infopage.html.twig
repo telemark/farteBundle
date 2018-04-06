@@ -18,7 +18,7 @@
 {% block content %}
 
 <div class="content infopage">
-        <div class="constrained-content">
+  <div class="constrained-content">
 
     {% if imageId is defined %}
         {{ render(
@@ -36,53 +36,76 @@
             )
         ) }}
     {% endif %}
-<div class="main">
-<div class="main__center">
-      <h1>{{ ez_render_field(content, 'name') }}</h1>
 
-    {% if not ez_is_field_empty( content, 'short_description' ) %}
-      <div class="byline">
-        {{ ez_render_field(content, 'short_description') }}
-      </div>
-    {% endif %}
+    <div class="landingpage-grid">
 
-<div class="grid grid--12">
-{{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['linkbox'] , 'viewType': 'line' }} )) }}
-</div>
+      <div class="landingpage-nav--wrap">
+        
+        <nav role="navigation" class="main__left landingpage-nav--left">
 
-    {% if not ez_is_field_empty( content, 'description' ) %}
-      {{ ez_render_field(content, 'description') }}
-    {% endif %}
-</div>
-   <aside class="main__right">
-    {{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['infobox'] , 'viewType': 'line' }} )) }}
-  </aside>
-  <nav role="navigation" class="main__left">
-
-        {% if location.path[2] is defined %}
-          {% if location.path[2] == 111 %}
-            {% set locId = location.path[3] %}
-              {% if location.path[5] is defined and location.path[5] == 566 %}
-                {% set locId = 566 %}
-              {% elseif location.path[5] is defined and location.path[5] == 9791 %}
-                {% set locId = 9791 %}
+              {% if location.path[2] is defined %}
+                {% if location.path[2] == 111 %}
+                  {% set locId = location.path[3] %}
+                    {% if location.path[5] is defined and location.path[5] == 566 %}
+                      {% set locId = 566 %}
+                    {% elseif location.path[5] is defined and location.path[5] == 9791 %}
+                      {% set locId = 9791 %}
+                    {% endif %}
+                {% else %}
+                  {% set locId = location.path[2] %}
+                {% endif %}
+              {% else %}
+                {% set locId = location.id %}
               {% endif %}
-          {% else %}
-            {% set locId = location.path[2] %}
+                  {{ render(
+                      controller(
+                          "tfkfarteBundle:Menu:leftMenu",
+                          {'locationId': location.id, 'currentLocationId': locId}
+                      )
+                  ) }}
+        </nav>
+
+        <aside class="landingpage-nav--right main__left">
+          {{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['infobox'] , 'viewType': 'line' }} )) }}
+        </aside>
+
+      </div>
+
+
+
+
+
+      <div class="landingpage-main">
+
+          <h1>{{ ez_render_field(content, 'name') }}</h1>
+
+          {% if not ez_is_field_empty( content, 'short_description' ) %}
+            <div class="byline">
+              {{ ez_render_field(content, 'short_description') }}
+            </div>
           {% endif %}
-        {% else %}
-          {% set locId = location.id %}
-        {% endif %}
-            {{ render(
-                controller(
-                    "tfkfarteBundle:Menu:leftMenu",
-                    {'locationId': location.id, 'currentLocationId': locId}
-                )
-            ) }}
-</nav>
 
-</div>
+          <div class="grid grid--12">
+          {{ render( controller("tfkfarteBundle:Item:children", {'locationId': location.id,  'params' : { 'class' : ['linkbox'] , 'viewType': 'line' }} )) }}
+          </div>
 
-</div>
+          {% if not ez_is_field_empty( content, 'description' ) %}
+            {{ ez_render_field(content, 'description') }}
+          {% endif %}
+
+      </div>
+
+
+
+
+    </div>
+
+    
+  
+
+  </div>
+
+
+
 </div>
 {% endblock %}

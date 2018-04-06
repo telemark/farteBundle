@@ -61,6 +61,9 @@ $susy-large: (
 @import "menu.scss";
 @import "footer.scss";
 
+// Landingssider
+@import "landingssider/_buss-til-bush.scss";
+
 // Søkestiler
 @import "grid.scss";
 @import "_search-field.scss";
