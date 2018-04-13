@@ -149,6 +149,19 @@ footer {
             background-repeat: no-repeat;
         }
 
+        li.facebook:before {
+            content: "";
+            width: 40px;
+            height: 33px;
+            background-image: url("/bundles/tfkfarte/images/icon/icon-fb.svg");
+            position: absolute;
+            margin-top: 2px;
+            padding-right: 0;
+            margin-left: -2.75em;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
 
         @media screen and (min-width:600px) {
 
