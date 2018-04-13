@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 12</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-12">
+            <circle id="Oval" fill="#FFFFFF" cx="40" cy="40" r="40"></circle>
+            <path d="M47,32 L47,62 C47,65.3137085 44.3137085,68 41,68 L39,68 C35.6862915,68 33,65.3137085 33,62 L33,32 L23,32 C19.6862915,32 17,29.3137085 17,26 L17,25 C17,21.6862915 19.6862915,19 23,19 L57,19 C60.3137085,19 63,21.6862915 63,25 L63,26 C63,29.3137085 60.3137085,32 57,32 L47,32 Z" id="Combined-Shape" fill="#EA0004"></path>
+        </g>
+    </g>
+</svg>
