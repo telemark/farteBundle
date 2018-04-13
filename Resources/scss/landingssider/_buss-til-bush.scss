@@ -25,10 +25,19 @@
 
   
   .top-image {
+    height: 420px;
+    overflow: auto;
+    overflow-y: hidden;
     margin-bottom: 29px;
+    // picture {
+    //   height: 420px;
+    //   width: 100%;
+    // }
     img {
       max-height: 420px;
-      object-fit: none;
+      object-fit: cover;
+      object-position: center center;
+      font-family: 'object-fit: cover; object-position: center center;';
       width: 100%;   
     }
   }
@@ -67,15 +76,26 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    // ... override for base styles first ...
+
+    .item.grid__item--6-12:nth-child(2n+2),
+    .item.grid__item--6-12:nth-child(2n+1) {
+      @media all and (min-width: 37.5rem) {
+        margin-left: 0 ;
+        margin-right: 0;
+        clear: 0;
+      }
+    }
+
+
     .item {
-      // ... override for base styles first ...
-      width: initial;
-      float: initial;
-      clear: initial;
-      margin-left: initial;
-      margin-right: initial;
-      width: initial;
-      float: initial;
+      width: 0;
+      float: 0;
+      clear: 0;
+      margin-left: 0;
+      margin-right: 0;
+      width: 0;
+      float: 0;
 
       // That should do the trick, now flex:
       flex-basis: 100%;
@@ -83,7 +103,7 @@
       min-height: 122px;
       background-color: $yellow;
       margin-bottom: 20px;
-      padding: 2rem 1rem;
+      padding: 2rem 0rem;
       @media (min-width: 600px) {
         flex-basis: 49%;
         width: 49%;
@@ -101,6 +121,7 @@
           text-decoration: none;
           border-bottom: 2px solid transparent;
           position: relative;
+          margin-left: 1rem;
           &:hover {
             border-bottom: 2px solid $black;
           }
@@ -220,11 +241,17 @@
           }
         }
         .item__content {
+          position: relative;
           flex-basis: 77%;
           font-size: .875rem;
           padding: 1.375rem 1.5rem 1.125rem;
           @media (max-width: 550px) {
             flex-basis: 100%;
+          }
+          &:hover a > h2, 
+          &:hover a:last-child {
+            border-bottom: 2px solid $black;
+            transition: all 375ms ease-in;
           }
           a {
             position: relative;
@@ -232,8 +259,11 @@
             font-family: Telefon;
             text-decoration: none;
             border-bottom: 2px solid transparent;
-            &:hover {
-              border-bottom: 2px solid $black;
+            transition: all 375ms ease-in;
+            h2 {
+              transition: all 375ms ease-in;
+              border-bottom: 2px solid transparent;
+              display: inline;
             }
             &:last-child {
               display: inline-block;
@@ -243,15 +273,14 @@
               &:before {
                 content: "";
                 position: absolute;
-                top: 0.1375rem;
+                top: 0.02rem;
                 left: 0;
                 right: 0;
                 bottom:0;
-
-                background: url('/bundles/tfkfarte/images/icons/arrow-right2.svg') no-repeat;
-                background-size: 15px 14px;
+                background: url('/bundles/tfkfarte/images/icon/icon-dnt.svg') no-repeat;
+                background-size: 15px 15px;
                 width: 15px;
-                height: 14px;
+                height: 15px;
               }
             }
           }
