@@ -102,7 +102,7 @@
       justify-content: space-between;
       min-height: 122px;
       background-color: $yellow;
-      margin-bottom: 20px;
+      margin-bottom: 2%;
       position: relative;
       @media (min-width: 600px) {
         flex-basis: 49%;
@@ -133,7 +133,7 @@
           content: "";
           position: absolute;
           left: 0;
-          margin-top: 0.75rem;
+          margin-top: .825rem;
           margin-left: 1rem;
           right: 0;
           background: url('/bundles/tfkfarte/images/icons/arrow-right2.svg') no-repeat;
