@@ -1,5 +1,28 @@
 {% extends noLayout ? viewbaseLayout : "tfkfarteBundle::pagelayout.html.twig" %}
 
+{% set socialUrl = app.request.server.get('REQUEST_SCHEME') ~ '://' ~ app.request.server.get('SERVER_NAME') ~ app.request.server.get('REQUEST_URI') %}
+
+{% set hostname = app.request.server.get('REQUEST_SCHEME') ~ 'https://' ~ app.request.server.get('SERVER_NAME') %}
+
+{% set socialIntro = 'Farte.no er eid av Telemark fylkeskommune, ved avdeling for areal og transport. Farte.no er en informasjonskanal for kollektivtransporttilbudet som Telemark fylkeskommune har ansvaret for.' %}
+
+{% set socialTitle = ez_content_name( content ) ~ ' - Farte' %}
+
+{% set author = 'Telemark fylkeskommune - Farte' %}
+
+{% block meta %}
+ 	<title>{{ socialTitle }}</title>
+    <meta property="og:url" content="{{ socialUrl }}" />
+    <meta property="og:type"  content="website" />
+    <meta property="og:title"  content="{{ socialTitle }}" />
+    <meta property="og:description" content="{{ socialIntro }}" />
+    <meta name="description" content="{{ socialIntro }}" />
+	<meta property="og:image" content="{{ hostname }}/{{ asset('bundles/tfkfarte/images/logo/facebook_logo.png') }}"/>
+	<meta property="og:image:width" content="1140px"/>
+	<meta property="og:image:width" content="480px"/>
+	<meta name="keywords" content="Farte, Telemark, Reise, Buss, Transport, Reiseplanlegger, Rutetabeller, Fylkeskommune, Telemark, ledige, rjukan ,Notodden, Offentlig"/>
+{% endblock %}
+
 {% block content %}
 
   {{ ez_render_field( content, "page" ) }}

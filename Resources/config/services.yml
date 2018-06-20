@@ -28,3 +28,10 @@ services:
         scope: request # needed as we have the request as a dependency here
         tags:
             - { name: knp_menu.menu, alias: top} # The alias is what is used to retrieve the menu
+
+    vp_utility.sort_location_clause_helper:
+        class: tfk\farteBundle\Helper\SortLocationHelper
+        arguments:  [@ezpublish.api.repository, @service_container,  @ezpublish.config.resolver]
+
+
+        

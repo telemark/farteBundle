@@ -3,12 +3,41 @@
 namespace tfk\farteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use eZ\Publish\API\Repository\Values\Content\Query;
+use eZ\Publish\API\Repository\Values\Content\Query\Criterion\ParentLocationId;
+use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
     public function indexAction($name)
     {
         return $this->render('tfkfarteBundle:Default:index.html.twig', array('name' => $name));
+    }
+    public function mainMenuAction($locationId) {
+
+        $currentLocation = $this->getRepository()->getLocationService()->loadLocation( $locationId );
+        $results = $this->getRepository()->getLocationService()->loadLocationChildren( $currentLocation );
+        $locationList = array();
+        $subLocationList = array();
+        foreach ( $results->locations as $result ) {
+
+            $currentLocation = $this->getRepository()->getLocationService()->loadLocation( $result->contentInfo->mainLocationId );
+            $content = $this->getRepository()->getContentService()->loadContent($currentLocation->contentInfo->id);
+
+
+            if ($content->fields['show_in_menu']['nor-NO']->bool === true ) {
+                $locationList[] = $currentLocation;
+                $subresults = $this->getRepository()->getLocationService()->loadLocationChildren( $currentLocation );
+                foreach ($subresults->locations as $subresult) {
+                    if (!empty($subresult)) {
+                        $subLocationList[$result->contentInfo->mainLocationId][] = $this->getRepository()->getLocationService()->loadLocation( $subresult->contentInfo->mainLocationId );
+                    }
+                }
+            }
+                
+            
+        }
+        return $this->render('tfkfarteBundle:parts:menu_main.html.twig', array( 'list' => $locationList, 'sublist' => $subLocationList) );
     }
     public function searchStationAction($name)
         {

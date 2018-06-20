@@ -151,6 +151,11 @@ system:
           template: tfkfarteBundle:responsive:image.html.twig
           match:
             Identifier\ContentType: [image]
+      facebook:
+        image:
+          template: tfkfarteBundle:facebook:image.html.twig
+          match:
+            Identifier\ContentType: [image]
       meta:
         image:
           template: tfkfarteBundle:meta:image.html.twig

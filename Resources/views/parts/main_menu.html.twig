@@ -1,0 +1,52 @@
+<nav id="main-nav" class="menu">
+	<div class="constrained">
+	<ul class="menu__content menu__level">
+		{% for location in list %}
+			{% if location.hidden == false %}
+				<li class="menu__item">
+					<div class="menu__item-content-wrapper">
+						{% if sublist[location.contentInfo.mainLocationId] is defined %}
+						 <div class="menu__item-content menu__item--submenu">
+							<a href="{{ path(location) }}" class="menu__item-link menu__item-link--submenu">{{location.contentInfo.name}}</a>
+							<span class="icon--menu-arrow-down menu__item__dropdown hide--to-l"></span><span class="icon--menu-arrow-right menu__item__dropdown hide--from-l js-menu-dropdown"></span>
+					  	</div>
+						{% else %}
+						<div class="menu__item-content">
+							<a href="{{ path(location) }}" class="menu__item-link menu__item-link">{{location.contentInfo.name}}</a>
+					  	</div>
+					  	{% endif %}
+                    </div>
+					{% if sublist[location.contentInfo.mainLocationId] is defined %}
+					{% set size = sublist[location.contentInfo.mainLocationId]|length %}
+					{% if size > 3 %}
+						{% if size > 6 %}
+							{% set class = 'tripleLi' %}
+						{% else %}
+							{% set class = 'doubleLi' %}
+						{% endif %}
+					{% else %}
+						{% set class = 'singleLi' %}
+					{% endif %}
+						<ul class="submenu {{class}}">
+							{% for sublocation in sublist[location.contentInfo.mainLocationId] %}
+								{% if sublocation.hidden == false %}
+									{% if sublocation.ContentInfo.contentTypeId == 28 %}
+									<li>
+								     <div class="menu__item-content menu__item--submenu">{{ render(controller('ez_content:viewLocation', {
+                                            'locationId': sublocation.contentInfo.mainLocationId,
+                                            'viewType': 'menu_line'
+                                        })) }}
+									</li>
+									{% else %}
+									<li><a href="{{ path(sublocation) }}">{{sublocation.contentInfo.name}}</a>
+									</li>
+									{% endif %}
+								{% endif %}
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</nav>   

@@ -1,0 +1,53 @@
+
+{% set socialUrl = app.request.server.get('REQUEST_SCHEME') ~ '://' ~ app.request.server.get('SERVER_NAME') ~ app.request.server.get('REQUEST_URI') %}
+
+{% set socialTitle = ez_field_value( content, 'name' )|trim %}
+{% if not ez_is_field_empty( content, 'short_description' ) %}
+    {% set socialIntro = ez_field_value( content, 'short_description' )|striptags|trim %}
+{% else %}
+
+{% set socialIntro = ez_field_value( content, 'description' )|striptags|trim %}
+
+{% endif %}
+
+{% if content is defined and title is not defined %}
+    {% set title = ez_content_name( content ) ~ ' - Farte' %}
+{% endif %}
+
+{% if content.fields.author is defined %}
+    {% set author = ez_field_value(content,'author') %}
+{% else %}
+    {% set author = 'Telemark fylkeskommune - Farte' %}
+{% endif %}
+
+
+{% block meta %}
+    <meta property="og:url" content="{{ socialUrl }}" />
+    <meta property="og:type"  content="article" />
+    <meta property="og:title"  content="{{ socialTitle }}" />
+    {% if socialIntro is defined %}
+        <meta property="og:description" content="{{ socialIntro }}" />
+    {% endif %}
+
+{% if not ez_is_field_empty( content, 'image' ) %}
+{% set imageId = ez_field_value( content, 'image' ) %}
+<meta name="og:image" content="{{ render(
+            controller( 
+                "ez_content:viewContent", 
+                  {
+                      "contentId": imageId.destinationContentId,
+                      "viewType": "facebook",
+                      "params": { 
+                                    "image_type": "ingress"
+                                }
+                  }
+            )
+        ) }}"/>
+{% else %}
+<meta name="og:image" content="{{ asset('bundles/tfkfarte/images/logo/logo.png') }}"/>
+{% endif %}
+
+    {% if imageAlias.uri is defined %}
+        <meta property="og:image" content="{{ imageAlias.uri }}" />
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,43 @@
+<nav id="menu" role="navigation" class="menu">
+    <div class="constrained">
+        <ul class="menu__content menu__level">
+            {% for item in menuItems %}
+                {% if item.subLevelItemCount > 0 %}
+                    <li class="menu__item">
+                        <div class="menu__item-content-wrapper">
+                            <div class="menu__item-content menu__item--submenu">
+                                <a href="{{ path( "ez_urlalias", {"locationId": item.location.id } ) }}" class="menu__item-link menu__item-link--submenu">{{ ez_content_name( item.location.contentInfo ) }}</a>
+                                <span class="icon--menu-arrow-down menu__item__dropdown hide--to-l"></span>
+                                <span class="icon--menu-arrow-right menu__item__dropdown hide--from-l js-menu-dropdown"></span>
+                            </div>
+                        </div>
+                       <ul class="menu__submenu menu__level">
+                            {% for subItem in item.subLevelItems %}
+                                {% if contentTypesIdentifiers[subItem.contentInfo.contentTypeId] == 'link'  %}
+                                    <li class="menu__submenu-item">
+                                        {{ render(controller('ez_content:viewLocation', {
+                                            'locationId': subItem.id,
+                                            'viewType': 'menu_line'
+                                        })) }}
+                                    </li>
+                                {% else %}
+                                    <li class="menu__submenu-item">
+                                        <a href="{{ path(subItem) }}" class="menu__item-link">{{subItem.contentInfo.name}}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% else %}
+                    <li class="menu__item">
+                        <div class="menu__item-content-wrapper">
+                            <div class="menu__item-content">
+                                <a href="{{ path( "ez_urlalias", {"locationId": item.location.id } ) }}" class="menu__item-link">{{ ez_content_name( item.location.contentInfo ) }}</a>
+                            </div>
+                        </div>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

@@ -8,10 +8,9 @@
 	{% include 'tfkfarteBundle::page_head_displaystyles.html.twig' %}
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-	{% block page_head %}
-		{% include 'tfkfarteBundle::page_head.html.twig' %}
-	{% endblock %}
+{% block meta %}{% endblock %}
+<meta name="MSSmartTagsPreventParsing" content="TRUE"/>
+	{% include 'tfkfarteBundle::page_head.html.twig' %}
 	{% include 'tfkfarteBundle::page_head_style.html.twig' %}
 	{% include 'tfkfarteBundle::page_head_script.html.twig' %}
 </head>

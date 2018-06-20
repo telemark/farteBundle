@@ -1,4 +1,70 @@
 {% extends "tfkfarteBundle::pagelayout.html.twig" %}
+{% set socialUrl = app.request.server.get('REQUEST_SCHEME') ~ '://' ~ app.request.server.get('SERVER_NAME') ~ app.request.server.get('REQUEST_URI') %}
+
+{% set hostname = app.request.server.get('REQUEST_SCHEME') ~ '://' ~ app.request.server.get('SERVER_NAME') %}
+
+{% set socialTitle = ez_field_value( content, 'name' )|trim %}
+{% if not ez_is_field_empty( content, 'meta_description' ) %}
+    {% set socialIntro = ez_field_value( content, 'meta_description' )|striptags|trim|slice(0, 160) %}
+{% elseif not ez_is_field_empty( content, 'short_description' ) %}
+      {% set socialIntro = ez_field_value( content, 'meta_description' )|striptags|trim|slice(0, 160) %}
+{% else %}
+
+{% set socialIntro = ez_field_value( content, 'description' )|striptags|trim|slice(0, 160) %}
+
+{% endif %}
+
+{% if socialIntro is empty %}
+  {% set socialIntro = 'Farte.no er eid av Telemark fylkeskommune, ved avdeling for areal og transport. Farte.no er en informasjonskanal for kollektivtransporttilbudet som Telemark fylkeskommune har ansvaret for.' %}
+{% endif %}
+
+{% if content is defined and title is not defined %}
+    {% set title = ez_content_name( content ) ~ ' - Farte' %}
+{% endif %}
+
+{% if content.fields.author is defined %}
+    {% set author = ez_field_value(content,'author') %}
+{% else %}
+    {% set author = 'Telemark fylkeskommune - Farte' %}
+{% endif %}
+
+
+{% block meta %}
+    <title>{{ socialTitle }}</title>
+    <meta property="og:url" content="{{ socialUrl }}" />
+    <meta property="og:type"  content="article" />
+    <meta property="og:title"  content="{{ socialTitle }}" />
+    {% if socialIntro is defined %}
+        <meta property="og:description" content="{{ socialIntro }}" />
+        <meta name="description" content="{{ socialIntro }}" />
+    {% endif %}
+<meta name="keywords" content="{% if content.fields.meta_keywords is defined %}{{ ez_field_value(content,'meta_keywords') }}{% else%}Telemark, Reise, Buss, Transport, Reiseplanlegger, Rutetabeller, Fylkeskommune, Telemark, ledige, rjukan ,Notodden, Offentlig {% endif %}"/>
+{% if not ez_is_field_empty( content, 'image' ) %}
+{% set imageId = ez_field_value( content, 'image' ) %}
+<meta property="og:image" content="{{ render(
+            controller( 
+                "ez_content:viewContent", 
+                  {
+                      "contentId": imageId.destinationContentId,
+                      "viewType": "facebook",
+                      "params": { 
+                                    "image_type": "ingress"
+                                }
+                  }
+            )
+        ) }}"/>
+{% else %}
+  <meta property="og:image" content="{{ hostname }}/{{ asset('bundles/tfkfarte/images/logo/facebook_logo.png') }}"/>
+  <meta property="og:image:width" content="1140px"/>
+  <meta property="og:image:width" content="480px"/>
+{% endif %}
+
+    {% if imageAlias.uri is defined %}
+        <meta property="og:image" content="{{ imageAlias.uri }}" />
+    {% endif %}
+{% endblock %}
+
+
 
 {% if not ez_is_field_empty( content, 'banner' ) %}
     {% set bannerImageId = ez_field_value( content, 'banner' ) %}
