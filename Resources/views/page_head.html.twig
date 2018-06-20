@@ -2,9 +2,6 @@
     Defining page title based on current content name, if available
     See full/blog_post.html.twig for an example of customization
 #}
-{% if content is defined and title is not defined %}
-    {% set title = ez_content_name( content ) ~ ' - Farte' %}
-{% endif %}
 
 <meta name="generator" content="eZ Platform"/>
 
