@@ -1,6 +1,6 @@
 {% extends noLayout ? viewbaseLayout : "tfkfarteBundle::pagelayout.html.twig" %}
 
-{% set socialUrl = app.request.server.get('REQUEST_SCHEME') ~ '://' ~ app.request.server.get('SERVER_NAME') ~ app.request.server.get('REQUEST_URI') %}
+{% set socialUrl = app.request.server.get('REQUEST_SCHEME') ~ 'https://' ~ app.request.server.get('SERVER_NAME') ~ app.request.server.get('REQUEST_URI') %}
 
 {% set hostname = app.request.server.get('REQUEST_SCHEME') ~ 'https://' ~ app.request.server.get('SERVER_NAME') %}
 
