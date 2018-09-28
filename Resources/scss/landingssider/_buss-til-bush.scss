@@ -23,7 +23,7 @@
     overflow-x: hidden;
   }
 
-  
+
   .top-image {
     height: 420px;
     overflow: auto;
@@ -38,7 +38,7 @@
       object-fit: cover;
       object-position: center center;
       font-family: 'object-fit: cover; object-position: center center;';
-      width: 100%;   
+      width: 100%;
     }
   }
 
@@ -89,13 +89,13 @@
 
 
     .item {
-      width: 0;
       float: 0;
       clear: 0;
       margin-left: 0;
       margin-right: 0;
-      width: 0;
+      width: 100%;
       float: 0;
+      max-width: initial;
 
       // That should do the trick, now flex:
       flex-basis: 100%;
@@ -124,6 +124,7 @@
         right: 0;
         top: 0;
         bottom: 0;
+        max-width: initial;
         &:hover {
           border-bottom: 2px solid $black;
           transition: all 333ms ease-in;
@@ -146,11 +147,11 @@
           padding-left: 44px;
         }
       }
-      
+
       h1 {
         display: inline-block;
         border: none;
-      } 
+      }
 
 
     } // Item end
@@ -175,7 +176,7 @@
 
 
   // Layout
-  
+
   .landingpage-nav--left,
   .landingpage-nav--right {
     width: 20%;
@@ -254,7 +255,7 @@
           @media (max-width: 550px) {
             flex-basis: 100%;
           }
-          &:hover a > h2, 
+          &:hover a > h2,
           &:hover a:last-child {
             border-bottom: 2px solid $black;
             transition: all 375ms ease-in;
@@ -315,7 +316,7 @@
         color: $black;
         margin-bottom: 0;
       }
-      
+
     }
 
 
