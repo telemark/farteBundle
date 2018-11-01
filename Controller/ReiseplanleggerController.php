@@ -22,7 +22,13 @@ class ReiseplanleggerController extends Controller
         $values = array();
 
         if ($searchString !== "") {
-          $xml = file_get_contents($travelmagic_url . "/scripts/TravelMagic/TravelMagicWE.dll/StageXML?cnt=$cnt&filter=".urlencode($searchString));
+
+          $curl = curl_init();
+          curl_setopt( $curl, CURLOPT_URL, $travelmagic_url . "/scripts/TravelMagic/TravelMagicWE.dll/StageXML?cnt=$cnt&filter=".urlencode( $searchString ) );
+          curl_setopt( $curl, CURLOPT_RETURNTRANSFER, true);
+          $xml = curl_exec( $curl );
+          curl_close( $curl );
+
           $sxm = simplexml_load_string($xml);
 
           foreach ($sxm->i as $i) {
